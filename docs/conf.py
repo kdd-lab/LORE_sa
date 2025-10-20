@@ -20,8 +20,8 @@ author = 'Kode srl'
 extensions = ["sphinx.ext.autodoc",
               "sphinx.ext.coverage",
               'sphinx.ext.viewcode',
-              "sphinx.ext.napoleon",'sphinx.ext.duration'
-              # 'sphinx.ext.autosummary'
+              "sphinx.ext.napoleon",'sphinx.ext.duration',
+              'sphinx.ext.autosummary'
               ]
 
 
@@ -41,6 +41,12 @@ pygments_style = 'sphinx'
 autodoc_default_options = {"members": True, "inherited-members": True}
 autosummary_generate = True
 autoclass_content='class'
+
+# Mock imports for dependencies that are not needed for documentation building
+autodoc_mock_imports = [
+    'numpy', 'pandas', 'scipy', 'sklearn', 'joblib', 'imblearn',
+    'deap', 'bitarray', 'category_encoders', 'skmultilearn', 'arff'
+]
 
 
 

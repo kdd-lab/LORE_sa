@@ -1,1 +1,4 @@
 *.pyc
+docs/_build/
+docs/source/generated/
+*.egg-info/
