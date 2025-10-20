@@ -1,0 +1,344 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>lore_sa.util &mdash; LORE_sa  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
+
+  
+      <script src="../../_static/jquery.js"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+      <script src="../../_static/doctools.js"></script>
+      <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="lore_sa.surrogate.DecisionTreeSurrogate" href="lore_sa.surrogate.DecisionTreeSurrogate.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            LORE_sa
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../get_started.html">Get started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/tabular_explanations_example.html">Tabular explanation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#learning-and-explaining-german-credit-dataset">Learning and explaining German Credit Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#loading-and-preparation-of-data">Loading and preparation of data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#learning-a-random-forest-classfier">Learning a Random Forest classfier</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#explaining-the-prediction">Explaining the prediction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#shap-explainer">SHAP explainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#lore-explainer">LORE explainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#lime-explainer">LIME explainer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#learning-a-different-model">Learning a different model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#learning-a-logistic-regressor">Learning a Logistic Regressor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#id1">Explaining the prediction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#id2">LORE explainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#id3">LIME explainer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../modules.html">Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#lore-sa-bbox-blackbox-abstract-class"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.bbox</span></code>: BlackBox abstract class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.bbox.AbstractBBox.html">lore_sa.bbox.AbstractBBox</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.bbox.AbstractBBox.html#lore_sa.bbox.AbstractBBox"><code class="docutils literal notranslate"><span class="pre">AbstractBBox</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#lore-sa-dataset-dataset-class"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.dataset</span></code>: Dataset class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.dataset.Dataset.html">lore_sa.dataset.Dataset</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.dataset.Dataset.html#lore_sa.dataset.Dataset"><code class="docutils literal notranslate"><span class="pre">Dataset</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.dataset.TabularDataset.html">lore_sa.dataset.TabularDataset</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.dataset.TabularDataset.html#lore_sa.dataset.TabularDataset"><code class="docutils literal notranslate"><span class="pre">TabularDataset</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.dataset.utils.html">lore_sa.dataset.utils</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.dataset.utils.html#lore_sa.dataset.utils.prepare_bank_dataset"><code class="docutils literal notranslate"><span class="pre">prepare_bank_dataset()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#lore-sa-neighgen-neighborhood-generator-classes"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.neighgen</span></code>: Neighborhood Generator classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.neighgen.RandomGenerator.html">lore_sa.neighgen.RandomGenerator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.neighgen.RandomGenerator.html#lore_sa.neighgen.RandomGenerator"><code class="docutils literal notranslate"><span class="pre">RandomGenerator</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.neighgen.GeneticGenerator.html">lore_sa.neighgen.GeneticGenerator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.neighgen.GeneticGenerator.html#lore_sa.neighgen.GeneticGenerator"><code class="docutils literal notranslate"><span class="pre">GeneticGenerator</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#lore-sa-discretizer-discretizer-classes-and-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.discretizer</span></code>: Discretizer classes and functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.discretizer.Discretizer.html">lore_sa.discretizer.Discretizer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.discretizer.Discretizer.html#lore_sa.discretizer.Discretizer"><code class="docutils literal notranslate"><span class="pre">Discretizer</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.discretizer.RMEPDiscretizer.html">lore_sa.discretizer.RMEPDiscretizer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.discretizer.RMEPDiscretizer.html#lore_sa.discretizer.RMEPDiscretizer"><code class="docutils literal notranslate"><span class="pre">RMEPDiscretizer</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#lore-sa-encoder-decoder-encoder-decoder-classes-and-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.encoder_decoder</span></code>: Encoder/Decoder classes and functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.encoder_decoder.EncDec.html">lore_sa.encoder_decoder.EncDec</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.encoder_decoder.EncDec.html#lore_sa.encoder_decoder.EncDec"><code class="docutils literal notranslate"><span class="pre">EncDec</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.encoder_decoder.ColumnTransformerEnc.html">lore_sa.encoder_decoder.ColumnTransformerEnc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.encoder_decoder.ColumnTransformerEnc.html#lore_sa.encoder_decoder.ColumnTransformerEnc"><code class="docutils literal notranslate"><span class="pre">ColumnTransformerEnc</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#lore-sa-explanation-explanation-classes-and-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.explanation</span></code>: Explanation classes and functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.explanation.Explanation.html">lore_sa.explanation.Explanation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.explanation.Explanation.html#lore_sa.explanation.Explanation"><code class="docutils literal notranslate"><span class="pre">Explanation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.explanation.ExplanationEncoder.html">lore_sa.explanation.ExplanationEncoder</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.explanation.ExplanationEncoder.html#lore_sa.explanation.ExplanationEncoder"><code class="docutils literal notranslate"><span class="pre">ExplanationEncoder</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.explanation.ImageExplanation.html">lore_sa.explanation.ImageExplanation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.explanation.ImageExplanation.html#lore_sa.explanation.ImageExplanation"><code class="docutils literal notranslate"><span class="pre">ImageExplanation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.explanation.MultilabelExplanation.html">lore_sa.explanation.MultilabelExplanation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.explanation.MultilabelExplanation.html#lore_sa.explanation.MultilabelExplanation"><code class="docutils literal notranslate"><span class="pre">MultilabelExplanation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.explanation.TextExplanation.html">lore_sa.explanation.TextExplanation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.explanation.TextExplanation.html#lore_sa.explanation.TextExplanation"><code class="docutils literal notranslate"><span class="pre">TextExplanation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.explanation.json2explanation.html">lore_sa.explanation.json2explanation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.explanation.json2explanation.html#lore_sa.explanation.json2explanation"><code class="docutils literal notranslate"><span class="pre">json2explanation()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#lore-sa-rule-rule-classes-and-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.rule</span></code>: Rule classes and functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.rule.Rule.html">lore_sa.rule.Rule</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.rule.Rule.html#lore_sa.rule.Rule"><code class="docutils literal notranslate"><span class="pre">Rule</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.rule.RuleEncoder.html">lore_sa.rule.RuleEncoder</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.rule.RuleEncoder.html#lore_sa.rule.RuleEncoder"><code class="docutils literal notranslate"><span class="pre">RuleEncoder</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.rule.json2rule.html">lore_sa.rule.json2rule</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.rule.json2rule.html#lore_sa.rule.json2rule"><code class="docutils literal notranslate"><span class="pre">json2rule()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.rule.json2expression.html">lore_sa.rule.json2expression</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.rule.json2expression.html#lore_sa.rule.json2expression"><code class="docutils literal notranslate"><span class="pre">json2expression()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.rule.Expression.html">lore_sa.rule.Expression</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.rule.Expression.html#lore_sa.rule.Expression"><code class="docutils literal notranslate"><span class="pre">Expression</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#lore-sa-surrogate-surrogate-classes-and-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.surrogate</span></code>: Surrogate classes and functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.surrogate.Surrogate.html">lore_sa.surrogate.Surrogate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.surrogate.Surrogate.html#lore_sa.surrogate.Surrogate"><code class="docutils literal notranslate"><span class="pre">Surrogate</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.surrogate.DecisionTreeSurrogate.html">lore_sa.surrogate.DecisionTreeSurrogate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.surrogate.DecisionTreeSurrogate.html#lore_sa.surrogate.DecisionTreeSurrogate"><code class="docutils literal notranslate"><span class="pre">DecisionTreeSurrogate</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../modules.html#lore-sa-util-util-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.util</span></code>: Util functions</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">lore_sa.util</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lore_sa.util.best_fit_distribution"><code class="docutils literal notranslate"><span class="pre">best_fit_distribution()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lore_sa.util.sigmoid"><code class="docutils literal notranslate"><span class="pre">sigmoid()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lore_sa.util.vector2dict"><code class="docutils literal notranslate"><span class="pre">vector2dict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">LORE_sa</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../modules.html">Modules</a></li>
+      <li class="breadcrumb-item active">lore_sa.util</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/source/generated/lore_sa.util.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-lore_sa.util">
+<span id="lore-sa-util"></span><h1>lore_sa.util<a class="headerlink" href="#module-lore_sa.util" title="Permalink to this heading"></a></h1>
+<p class="rubric">Functions</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lore_sa.util.best_fit_distribution" title="lore_sa.util.best_fit_distribution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">best_fit_distribution</span></code></a>(data[, bins, ax])</p></td>
+<td><p>Model data by finding best fit distribution to data</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate_feature_values</span></code>(X, ...[, ...])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">estimate_nbr_bins</span></code>(x)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">freedman_diaconis</span></code>(x)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_distr_values</span></code>(x[, size])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">mixed_distance_idx</span></code>(x, y, idx[, ddist, cdist])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">multi_dt_predict</span></code>(X, dt_list)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">multilabel2str</span></code>(y, class_name)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">neuclidean</span></code>(x, y)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">nmeandev</span></code>(x, y)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">record2str</span></code>(x, feature_names, numeric_columns)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lore_sa.util.sigmoid" title="lore_sa.util.sigmoid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sigmoid</span></code></a>(x[, x0, k, L])</p></td>
+<td><p>A logistic function or logistic curve is a common &quot;S&quot; shape (sigmoid curve</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">struges</span></code>(x)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lore_sa.util.vector2dict" title="lore_sa.util.vector2dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vector2dict</span></code></a>(x, feature_names)</p></td>
+<td><p>Given an array <a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>x''' and an ordered list of feature names, returns a dictionary where each entry has the form <a href="#id5"><span class="problematic" id="id6">``</span></a><a href="#id7"><span class="problematic" id="id8">`</span></a>feature_name : value''' for each feature in x. :param x: list of values :param feature_names: ordered feature list as the x instance :return:.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="lore_sa.util.best_fit_distribution">
+<span class="sig-prename descclassname"><span class="pre">lore_sa.util.</span></span><span class="sig-name descname"><span class="pre">best_fit_distribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/util.html#best_fit_distribution"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.util.best_fit_distribution" title="Permalink to this definition"></a></dt>
+<dd><p>Model data by finding best fit distribution to data</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lore_sa.util.sigmoid">
+<span class="sig-prename descclassname"><span class="pre">lore_sa.util.</span></span><span class="sig-name descname"><span class="pre">sigmoid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">L</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/util.html#sigmoid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.util.sigmoid" title="Permalink to this definition"></a></dt>
+<dd><p>A logistic function or logistic curve is a common “S” shape (sigmoid curve</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – value to transform</p></li>
+<li><p><strong>x0</strong> – the x-value of the sigmoid’s midpoint</p></li>
+<li><p><strong>k</strong> – the curve’s maximum value</p></li>
+<li><p><strong>L</strong> – the steepness of the curve</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>sigmoid of x</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lore_sa.util.vector2dict">
+<span class="sig-prename descclassname"><span class="pre">lore_sa.util.</span></span><span class="sig-name descname"><span class="pre">vector2dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_names</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/util.html#vector2dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.util.vector2dict" title="Permalink to this definition"></a></dt>
+<dd><p>Given an array <a href="#id9"><span class="problematic" id="id10">``</span></a><a href="#id11"><span class="problematic" id="id12">`</span></a>x’’’ and an ordered list of feature names, returns a dictionary
+where each entry has the form <a href="#id13"><span class="problematic" id="id14">``</span></a><a href="#id15"><span class="problematic" id="id16">`</span></a>feature_name : value’’’ for each feature in x.
+:param x: list of values
+:param feature_names: ordered feature list as the x instance
+:return:</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="lore_sa.surrogate.DecisionTreeSurrogate.html" class="btn btn-neutral float-left" title="lore_sa.surrogate.DecisionTreeSurrogate" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Kode srl.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

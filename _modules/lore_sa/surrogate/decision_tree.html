@@ -1,0 +1,607 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>lore_sa.surrogate.decision_tree &mdash; LORE_sa  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+
+  
+      <script src="../../../_static/jquery.js"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+      <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+      <script src="../../../_static/doctools.js"></script>
+      <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            LORE_sa
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../get_started.html">Get started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../examples/tabular_explanations_example.html">Tabular explanation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#learning-and-explaining-german-credit-dataset">Learning and explaining German Credit Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#loading-and-preparation-of-data">Loading and preparation of data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#learning-a-random-forest-classfier">Learning a Random Forest classfier</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#explaining-the-prediction">Explaining the prediction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#shap-explainer">SHAP explainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#lore-explainer">LORE explainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#lime-explainer">LIME explainer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#learning-a-different-model">Learning a different model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#learning-a-logistic-regressor">Learning a Logistic Regressor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#id1">Explaining the prediction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#id2">LORE explainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#id3">LIME explainer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/modules.html">Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../source/modules.html#lore-sa-bbox-blackbox-abstract-class"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.bbox</span></code>: BlackBox abstract class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.bbox.AbstractBBox.html">lore_sa.bbox.AbstractBBox</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.bbox.AbstractBBox.html#lore_sa.bbox.AbstractBBox"><code class="docutils literal notranslate"><span class="pre">AbstractBBox</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../source/modules.html#lore-sa-dataset-dataset-class"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.dataset</span></code>: Dataset class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.dataset.Dataset.html">lore_sa.dataset.Dataset</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.dataset.Dataset.html#lore_sa.dataset.Dataset"><code class="docutils literal notranslate"><span class="pre">Dataset</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.dataset.TabularDataset.html">lore_sa.dataset.TabularDataset</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.dataset.TabularDataset.html#lore_sa.dataset.TabularDataset"><code class="docutils literal notranslate"><span class="pre">TabularDataset</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.dataset.utils.html">lore_sa.dataset.utils</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.dataset.utils.html#lore_sa.dataset.utils.prepare_bank_dataset"><code class="docutils literal notranslate"><span class="pre">prepare_bank_dataset()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../source/modules.html#lore-sa-neighgen-neighborhood-generator-classes"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.neighgen</span></code>: Neighborhood Generator classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.neighgen.RandomGenerator.html">lore_sa.neighgen.RandomGenerator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.neighgen.RandomGenerator.html#lore_sa.neighgen.RandomGenerator"><code class="docutils literal notranslate"><span class="pre">RandomGenerator</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.neighgen.GeneticGenerator.html">lore_sa.neighgen.GeneticGenerator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.neighgen.GeneticGenerator.html#lore_sa.neighgen.GeneticGenerator"><code class="docutils literal notranslate"><span class="pre">GeneticGenerator</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../source/modules.html#lore-sa-discretizer-discretizer-classes-and-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.discretizer</span></code>: Discretizer classes and functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.discretizer.Discretizer.html">lore_sa.discretizer.Discretizer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.discretizer.Discretizer.html#lore_sa.discretizer.Discretizer"><code class="docutils literal notranslate"><span class="pre">Discretizer</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.discretizer.RMEPDiscretizer.html">lore_sa.discretizer.RMEPDiscretizer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.discretizer.RMEPDiscretizer.html#lore_sa.discretizer.RMEPDiscretizer"><code class="docutils literal notranslate"><span class="pre">RMEPDiscretizer</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../source/modules.html#lore-sa-encoder-decoder-encoder-decoder-classes-and-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.encoder_decoder</span></code>: Encoder/Decoder classes and functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.encoder_decoder.EncDec.html">lore_sa.encoder_decoder.EncDec</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.encoder_decoder.EncDec.html#lore_sa.encoder_decoder.EncDec"><code class="docutils literal notranslate"><span class="pre">EncDec</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.encoder_decoder.ColumnTransformerEnc.html">lore_sa.encoder_decoder.ColumnTransformerEnc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.encoder_decoder.ColumnTransformerEnc.html#lore_sa.encoder_decoder.ColumnTransformerEnc"><code class="docutils literal notranslate"><span class="pre">ColumnTransformerEnc</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../source/modules.html#lore-sa-explanation-explanation-classes-and-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.explanation</span></code>: Explanation classes and functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.explanation.Explanation.html">lore_sa.explanation.Explanation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.explanation.Explanation.html#lore_sa.explanation.Explanation"><code class="docutils literal notranslate"><span class="pre">Explanation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.explanation.ExplanationEncoder.html">lore_sa.explanation.ExplanationEncoder</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.explanation.ExplanationEncoder.html#lore_sa.explanation.ExplanationEncoder"><code class="docutils literal notranslate"><span class="pre">ExplanationEncoder</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.explanation.ImageExplanation.html">lore_sa.explanation.ImageExplanation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.explanation.ImageExplanation.html#lore_sa.explanation.ImageExplanation"><code class="docutils literal notranslate"><span class="pre">ImageExplanation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.explanation.MultilabelExplanation.html">lore_sa.explanation.MultilabelExplanation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.explanation.MultilabelExplanation.html#lore_sa.explanation.MultilabelExplanation"><code class="docutils literal notranslate"><span class="pre">MultilabelExplanation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.explanation.TextExplanation.html">lore_sa.explanation.TextExplanation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.explanation.TextExplanation.html#lore_sa.explanation.TextExplanation"><code class="docutils literal notranslate"><span class="pre">TextExplanation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.explanation.json2explanation.html">lore_sa.explanation.json2explanation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.explanation.json2explanation.html#lore_sa.explanation.json2explanation"><code class="docutils literal notranslate"><span class="pre">json2explanation()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../source/modules.html#lore-sa-rule-rule-classes-and-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.rule</span></code>: Rule classes and functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.rule.Rule.html">lore_sa.rule.Rule</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.rule.Rule.html#lore_sa.rule.Rule"><code class="docutils literal notranslate"><span class="pre">Rule</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.rule.RuleEncoder.html">lore_sa.rule.RuleEncoder</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.rule.RuleEncoder.html#lore_sa.rule.RuleEncoder"><code class="docutils literal notranslate"><span class="pre">RuleEncoder</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.rule.json2rule.html">lore_sa.rule.json2rule</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.rule.json2rule.html#lore_sa.rule.json2rule"><code class="docutils literal notranslate"><span class="pre">json2rule()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.rule.json2expression.html">lore_sa.rule.json2expression</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.rule.json2expression.html#lore_sa.rule.json2expression"><code class="docutils literal notranslate"><span class="pre">json2expression()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.rule.Expression.html">lore_sa.rule.Expression</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.rule.Expression.html#lore_sa.rule.Expression"><code class="docutils literal notranslate"><span class="pre">Expression</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../source/modules.html#lore-sa-surrogate-surrogate-classes-and-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.surrogate</span></code>: Surrogate classes and functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.surrogate.Surrogate.html">lore_sa.surrogate.Surrogate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.surrogate.Surrogate.html#lore_sa.surrogate.Surrogate"><code class="docutils literal notranslate"><span class="pre">Surrogate</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.surrogate.DecisionTreeSurrogate.html">lore_sa.surrogate.DecisionTreeSurrogate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.surrogate.DecisionTreeSurrogate.html#lore_sa.surrogate.DecisionTreeSurrogate"><code class="docutils literal notranslate"><span class="pre">DecisionTreeSurrogate</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../source/modules.html#lore-sa-util-util-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.util</span></code>: Util functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.util.html">lore_sa.util</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.util.html#lore_sa.util.best_fit_distribution"><code class="docutils literal notranslate"><span class="pre">best_fit_distribution()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.util.html#lore_sa.util.sigmoid"><code class="docutils literal notranslate"><span class="pre">sigmoid()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.util.html#lore_sa.util.vector2dict"><code class="docutils literal notranslate"><span class="pre">vector2dict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">LORE_sa</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">lore_sa.surrogate.decision_tree</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for lore_sa.surrogate.decision_tree</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span><span class="w"> </span><span class="nn">copy</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">operator</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">confusion_matrix</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">..encoder_decoder</span><span class="w"> </span><span class="kn">import</span> <span class="n">EncDec</span><span class="p">,</span> <span class="n">ColumnTransformerEnc</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..logger</span><span class="w"> </span><span class="kn">import</span> <span class="n">logger</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.tree._tree</span><span class="w"> </span><span class="kn">import</span> <span class="n">TREE_LEAF</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.tree</span><span class="w"> </span><span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sklearn.model_selection</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.experimental</span><span class="w"> </span><span class="kn">import</span> <span class="n">enable_halving_search_cv</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Surrogate&quot;</span><span class="p">,</span> <span class="s2">&quot;DecisionTreeSurrogate&quot;</span><span class="p">]</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">..rule</span><span class="w"> </span><span class="kn">import</span> <span class="n">Expression</span><span class="p">,</span> <span class="n">Rule</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.surrogate</span><span class="w"> </span><span class="kn">import</span> <span class="n">Surrogate</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..util</span><span class="w"> </span><span class="kn">import</span> <span class="n">vector2dict</span><span class="p">,</span> <span class="n">multilabel2str</span>
+
+
+<div class="viewcode-block" id="DecisionTreeSurrogate"><a class="viewcode-back" href="../../../source/generated/lore_sa.surrogate.DecisionTreeSurrogate.html#lore_sa.surrogate.DecisionTreeSurrogate">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">DecisionTreeSurrogate</span><span class="p">(</span><span class="n">Surrogate</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DecisionTreeSurrogate.__init__"><a class="viewcode-back" href="../../../source/generated/lore_sa.surrogate.DecisionTreeSurrogate.html#lore_sa.surrogate.DecisionTreeSurrogate.__init__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">preprocessing</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">class_values</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">multi_label</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                 <span class="n">one_vs_rest</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">prune_tree</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">kind</span><span class="p">,</span> <span class="n">preprocessing</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dt</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fidelity</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">confusion_matrix</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">prune_tree</span> <span class="o">=</span> <span class="n">prune_tree</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">class_values</span> <span class="o">=</span> <span class="n">class_values</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">multi_label</span> <span class="o">=</span> <span class="n">multi_label</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">one_vs_rest</span> <span class="o">=</span> <span class="n">one_vs_rest</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cv</span> <span class="o">=</span> <span class="n">cv</span></div>
+
+
+<div class="viewcode-block" id="DecisionTreeSurrogate.train"><a class="viewcode-back" href="../../../source/generated/lore_sa.surrogate.DecisionTreeSurrogate.html#lore_sa.surrogate.DecisionTreeSurrogate.train">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">train</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">Yb</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        :param Z: The training input samples</span>
+<span class="sd">        :param Yb: The target values (class labels) as integers or strings.</span>
+<span class="sd">        :param weights: Sample weights.</span>
+<span class="sd">        :param class_values:</span>
+<span class="sd">        :param [bool] multi_label:</span>
+<span class="sd">        :param [bool] one_vs_rest:</span>
+<span class="sd">        :param [int] cv:</span>
+<span class="sd">        :param [bool] prune_tree:</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dt</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">class_weight</span><span class="o">=</span><span class="s1">&#39;balanced&#39;</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">prune_tree</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">param_list</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;min_samples_split&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+                          <span class="s1">&#39;min_samples_leaf&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+                          <span class="s1">&#39;splitter&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;best&#39;</span><span class="p">,</span> <span class="s1">&#39;random&#39;</span><span class="p">],</span>
+                          <span class="s1">&#39;max_depth&#39;</span><span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span>
+                          <span class="s1">&#39;criterion&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;entropy&#39;</span><span class="p">,</span> <span class="s1">&#39;gini&#39;</span><span class="p">],</span>
+                          <span class="s1">&#39;max_features&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="s1">&#39;sqrt&#39;</span><span class="p">,</span> <span class="s1">&#39;log2&#39;</span><span class="p">]</span>
+                          <span class="p">}</span>
+
+            <span class="c1"># if multi_label is False or (multi_label is True and one_vs_rest is True):</span>
+            <span class="c1">#     if len(class_values) == 2 or (multi_label and one_vs_rest):</span>
+            <span class="c1">#         scoring = &#39;precision&#39;</span>
+            <span class="c1">#     else:</span>
+            <span class="c1">#         scoring = &#39;precision_macro&#39;</span>
+            <span class="c1"># else:</span>
+            <span class="n">scoring</span> <span class="o">=</span> <span class="s1">&#39;precision_micro&#39;</span>
+
+            <span class="n">dt_search</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">model_selection</span><span class="o">.</span><span class="n">HalvingGridSearchCV</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dt</span><span class="p">,</span> <span class="n">param_grid</span><span class="o">=</span><span class="n">param_list</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="n">scoring</span><span class="p">,</span>
+                                                                    <span class="n">cv</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cv</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Search the best estimator&#39;</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Start time: </span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()))</span>
+            <span class="n">dt_search</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span> <span class="n">Yb</span><span class="p">,</span> <span class="n">sample_weight</span><span class="o">=</span><span class="n">weights</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;End time: </span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dt</span> <span class="o">=</span> <span class="n">dt_search</span><span class="o">.</span><span class="n">best_estimator_</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Pruning&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">prune_duplicate_leaves</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dt</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span> <span class="n">Yb</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">fidelity</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span> <span class="n">Yb</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">confusion_matrix</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">Yb</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">Z</span><span class="p">))</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Fidelity: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fidelity</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">dt</span></div>
+
+<div class="viewcode-block" id="DecisionTreeSurrogate.is_leaf"><a class="viewcode-back" href="../../../source/generated/lore_sa.surrogate.DecisionTreeSurrogate.html#lore_sa.surrogate.DecisionTreeSurrogate.is_leaf">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">is_leaf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inner_tree</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check whether node is leaf node&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">inner_tree</span><span class="o">.</span><span class="n">children_left</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">==</span> <span class="n">TREE_LEAF</span> <span class="ow">and</span>
+                <span class="n">inner_tree</span><span class="o">.</span><span class="n">children_right</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">==</span> <span class="n">TREE_LEAF</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DecisionTreeSurrogate.prune_index"><a class="viewcode-back" href="../../../source/generated/lore_sa.surrogate.DecisionTreeSurrogate.html#lore_sa.surrogate.DecisionTreeSurrogate.prune_index">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">prune_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inner_tree</span><span class="p">,</span> <span class="n">decisions</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Start pruning from the bottom - if we start from the top, we might miss</span>
+<span class="sd">        nodes that become leaves during pruning.</span>
+<span class="sd">        Do not use this directly - use prune_duplicate_leaves instead.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_leaf</span><span class="p">(</span><span class="n">inner_tree</span><span class="p">,</span> <span class="n">inner_tree</span><span class="o">.</span><span class="n">children_left</span><span class="p">[</span><span class="n">index</span><span class="p">]):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">prune_index</span><span class="p">(</span><span class="n">inner_tree</span><span class="p">,</span> <span class="n">decisions</span><span class="p">,</span> <span class="n">inner_tree</span><span class="o">.</span><span class="n">children_left</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_leaf</span><span class="p">(</span><span class="n">inner_tree</span><span class="p">,</span> <span class="n">inner_tree</span><span class="o">.</span><span class="n">children_right</span><span class="p">[</span><span class="n">index</span><span class="p">]):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">prune_index</span><span class="p">(</span><span class="n">inner_tree</span><span class="p">,</span> <span class="n">decisions</span><span class="p">,</span> <span class="n">inner_tree</span><span class="o">.</span><span class="n">children_right</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+
+        <span class="c1"># Prune children if both children are leaves now and make the same decision:</span>
+        <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">is_leaf</span><span class="p">(</span><span class="n">inner_tree</span><span class="p">,</span> <span class="n">inner_tree</span><span class="o">.</span><span class="n">children_left</span><span class="p">[</span><span class="n">index</span><span class="p">])</span> <span class="ow">and</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">is_leaf</span><span class="p">(</span><span class="n">inner_tree</span><span class="p">,</span> <span class="n">inner_tree</span><span class="o">.</span><span class="n">children_right</span><span class="p">[</span><span class="n">index</span><span class="p">])</span> <span class="ow">and</span>
+                <span class="p">(</span><span class="n">decisions</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">==</span> <span class="n">decisions</span><span class="p">[</span><span class="n">inner_tree</span><span class="o">.</span><span class="n">children_left</span><span class="p">[</span><span class="n">index</span><span class="p">]])</span> <span class="ow">and</span>
+                <span class="p">(</span><span class="n">decisions</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">==</span> <span class="n">decisions</span><span class="p">[</span><span class="n">inner_tree</span><span class="o">.</span><span class="n">children_right</span><span class="p">[</span><span class="n">index</span><span class="p">]])):</span>
+            <span class="c1"># turn node into a leaf by &quot;unlinking&quot; its children</span>
+            <span class="n">inner_tree</span><span class="o">.</span><span class="n">children_left</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">TREE_LEAF</span>
+            <span class="n">inner_tree</span><span class="o">.</span><span class="n">children_right</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">TREE_LEAF</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Pruned </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="DecisionTreeSurrogate.prune_duplicate_leaves"><a class="viewcode-back" href="../../../source/generated/lore_sa.surrogate.DecisionTreeSurrogate.html#lore_sa.surrogate.DecisionTreeSurrogate.prune_duplicate_leaves">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">prune_duplicate_leaves</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dt</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Remove leaves if both&quot;&quot;&quot;</span>
+        <span class="n">decisions</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">tree_</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>  <span class="c1"># Decision for each node</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">prune_index</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">tree_</span><span class="p">,</span> <span class="n">decisions</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DecisionTreeSurrogate.get_rule"><a class="viewcode-back" href="../../../source/generated/lore_sa.surrogate.DecisionTreeSurrogate.html#lore_sa.surrogate.DecisionTreeSurrogate.get_rule">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_rule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">encoder</span><span class="p">:</span> <span class="n">EncDec</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Extract the rules as the promises and consequences {p -&gt; y}, starting from a Decision Tree</span>
+
+<span class="sd">             {( income &gt; 90) -&gt; grant),</span>
+<span class="sd">                ( job = employer) -&gt; grant)</span>
+<span class="sd">            }</span>
+
+<span class="sd">        :param [Numpy Array] z: instance encoded of the dataset to extract the rule</span>
+<span class="sd">        :param [EncDec] encdec:</span>
+<span class="sd">        :return [Rule]: Rule objects</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="n">z</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">feature</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">tree_</span><span class="o">.</span><span class="n">feature</span>
+        <span class="n">threshold</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">tree_</span><span class="o">.</span><span class="n">threshold</span>
+        <span class="n">predicted_class</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+        <span class="n">inv_transform_predicted_class</span> <span class="o">=</span> <span class="n">encoder</span><span class="o">.</span><span class="n">decode_target_class</span><span class="p">([</span><span class="n">predicted_class</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="n">target_feature_name</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">encoder</span><span class="o">.</span><span class="n">encoded_descriptor</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="n">consequence</span> <span class="o">=</span> <span class="n">Expression</span><span class="p">(</span><span class="n">variable</span><span class="o">=</span><span class="n">target_feature_name</span><span class="p">,</span> <span class="n">operator</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">eq</span><span class="p">,</span>
+                                 <span class="n">value</span><span class="o">=</span><span class="n">inv_transform_predicted_class</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="n">leave_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+        <span class="n">node_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">decision_path</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="o">.</span><span class="n">indices</span>
+
+        <span class="n">feature_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">encoder</span><span class="o">.</span><span class="n">encoded_features</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+        <span class="n">numeric_columns</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">encoder</span><span class="o">.</span><span class="n">encoded_descriptor</span><span class="p">[</span><span class="s1">&#39;numeric&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+
+        <span class="n">premises</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">node_id</span> <span class="ow">in</span> <span class="n">node_index</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">leave_id</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">node_id</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">attribute</span> <span class="o">=</span> <span class="n">feature_names</span><span class="p">[</span><span class="n">feature</span><span class="p">[</span><span class="n">node_id</span><span class="p">]]</span>
+                <span class="k">if</span> <span class="n">attribute</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">numeric_columns</span><span class="p">:</span>
+                    <span class="c1"># this is a categorical feature</span>
+                    <span class="c1"># print(f&quot;{attribute} has value {x[0][feature[node_id]]} and threshold is {threshold[node_id]}&quot;)</span>
+                    <span class="n">thr</span> <span class="o">=</span> <span class="kc">False</span> <span class="k">if</span> <span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">feature</span><span class="p">[</span><span class="n">node_id</span><span class="p">]]</span> <span class="o">&lt;=</span> <span class="n">threshold</span><span class="p">[</span><span class="n">node_id</span><span class="p">]</span> <span class="k">else</span> <span class="kc">True</span>
+                    <span class="n">op</span> <span class="o">=</span> <span class="n">operator</span><span class="o">.</span><span class="n">eq</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">thr</span> <span class="o">=</span> <span class="n">threshold</span><span class="p">[</span><span class="n">node_id</span><span class="p">]</span>
+                    <span class="n">op</span> <span class="o">=</span> <span class="n">operator</span><span class="o">.</span><span class="n">le</span> <span class="k">if</span> <span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">feature</span><span class="p">[</span><span class="n">node_id</span><span class="p">]]</span> <span class="o">&lt;=</span> <span class="n">threshold</span><span class="p">[</span><span class="n">node_id</span><span class="p">]</span> <span class="k">else</span> <span class="n">operator</span><span class="o">.</span><span class="n">gt</span>
+
+                <span class="n">premises</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Expression</span><span class="p">(</span><span class="n">attribute</span><span class="p">,</span> <span class="n">op</span><span class="p">,</span> <span class="n">thr</span><span class="p">))</span>
+
+        <span class="n">premises</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">compact_premises</span><span class="p">(</span><span class="n">premises</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">Rule</span><span class="p">(</span><span class="n">premises</span><span class="o">=</span><span class="n">premises</span><span class="p">,</span> <span class="n">consequences</span><span class="o">=</span><span class="n">consequence</span><span class="p">,</span> <span class="n">encoder</span><span class="o">=</span><span class="n">encoder</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DecisionTreeSurrogate.compact_premises"><a class="viewcode-back" href="../../../source/generated/lore_sa.surrogate.DecisionTreeSurrogate.html#lore_sa.surrogate.DecisionTreeSurrogate.compact_premises">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">compact_premises</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">premises_list</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Remove the same premises with different values of threashold</span>
+
+<span class="sd">        :param premises_list: List of Expressions that defines the premises</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">attribute_list</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">premise</span> <span class="ow">in</span> <span class="n">premises_list</span><span class="p">:</span>
+            <span class="n">attribute_list</span><span class="p">[</span><span class="n">premise</span><span class="o">.</span><span class="n">variable</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">premise</span><span class="p">)</span>
+
+        <span class="n">compact_plist</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">att</span><span class="p">,</span> <span class="n">alist</span> <span class="ow">in</span> <span class="n">attribute_list</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">alist</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">min_thr</span> <span class="o">=</span> <span class="kc">None</span>
+                <span class="n">max_thr</span> <span class="o">=</span> <span class="kc">None</span>
+                <span class="k">for</span> <span class="n">av</span> <span class="ow">in</span> <span class="n">alist</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">av</span><span class="o">.</span><span class="n">operator</span> <span class="o">==</span> <span class="n">operator</span><span class="o">.</span><span class="n">le</span><span class="p">:</span>
+                        <span class="n">max_thr</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">av</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">max_thr</span><span class="p">)</span> <span class="k">if</span> <span class="n">max_thr</span> <span class="k">else</span> <span class="n">av</span><span class="o">.</span><span class="n">value</span>
+                    <span class="k">elif</span> <span class="n">av</span><span class="o">.</span><span class="n">operator</span> <span class="o">==</span> <span class="n">operator</span><span class="o">.</span><span class="n">gt</span><span class="p">:</span>
+                        <span class="n">min_thr</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">av</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">min_thr</span><span class="p">)</span> <span class="k">if</span> <span class="n">min_thr</span> <span class="k">else</span> <span class="n">av</span><span class="o">.</span><span class="n">value</span>
+
+                <span class="k">if</span> <span class="n">max_thr</span><span class="p">:</span>
+                    <span class="n">compact_plist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Expression</span><span class="p">(</span><span class="n">att</span><span class="p">,</span> <span class="n">operator</span><span class="o">.</span><span class="n">le</span><span class="p">,</span> <span class="n">max_thr</span><span class="p">))</span>
+
+                <span class="k">if</span> <span class="n">min_thr</span><span class="p">:</span>
+                    <span class="n">compact_plist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Expression</span><span class="p">(</span><span class="n">att</span><span class="p">,</span> <span class="n">operator</span><span class="o">.</span><span class="n">gt</span><span class="p">,</span> <span class="n">min_thr</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">compact_plist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">alist</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">compact_plist</span></div>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_counterfactual_rules</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">neighborhood_train_X</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">neighborhood_train_Y</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">,</span>
+                                 <span class="n">encoder</span><span class="p">:</span> <span class="n">EncDec</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                                 <span class="n">filter_crules</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">constraints</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">unadmittible_features</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+
+
+        <span class="n">feature_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">encoder</span><span class="o">.</span><span class="n">encoded_features</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+        <span class="c1"># numeric_columns = list(encoder.encoded_descriptor[&#39;numeric&#39;].keys())</span>
+        <span class="n">predicted_class</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="c1"># inv_transform_predicted_class = encoder.encoder.named_transformers_.get(&#39;target&#39;)\</span>
+        <span class="c1">#     .inverse_transform([predicted_class])[0] #TODO: modify to generalize to multiclasses</span>
+
+        <span class="n">class_name</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">encoder</span><span class="o">.</span><span class="n">encoded_descriptor</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">class_values</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">encoder</span><span class="o">.</span><span class="n">encoded_descriptor</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">())[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;distinct_values&#39;</span><span class="p">]</span>
+
+
+        <span class="n">clen</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span>
+        <span class="n">crule_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="n">delta_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+
+        <span class="c1"># y = self.dt.predict(neighborhood_dataset.df)[0]</span>
+        <span class="c1"># Y = self.dt.predict(neighborhood_dataset.df)</span>
+
+        <span class="n">x_dict</span> <span class="o">=</span> <span class="n">vector2dict</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">feature_names</span><span class="p">)</span>
+        <span class="c1"># select the subset of ```neighborhood_train_X``` that have a classification different from the input x</span>
+        <span class="n">Z1</span> <span class="o">=</span> <span class="n">neighborhood_train_X</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">neighborhood_train_Y</span> <span class="o">!=</span> <span class="n">predicted_class</span><span class="p">)]</span>
+
+        <span class="c1"># We search for the shortest rule among those that support the elements in Z1</span>
+        <span class="k">for</span> <span class="n">zi</span> <span class="ow">in</span> <span class="n">Z1</span><span class="p">:</span>
+            <span class="c1">#</span>
+            <span class="n">crule</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_rule</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="n">zi</span><span class="p">,</span> <span class="n">encoder</span><span class="o">=</span><span class="n">encoder</span><span class="p">)</span>
+
+            <span class="n">delta</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_falsified_conditions</span><span class="p">(</span><span class="n">x_dict</span><span class="p">,</span> <span class="n">crule</span><span class="p">)</span>
+            <span class="n">num_falsified_conditions</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">unadmittible_features</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">is_feasible</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">check_feasibility_of_falsified_conditions</span><span class="p">(</span><span class="n">delta</span><span class="p">,</span> <span class="n">unadmittible_features</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">is_feasible</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+                    <span class="k">continue</span>
+
+            <span class="k">if</span> <span class="n">constraints</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="c1">##TODO</span>
+                <span class="n">to_remove</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+                <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">crule</span><span class="o">.</span><span class="n">premises</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">variable</span> <span class="ow">in</span> <span class="n">constraints</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                        <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">operator</span> <span class="o">==</span> <span class="n">constraints</span><span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">variable</span><span class="p">][</span><span class="s1">&#39;op&#39;</span><span class="p">]:</span>
+                            <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">thr</span> <span class="o">&gt;</span> <span class="n">constraints</span><span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">variable</span><span class="p">][</span><span class="s1">&#39;thr&#39;</span><span class="p">]:</span>
+                                <span class="k">break</span>
+                                <span class="c1"># caso corretto</span>
+                <span class="c1">##TODO</span>
+
+            <span class="k">if</span> <span class="n">filter_crules</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">xc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_counterfactual</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">feature_names</span><span class="p">)</span>
+                <span class="n">bb_outcomec</span> <span class="o">=</span> <span class="n">filter_crules</span><span class="p">(</span><span class="n">xc</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">bb_outcomec</span> <span class="o">=</span> <span class="n">class_values</span><span class="p">[</span><span class="n">bb_outcomec</span><span class="p">]</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">class_name</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">else</span> <span class="n">multilabel2str</span><span class="p">(</span><span class="n">bb_outcomec</span><span class="p">,</span>
+                                                                                                           <span class="n">class_values</span><span class="p">)</span>
+                <span class="n">dt_outcomec</span> <span class="o">=</span> <span class="n">crule</span><span class="o">.</span><span class="n">cons</span>
+
+                <span class="k">if</span> <span class="n">bb_outcomec</span> <span class="o">==</span> <span class="n">dt_outcomec</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">num_falsified_conditions</span> <span class="o">&lt;</span> <span class="n">clen</span><span class="p">:</span>
+                        <span class="n">clen</span> <span class="o">=</span> <span class="n">num_falsified_conditions</span>
+                        <span class="n">crule_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">crule</span><span class="p">]</span>
+                        <span class="n">delta_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">delta</span><span class="p">]</span>
+                    <span class="k">elif</span> <span class="n">num_falsified_conditions</span> <span class="o">==</span> <span class="n">clen</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">delta</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">delta_list</span><span class="p">:</span>
+                            <span class="n">crule_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">crule</span><span class="p">)</span>
+                            <span class="n">delta_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">num_falsified_conditions</span> <span class="o">&lt;</span> <span class="n">clen</span><span class="p">:</span>
+                    <span class="n">clen</span> <span class="o">=</span> <span class="n">num_falsified_conditions</span>
+                    <span class="n">crule_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">crule</span><span class="p">]</span>
+                    <span class="n">delta_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">delta</span><span class="p">]</span>
+                    <span class="c1"># print(crule, delta)</span>
+                <span class="k">elif</span> <span class="n">num_falsified_conditions</span> <span class="o">==</span> <span class="n">clen</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">delta</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">delta_list</span><span class="p">:</span>
+                        <span class="n">crule_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">crule</span><span class="p">)</span>
+                        <span class="n">delta_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">crule_list</span><span class="p">,</span> <span class="n">delta_list</span>
+
+<div class="viewcode-block" id="DecisionTreeSurrogate.get_falsified_conditions"><a class="viewcode-back" href="../../../source/generated/lore_sa.surrogate.DecisionTreeSurrogate.html#lore_sa.surrogate.DecisionTreeSurrogate.get_falsified_conditions">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_falsified_conditions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_dict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">crule</span><span class="p">:</span> <span class="n">Rule</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Check the wrong conditions</span>
+<span class="sd">        :param x_dict:</span>
+<span class="sd">        :param crule:</span>
+<span class="sd">        :return: list of falsified premises</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">delta</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">crule</span><span class="o">.</span><span class="n">premises</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">operator</span> <span class="o">==</span> <span class="n">operator</span><span class="o">.</span><span class="n">le</span> <span class="ow">and</span> <span class="n">x_dict</span><span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">variable</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">p</span><span class="o">.</span><span class="n">value</span><span class="p">:</span>
+                    <span class="n">delta</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+                <span class="k">elif</span> <span class="n">p</span><span class="o">.</span><span class="n">operator</span> <span class="o">==</span> <span class="n">operator</span><span class="o">.</span><span class="n">gt</span> <span class="ow">and</span> <span class="n">x_dict</span><span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">variable</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">p</span><span class="o">.</span><span class="n">value</span><span class="p">:</span>
+                    <span class="n">delta</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="c1"># print(&#39;pop&#39;, p.operator2string(), &#39;xd&#39;, x_dict, &#39;xd di p &#39;, p.variable, &#39;hthrr&#39;, p.value)</span>
+
+                <span class="k">continue</span>
+        <span class="k">return</span> <span class="n">delta</span></div>
+
+<div class="viewcode-block" id="DecisionTreeSurrogate.check_feasibility_of_falsified_conditions"><a class="viewcode-back" href="../../../source/generated/lore_sa.surrogate.DecisionTreeSurrogate.html#lore_sa.surrogate.DecisionTreeSurrogate.check_feasibility_of_falsified_conditions">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">check_feasibility_of_falsified_conditions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">unadmittible_features</span><span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Check if a falsifield confition is in an unadmittible feature list</span>
+<span class="sd">        :param delta:</span>
+<span class="sd">        :param unadmittible_features:</span>
+<span class="sd">        :return: True or False</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">delta</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">variable</span> <span class="ow">in</span> <span class="n">unadmittible_features</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">unadmittible_features</span><span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">variable</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="kc">False</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">unadmittible_features</span><span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">variable</span><span class="p">]</span> <span class="o">==</span> <span class="n">p</span><span class="o">.</span><span class="n">operator</span><span class="p">:</span>
+                        <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">apply_counterfactual</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">feature_names</span><span class="p">:</span><span class="nb">list</span><span class="p">,</span> <span class="n">features_map</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">features_map_inv</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">numeric_columns</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">x_dict</span> <span class="o">=</span> <span class="n">vector2dict</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">feature_names</span><span class="p">)</span>
+        <span class="n">x_copy_dict</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">x_dict</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">delta</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">variable</span> <span class="ow">in</span> <span class="n">numeric_columns</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="nb">int</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">value</span><span class="p">):</span>
+                    <span class="n">gap</span> <span class="o">=</span> <span class="mf">1.0</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">decimals</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">value</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
+                    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">decimals</span><span class="p">):</span>
+                        <span class="k">if</span> <span class="n">e</span> <span class="o">!=</span> <span class="s1">&#39;0&#39;</span><span class="p">:</span>
+                            <span class="k">break</span>
+                    <span class="n">gap</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">10</span> <span class="o">**</span> <span class="p">(</span><span class="n">idx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+                <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">operator</span> <span class="o">==</span> <span class="n">operator</span><span class="o">.</span><span class="n">gt</span><span class="p">:</span>
+                    <span class="n">x_copy_dict</span><span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">variable</span><span class="p">]</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">value</span> <span class="o">+</span> <span class="n">gap</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">x_copy_dict</span><span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">variable</span><span class="p">]</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">value</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">fn</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">variable</span>
+                <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">operator</span> <span class="o">==</span> <span class="n">operator</span><span class="o">.</span><span class="n">gt</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">features_map</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                        <span class="n">fi</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">feature_names</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">att</span><span class="p">)</span>
+                        <span class="n">fi</span> <span class="o">=</span> <span class="n">features_map_inv</span><span class="p">[</span><span class="n">fi</span><span class="p">]</span>
+                        <span class="k">for</span> <span class="n">fv</span> <span class="ow">in</span> <span class="n">features_map</span><span class="p">[</span><span class="n">fi</span><span class="p">]:</span>
+                            <span class="n">x_copy_dict</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">=</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">fv</span><span class="p">)]</span> <span class="o">=</span> <span class="mf">0.0</span>
+                    <span class="n">x_copy_dict</span><span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">att</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">features_map</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                        <span class="n">fi</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">feature_names</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">att</span><span class="p">)</span>
+                        <span class="n">fi</span> <span class="o">=</span> <span class="n">features_map_inv</span><span class="p">[</span><span class="n">fi</span><span class="p">]</span>
+                        <span class="k">for</span> <span class="n">fv</span> <span class="ow">in</span> <span class="n">features_map</span><span class="p">[</span><span class="n">fi</span><span class="p">]:</span>
+                            <span class="n">x_copy_dict</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">=</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">fv</span><span class="p">)]</span> <span class="o">=</span> <span class="mf">1.0</span>
+                    <span class="n">x_copy_dict</span><span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">att</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+        <span class="n">x_counterfactual</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x_dict</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">fn</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">feature_names</span><span class="p">):</span>
+            <span class="n">x_counterfactual</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">x_copy_dict</span><span class="p">[</span><span class="n">fn</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">x_counterfactual</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Kode srl.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

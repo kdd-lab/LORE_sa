@@ -1,0 +1,442 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>lore_sa.dataset.tabular_dataset &mdash; LORE_sa  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+
+  
+      <script src="../../../_static/jquery.js"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+      <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+      <script src="../../../_static/doctools.js"></script>
+      <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            LORE_sa
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../get_started.html">Get started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../examples/tabular_explanations_example.html">Tabular explanation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#learning-and-explaining-german-credit-dataset">Learning and explaining German Credit Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#loading-and-preparation-of-data">Loading and preparation of data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#learning-a-random-forest-classfier">Learning a Random Forest classfier</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#explaining-the-prediction">Explaining the prediction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#shap-explainer">SHAP explainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#lore-explainer">LORE explainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#lime-explainer">LIME explainer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#learning-a-different-model">Learning a different model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#learning-a-logistic-regressor">Learning a Logistic Regressor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#id1">Explaining the prediction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#id2">LORE explainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#id3">LIME explainer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/modules.html">Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../source/modules.html#lore-sa-bbox-blackbox-abstract-class"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.bbox</span></code>: BlackBox abstract class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.bbox.AbstractBBox.html">lore_sa.bbox.AbstractBBox</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.bbox.AbstractBBox.html#lore_sa.bbox.AbstractBBox"><code class="docutils literal notranslate"><span class="pre">AbstractBBox</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../source/modules.html#lore-sa-dataset-dataset-class"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.dataset</span></code>: Dataset class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.dataset.Dataset.html">lore_sa.dataset.Dataset</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.dataset.Dataset.html#lore_sa.dataset.Dataset"><code class="docutils literal notranslate"><span class="pre">Dataset</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.dataset.TabularDataset.html">lore_sa.dataset.TabularDataset</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.dataset.TabularDataset.html#lore_sa.dataset.TabularDataset"><code class="docutils literal notranslate"><span class="pre">TabularDataset</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.dataset.utils.html">lore_sa.dataset.utils</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.dataset.utils.html#lore_sa.dataset.utils.prepare_bank_dataset"><code class="docutils literal notranslate"><span class="pre">prepare_bank_dataset()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../source/modules.html#lore-sa-neighgen-neighborhood-generator-classes"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.neighgen</span></code>: Neighborhood Generator classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.neighgen.RandomGenerator.html">lore_sa.neighgen.RandomGenerator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.neighgen.RandomGenerator.html#lore_sa.neighgen.RandomGenerator"><code class="docutils literal notranslate"><span class="pre">RandomGenerator</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.neighgen.GeneticGenerator.html">lore_sa.neighgen.GeneticGenerator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.neighgen.GeneticGenerator.html#lore_sa.neighgen.GeneticGenerator"><code class="docutils literal notranslate"><span class="pre">GeneticGenerator</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../source/modules.html#lore-sa-discretizer-discretizer-classes-and-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.discretizer</span></code>: Discretizer classes and functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.discretizer.Discretizer.html">lore_sa.discretizer.Discretizer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.discretizer.Discretizer.html#lore_sa.discretizer.Discretizer"><code class="docutils literal notranslate"><span class="pre">Discretizer</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.discretizer.RMEPDiscretizer.html">lore_sa.discretizer.RMEPDiscretizer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.discretizer.RMEPDiscretizer.html#lore_sa.discretizer.RMEPDiscretizer"><code class="docutils literal notranslate"><span class="pre">RMEPDiscretizer</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../source/modules.html#lore-sa-encoder-decoder-encoder-decoder-classes-and-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.encoder_decoder</span></code>: Encoder/Decoder classes and functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.encoder_decoder.EncDec.html">lore_sa.encoder_decoder.EncDec</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.encoder_decoder.EncDec.html#lore_sa.encoder_decoder.EncDec"><code class="docutils literal notranslate"><span class="pre">EncDec</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.encoder_decoder.ColumnTransformerEnc.html">lore_sa.encoder_decoder.ColumnTransformerEnc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.encoder_decoder.ColumnTransformerEnc.html#lore_sa.encoder_decoder.ColumnTransformerEnc"><code class="docutils literal notranslate"><span class="pre">ColumnTransformerEnc</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../source/modules.html#lore-sa-explanation-explanation-classes-and-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.explanation</span></code>: Explanation classes and functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.explanation.Explanation.html">lore_sa.explanation.Explanation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.explanation.Explanation.html#lore_sa.explanation.Explanation"><code class="docutils literal notranslate"><span class="pre">Explanation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.explanation.ExplanationEncoder.html">lore_sa.explanation.ExplanationEncoder</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.explanation.ExplanationEncoder.html#lore_sa.explanation.ExplanationEncoder"><code class="docutils literal notranslate"><span class="pre">ExplanationEncoder</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.explanation.ImageExplanation.html">lore_sa.explanation.ImageExplanation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.explanation.ImageExplanation.html#lore_sa.explanation.ImageExplanation"><code class="docutils literal notranslate"><span class="pre">ImageExplanation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.explanation.MultilabelExplanation.html">lore_sa.explanation.MultilabelExplanation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.explanation.MultilabelExplanation.html#lore_sa.explanation.MultilabelExplanation"><code class="docutils literal notranslate"><span class="pre">MultilabelExplanation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.explanation.TextExplanation.html">lore_sa.explanation.TextExplanation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.explanation.TextExplanation.html#lore_sa.explanation.TextExplanation"><code class="docutils literal notranslate"><span class="pre">TextExplanation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.explanation.json2explanation.html">lore_sa.explanation.json2explanation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.explanation.json2explanation.html#lore_sa.explanation.json2explanation"><code class="docutils literal notranslate"><span class="pre">json2explanation()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../source/modules.html#lore-sa-rule-rule-classes-and-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.rule</span></code>: Rule classes and functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.rule.Rule.html">lore_sa.rule.Rule</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.rule.Rule.html#lore_sa.rule.Rule"><code class="docutils literal notranslate"><span class="pre">Rule</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.rule.RuleEncoder.html">lore_sa.rule.RuleEncoder</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.rule.RuleEncoder.html#lore_sa.rule.RuleEncoder"><code class="docutils literal notranslate"><span class="pre">RuleEncoder</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.rule.json2rule.html">lore_sa.rule.json2rule</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.rule.json2rule.html#lore_sa.rule.json2rule"><code class="docutils literal notranslate"><span class="pre">json2rule()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.rule.json2expression.html">lore_sa.rule.json2expression</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.rule.json2expression.html#lore_sa.rule.json2expression"><code class="docutils literal notranslate"><span class="pre">json2expression()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.rule.Expression.html">lore_sa.rule.Expression</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.rule.Expression.html#lore_sa.rule.Expression"><code class="docutils literal notranslate"><span class="pre">Expression</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../source/modules.html#lore-sa-surrogate-surrogate-classes-and-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.surrogate</span></code>: Surrogate classes and functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.surrogate.Surrogate.html">lore_sa.surrogate.Surrogate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.surrogate.Surrogate.html#lore_sa.surrogate.Surrogate"><code class="docutils literal notranslate"><span class="pre">Surrogate</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.surrogate.DecisionTreeSurrogate.html">lore_sa.surrogate.DecisionTreeSurrogate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.surrogate.DecisionTreeSurrogate.html#lore_sa.surrogate.DecisionTreeSurrogate"><code class="docutils literal notranslate"><span class="pre">DecisionTreeSurrogate</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../source/modules.html#lore-sa-util-util-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.util</span></code>: Util functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.util.html">lore_sa.util</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.util.html#lore_sa.util.best_fit_distribution"><code class="docutils literal notranslate"><span class="pre">best_fit_distribution()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.util.html#lore_sa.util.sigmoid"><code class="docutils literal notranslate"><span class="pre">sigmoid()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.util.html#lore_sa.util.vector2dict"><code class="docutils literal notranslate"><span class="pre">vector2dict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">LORE_sa</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">lore_sa.dataset.tabular_dataset</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for lore_sa.dataset.tabular_dataset</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span><span class="w"> </span><span class="nn">..dataset</span><span class="w"> </span><span class="kn">import</span> <span class="n">Dataset</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">..logger</span><span class="w"> </span><span class="kn">import</span> <span class="n">logger</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="kn">import</span> <span class="n">DataFrame</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TabularDataset&quot;</span><span class="p">,</span> <span class="s2">&quot;Dataset&quot;</span><span class="p">]</span>
+
+
+<div class="viewcode-block" id="TabularDataset"><a class="viewcode-back" href="../../../source/generated/lore_sa.dataset.TabularDataset.html#lore_sa.dataset.TabularDataset">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TabularDataset</span><span class="p">(</span><span class="n">Dataset</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    It provides an interface to handle datasets, including some essential information on the structure and</span>
+<span class="sd">    semantic of the dataset.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        df (pandas.DataFrame): dataframe containing the whole dataset</span>
+<span class="sd">        descriptor (dict): it contains the essential informationregarding each feature. Format:</span>
+
+<span class="sd">         &gt;&gt;&gt;   {&#39;numeric&#39;: {&#39;feature name&#39; :</span>
+<span class="sd">         &gt;&gt;&gt;                   {</span>
+<span class="sd">         &gt;&gt;&gt;                       &#39;index&#39; : &lt;index of feature column&gt;,</span>
+<span class="sd">         &gt;&gt;&gt;                       &#39;min&#39; : &lt;min value&gt;,</span>
+<span class="sd">         &gt;&gt;&gt;                       &#39;max&#39; : &lt;max value&gt;,</span>
+<span class="sd">         &gt;&gt;&gt;                       &#39;mean&#39;: &lt;mean value&gt;,</span>
+<span class="sd">         &gt;&gt;&gt;                       &#39;std&#39;: &lt;standard deviation&gt;,</span>
+<span class="sd">         &gt;&gt;&gt;                       &#39;median&#39;: &lt;median value&gt;,</span>
+<span class="sd">         &gt;&gt;&gt;                       &#39;q1&#39;: &lt;first quartile of the distribution&gt;,</span>
+<span class="sd">         &gt;&gt;&gt;                       &#39;q3&#39;: &lt;third quartile of the distribution,</span>
+<span class="sd">         &gt;&gt;&gt;                   },</span>
+<span class="sd">         &gt;&gt;&gt;               ...,</span>
+<span class="sd">         &gt;&gt;&gt;               ...,</span>
+<span class="sd">         &gt;&gt;&gt;               },</span>
+<span class="sd">         &gt;&gt;&gt;   &#39;categorical: {&#39;feature name&#39;:</span>
+<span class="sd">         &gt;&gt;&gt;                       {</span>
+<span class="sd">         &gt;&gt;&gt;                           &#39;index&#39; : &lt;index of feature column&gt;,</span>
+<span class="sd">         &gt;&gt;&gt;                           &#39;distinct_values&#39; : &lt;distinct categorical values&gt;,</span>
+<span class="sd">         &gt;&gt;&gt;                           &#39;value_counts&#39; : {&#39;distinct value&#39; : &lt;elements count&gt;,</span>
+<span class="sd">         &gt;&gt;&gt;                                           ... }</span>
+<span class="sd">         &gt;&gt;&gt;                       }</span>
+<span class="sd">         &gt;&gt;&gt;                   },</span>
+<span class="sd">         &gt;&gt;&gt;   &#39;ordinal: {&#39;feature name&#39;:</span>
+<span class="sd">         &gt;&gt;&gt;                       {</span>
+<span class="sd">         &gt;&gt;&gt;                           &#39;index&#39; : &lt;index of feature column&gt;,</span>
+<span class="sd">         &gt;&gt;&gt;                           &#39;distinct_values&#39; : &lt;distinct categorical values&gt;,</span>
+<span class="sd">         &gt;&gt;&gt;                           &#39;value_counts&#39; : {&#39;distinct value&#39; : &lt;elements count&gt;,</span>
+<span class="sd">         &gt;&gt;&gt;                                           ... }</span>
+<span class="sd">         &gt;&gt;&gt;                       }</span>
+<span class="sd">         &gt;&gt;&gt;                   },</span>
+<span class="sd">         &gt;&gt;&gt;                   ...</span>
+<span class="sd">         &gt;&gt;&gt;                   ...</span>
+<span class="sd">         &gt;&gt;&gt;                   ...</span>
+<span class="sd">         &gt;&gt;&gt;   }</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="TabularDataset.__init__"><a class="viewcode-back" href="../../../source/generated/lore_sa.dataset.TabularDataset.html#lore_sa.dataset.TabularDataset.__init__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">DataFrame</span><span class="p">,</span> <span class="n">class_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">categorial_columns</span><span class="p">:</span><span class="nb">list</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">ordinal_columns</span><span class="p">:</span><span class="nb">list</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">class_name</span> <span class="o">=</span> <span class="n">class_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="n">data</span>
+
+        <span class="c1"># target columns forced to be the last column of the dataset</span>
+        <span class="k">if</span> <span class="n">class_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="n">class_name</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">class_name</span><span class="p">]]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">descriptor</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;numeric&#39;</span><span class="p">:</span> <span class="p">{},</span> <span class="s1">&#39;categorical&#39;</span><span class="p">:</span> <span class="p">{},</span> <span class="s1">&#39;ordinal&#39;</span><span class="p">:</span> <span class="p">{}}</span>
+
+        <span class="c1"># creation of a default version of descriptor</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update_descriptor</span><span class="p">(</span><span class="n">categorial_columns</span><span class="o">=</span><span class="n">categorial_columns</span><span class="p">,</span> <span class="n">ordinal_columns</span><span class="o">=</span><span class="n">ordinal_columns</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TabularDataset.update_descriptor"><a class="viewcode-back" href="../../../source/generated/lore_sa.dataset.TabularDataset.html#lore_sa.dataset.TabularDataset.update_descriptor">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">update_descriptor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">categorial_columns</span><span class="p">:</span><span class="nb">list</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">ordinal_columns</span><span class="p">:</span><span class="nb">list</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        it creates the dataset descriptor dictionary</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">descriptor</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;numeric&#39;</span><span class="p">:</span> <span class="p">{},</span> <span class="s1">&#39;categorical&#39;</span><span class="p">:</span> <span class="p">{},</span> <span class="s1">&#39;ordinal&#39;</span><span class="p">:</span> <span class="p">{}}</span>
+        <span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+            <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">feature</span><span class="p">)</span>
+
+            <span class="c1"># categorical feature?</span>
+            <span class="k">if</span> <span class="n">categorial_columns</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">categorial_columns</span><span class="p">:</span>
+                <span class="n">desc</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;index&#39;</span><span class="p">:</span> <span class="n">index</span><span class="p">,</span>
+                        <span class="s1">&#39;distinct_values&#39;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()),</span>
+                        <span class="s1">&#39;count&#39;</span><span class="p">:</span> <span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">==</span> <span class="n">x</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())}}</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">descriptor</span><span class="p">[</span><span class="s1">&#39;categorical&#39;</span><span class="p">][</span><span class="n">feature</span><span class="p">]</span> <span class="o">=</span> <span class="n">desc</span>
+            <span class="k">elif</span> <span class="n">ordinal_columns</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">ordinal_columns</span><span class="p">:</span>
+                <span class="n">desc</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;index&#39;</span><span class="p">:</span> <span class="n">index</span><span class="p">,</span>
+                        <span class="s1">&#39;distinct_values&#39;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()),</span>
+                        <span class="s1">&#39;count&#39;</span><span class="p">:</span> <span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">==</span> <span class="n">x</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())}}</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">descriptor</span><span class="p">[</span><span class="s1">&#39;ordinal&#39;</span><span class="p">][</span><span class="n">feature</span><span class="p">]</span> <span class="o">=</span> <span class="n">desc</span>
+            <span class="k">elif</span> <span class="n">feature</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">():</span>
+                <span class="c1"># numerical</span>
+                <span class="n">desc</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;index&#39;</span><span class="p">:</span> <span class="n">index</span><span class="p">,</span>
+                        <span class="s1">&#39;min&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span>
+                        <span class="s1">&#39;max&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span>
+                        <span class="s1">&#39;mean&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+                        <span class="s1">&#39;std&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span>
+                        <span class="s1">&#39;median&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span>
+                        <span class="s1">&#39;q1&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.25</span><span class="p">),</span>
+                        <span class="s1">&#39;q3&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.75</span><span class="p">),</span>
+                        <span class="p">}</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">descriptor</span><span class="p">[</span><span class="s1">&#39;numeric&#39;</span><span class="p">][</span><span class="n">feature</span><span class="p">]</span> <span class="o">=</span> <span class="n">desc</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">desc</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;index&#39;</span><span class="p">:</span> <span class="n">index</span><span class="p">,</span>
+                        <span class="s1">&#39;distinct_values&#39;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()),</span>
+                        <span class="s1">&#39;count&#39;</span><span class="p">:</span> <span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">==</span> <span class="n">x</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())}}</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">descriptor</span><span class="p">[</span><span class="s1">&#39;categorical&#39;</span><span class="p">][</span><span class="n">feature</span><span class="p">]</span> <span class="o">=</span> <span class="n">desc</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">descriptor</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">set_target_label</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">descriptor</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TabularDataset.set_target_label"><a class="viewcode-back" href="../../../source/generated/lore_sa.dataset.TabularDataset.html#lore_sa.dataset.TabularDataset.set_target_label">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">set_target_label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">descriptor</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the target column into the dataset descriptor</span>
+
+<span class="sd">        :param descriptor:</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="nb">type</span> <span class="ow">in</span> <span class="n">descriptor</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">descriptor</span><span class="p">[</span><span class="nb">type</span><span class="p">]:</span>
+                <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">class_name</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="nb">type</span> <span class="o">==</span> <span class="s1">&#39;numeric&#39;</span><span class="p">:</span>
+                        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;ERR: target column cannot be continuous. Please, set a categorical column as target.&quot;</span>
+                                        <span class="s2">&quot;You can force the content of target column by discretize it.&quot;</span><span class="p">)</span>
+                    <span class="n">descriptor</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">descriptor</span><span class="p">[</span><span class="nb">type</span><span class="p">][</span><span class="n">k</span><span class="p">]}</span>
+                    <span class="n">descriptor</span><span class="p">[</span><span class="nb">type</span><span class="p">]</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+                    <span class="k">return</span> <span class="n">descriptor</span>
+
+        <span class="k">return</span> <span class="n">descriptor</span></div>
+
+<div class="viewcode-block" id="TabularDataset.from_csv"><a class="viewcode-back" href="../../../source/generated/lore_sa.dataset.TabularDataset.html#lore_sa.dataset.TabularDataset.from_csv">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_csv</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">class_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">dropna</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Read a comma-separated values (csv) file into Dataset object.</span>
+<span class="sd">        :param [str] filename:</span>
+<span class="sd">        :param class_name: optional</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">na_values</span><span class="o">=</span><span class="s1">&#39;?&#39;</span><span class="p">,</span> <span class="n">keep_default_na</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">dropna</span><span class="p">:</span>
+            <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="c1"># check if the class_name correspond to a categorical column</span>
+        <span class="k">if</span> <span class="n">class_name</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">])</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+            <span class="c1"># force the column to be categorical</span>
+            <span class="n">df</span><span class="p">[</span><span class="n">class_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">class_name</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+
+        <span class="n">dataset_obj</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">class_name</span><span class="o">=</span><span class="n">class_name</span><span class="p">)</span>
+        <span class="n">dataset_obj</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">filename</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{0}</span><span class="s1"> file imported&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">dataset_obj</span></div>
+
+<div class="viewcode-block" id="TabularDataset.from_dict"><a class="viewcode-back" href="../../../source/generated/lore_sa.dataset.TabularDataset.html#lore_sa.dataset.TabularDataset.from_dict">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_dict</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">class_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        From dicts of Series, arrays, or dicts.</span>
+<span class="sd">        :param [dict] data:</span>
+<span class="sd">        :param class_name: optional</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">class_name</span><span class="o">=</span><span class="n">class_name</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TabularDataset.set_class_name"><a class="viewcode-back" href="../../../source/generated/lore_sa.dataset.TabularDataset.html#lore_sa.dataset.TabularDataset.set_class_name">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">set_class_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">class_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the class name. Only the column name string</span>
+<span class="sd">        :param [str] class_name:</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">class_name</span> <span class="o">=</span> <span class="n">class_name</span></div>
+
+<div class="viewcode-block" id="TabularDataset.get_class_values"><a class="viewcode-back" href="../../../source/generated/lore_sa.dataset.TabularDataset.html#lore_sa.dataset.TabularDataset.get_class_values">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_class_values</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Provides the class_name</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">class_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;ERR: class_name is None. Set class_name with set_class_name(&#39;&lt;column name&gt;&#39;)&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">class_name</span><span class="p">]</span><span class="o">.</span><span class="n">values</span></div>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_numeric_columns</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">numeric_columns</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">_get_numeric_data</span><span class="p">()</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">numeric_columns</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_features_names</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+
+<div class="viewcode-block" id="TabularDataset.get_feature_name"><a class="viewcode-back" href="../../../source/generated/lore_sa.dataset.TabularDataset.html#lore_sa.dataset.TabularDataset.get_feature_name">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_feature_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">category</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">descriptor</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">descriptor</span><span class="p">[</span><span class="n">category</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">descriptor</span><span class="p">[</span><span class="n">category</span><span class="p">][</span><span class="n">name</span><span class="p">][</span><span class="s1">&#39;index&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">index</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="n">name</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Kode srl.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

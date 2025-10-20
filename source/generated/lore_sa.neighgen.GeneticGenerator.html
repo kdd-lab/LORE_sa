@@ -1,0 +1,470 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>lore_sa.neighgen.GeneticGenerator &mdash; LORE_sa  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
+
+  
+      <script src="../../_static/jquery.js"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+      <script src="../../_static/doctools.js"></script>
+      <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="lore_sa.discretizer.Discretizer" href="lore_sa.discretizer.Discretizer.html" />
+    <link rel="prev" title="lore_sa.neighgen.RandomGenerator" href="lore_sa.neighgen.RandomGenerator.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            LORE_sa
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../get_started.html">Get started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/tabular_explanations_example.html">Tabular explanation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#learning-and-explaining-german-credit-dataset">Learning and explaining German Credit Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#loading-and-preparation-of-data">Loading and preparation of data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#learning-a-random-forest-classfier">Learning a Random Forest classfier</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#explaining-the-prediction">Explaining the prediction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#shap-explainer">SHAP explainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#lore-explainer">LORE explainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#lime-explainer">LIME explainer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#learning-a-different-model">Learning a different model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#learning-a-logistic-regressor">Learning a Logistic Regressor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#id1">Explaining the prediction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#id2">LORE explainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#id3">LIME explainer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../modules.html">Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#lore-sa-bbox-blackbox-abstract-class"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.bbox</span></code>: BlackBox abstract class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.bbox.AbstractBBox.html">lore_sa.bbox.AbstractBBox</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.bbox.AbstractBBox.html#lore_sa.bbox.AbstractBBox"><code class="docutils literal notranslate"><span class="pre">AbstractBBox</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#lore-sa-dataset-dataset-class"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.dataset</span></code>: Dataset class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.dataset.Dataset.html">lore_sa.dataset.Dataset</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.dataset.Dataset.html#lore_sa.dataset.Dataset"><code class="docutils literal notranslate"><span class="pre">Dataset</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.dataset.TabularDataset.html">lore_sa.dataset.TabularDataset</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.dataset.TabularDataset.html#lore_sa.dataset.TabularDataset"><code class="docutils literal notranslate"><span class="pre">TabularDataset</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.dataset.utils.html">lore_sa.dataset.utils</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.dataset.utils.html#lore_sa.dataset.utils.prepare_bank_dataset"><code class="docutils literal notranslate"><span class="pre">prepare_bank_dataset()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../modules.html#lore-sa-neighgen-neighborhood-generator-classes"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.neighgen</span></code>: Neighborhood Generator classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.neighgen.RandomGenerator.html">lore_sa.neighgen.RandomGenerator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.neighgen.RandomGenerator.html#lore_sa.neighgen.RandomGenerator"><code class="docutils literal notranslate"><span class="pre">RandomGenerator</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">lore_sa.neighgen.GeneticGenerator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lore_sa.neighgen.GeneticGenerator"><code class="docutils literal notranslate"><span class="pre">GeneticGenerator</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#lore-sa-discretizer-discretizer-classes-and-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.discretizer</span></code>: Discretizer classes and functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.discretizer.Discretizer.html">lore_sa.discretizer.Discretizer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.discretizer.Discretizer.html#lore_sa.discretizer.Discretizer"><code class="docutils literal notranslate"><span class="pre">Discretizer</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.discretizer.RMEPDiscretizer.html">lore_sa.discretizer.RMEPDiscretizer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.discretizer.RMEPDiscretizer.html#lore_sa.discretizer.RMEPDiscretizer"><code class="docutils literal notranslate"><span class="pre">RMEPDiscretizer</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#lore-sa-encoder-decoder-encoder-decoder-classes-and-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.encoder_decoder</span></code>: Encoder/Decoder classes and functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.encoder_decoder.EncDec.html">lore_sa.encoder_decoder.EncDec</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.encoder_decoder.EncDec.html#lore_sa.encoder_decoder.EncDec"><code class="docutils literal notranslate"><span class="pre">EncDec</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.encoder_decoder.ColumnTransformerEnc.html">lore_sa.encoder_decoder.ColumnTransformerEnc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.encoder_decoder.ColumnTransformerEnc.html#lore_sa.encoder_decoder.ColumnTransformerEnc"><code class="docutils literal notranslate"><span class="pre">ColumnTransformerEnc</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#lore-sa-explanation-explanation-classes-and-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.explanation</span></code>: Explanation classes and functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.explanation.Explanation.html">lore_sa.explanation.Explanation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.explanation.Explanation.html#lore_sa.explanation.Explanation"><code class="docutils literal notranslate"><span class="pre">Explanation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.explanation.ExplanationEncoder.html">lore_sa.explanation.ExplanationEncoder</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.explanation.ExplanationEncoder.html#lore_sa.explanation.ExplanationEncoder"><code class="docutils literal notranslate"><span class="pre">ExplanationEncoder</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.explanation.ImageExplanation.html">lore_sa.explanation.ImageExplanation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.explanation.ImageExplanation.html#lore_sa.explanation.ImageExplanation"><code class="docutils literal notranslate"><span class="pre">ImageExplanation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.explanation.MultilabelExplanation.html">lore_sa.explanation.MultilabelExplanation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.explanation.MultilabelExplanation.html#lore_sa.explanation.MultilabelExplanation"><code class="docutils literal notranslate"><span class="pre">MultilabelExplanation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.explanation.TextExplanation.html">lore_sa.explanation.TextExplanation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.explanation.TextExplanation.html#lore_sa.explanation.TextExplanation"><code class="docutils literal notranslate"><span class="pre">TextExplanation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.explanation.json2explanation.html">lore_sa.explanation.json2explanation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.explanation.json2explanation.html#lore_sa.explanation.json2explanation"><code class="docutils literal notranslate"><span class="pre">json2explanation()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#lore-sa-rule-rule-classes-and-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.rule</span></code>: Rule classes and functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.rule.Rule.html">lore_sa.rule.Rule</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.rule.Rule.html#lore_sa.rule.Rule"><code class="docutils literal notranslate"><span class="pre">Rule</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.rule.RuleEncoder.html">lore_sa.rule.RuleEncoder</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.rule.RuleEncoder.html#lore_sa.rule.RuleEncoder"><code class="docutils literal notranslate"><span class="pre">RuleEncoder</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.rule.json2rule.html">lore_sa.rule.json2rule</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.rule.json2rule.html#lore_sa.rule.json2rule"><code class="docutils literal notranslate"><span class="pre">json2rule()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.rule.json2expression.html">lore_sa.rule.json2expression</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.rule.json2expression.html#lore_sa.rule.json2expression"><code class="docutils literal notranslate"><span class="pre">json2expression()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.rule.Expression.html">lore_sa.rule.Expression</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.rule.Expression.html#lore_sa.rule.Expression"><code class="docutils literal notranslate"><span class="pre">Expression</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#lore-sa-surrogate-surrogate-classes-and-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.surrogate</span></code>: Surrogate classes and functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.surrogate.Surrogate.html">lore_sa.surrogate.Surrogate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.surrogate.Surrogate.html#lore_sa.surrogate.Surrogate"><code class="docutils literal notranslate"><span class="pre">Surrogate</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.surrogate.DecisionTreeSurrogate.html">lore_sa.surrogate.DecisionTreeSurrogate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.surrogate.DecisionTreeSurrogate.html#lore_sa.surrogate.DecisionTreeSurrogate"><code class="docutils literal notranslate"><span class="pre">DecisionTreeSurrogate</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#lore-sa-util-util-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.util</span></code>: Util functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.util.html">lore_sa.util</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.util.html#lore_sa.util.best_fit_distribution"><code class="docutils literal notranslate"><span class="pre">best_fit_distribution()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.util.html#lore_sa.util.sigmoid"><code class="docutils literal notranslate"><span class="pre">sigmoid()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.util.html#lore_sa.util.vector2dict"><code class="docutils literal notranslate"><span class="pre">vector2dict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">LORE_sa</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../modules.html">Modules</a></li>
+      <li class="breadcrumb-item active">lore_sa.neighgen.GeneticGenerator</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/source/generated/lore_sa.neighgen.GeneticGenerator.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="lore-sa-neighgen-geneticgenerator">
+<h1>lore_sa.neighgen.GeneticGenerator<a class="headerlink" href="#lore-sa-neighgen-geneticgenerator" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="lore_sa.neighgen.GeneticGenerator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lore_sa.neighgen.</span></span><span class="sig-name descname"><span class="pre">GeneticGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bbox=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoder=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ocr=0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha1=0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha2=0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric=&lt;function</span> <span class="pre">neuclidean&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ngen=30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mutpb=0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cxpb=0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tournsize=3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">halloffame_ratio=0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed=None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/neighgen/genetic.html#GeneticGenerator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.neighgen.GeneticGenerator" title="Permalink to this definition"></a></dt>
+<dd><p>Random Generator creates neighbor instances by generating random values starting from an input instance and
+pruning the generation around a fitness function based on proximity to the instance to explain</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="lore_sa.neighgen.GeneticGenerator.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bbox=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoder=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ocr=0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha1=0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha2=0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric=&lt;function</span> <span class="pre">neuclidean&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ngen=30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mutpb=0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cxpb=0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tournsize=3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">halloffame_ratio=0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed=None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/neighgen/genetic.html#GeneticGenerator.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.neighgen.GeneticGenerator.__init__" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bbox</strong> – the Black Box model to explain</p></li>
+<li><p><strong>dataset</strong> – the dataset with the descriptor of the original dataset</p></li>
+<li><p><strong>encoder</strong> – an encoder to transfrom the data from/to the black box model</p></li>
+<li><p><strong>ocr</strong> – acronym for One Class Ratio, it is the ratio of the number of instances of the minority class</p></li>
+<li><p><strong>alpha1</strong> – the weight of the similarity of the features from the given instance. The sum of alpha1 and alpha2 must be 1</p></li>
+<li><p><strong>alpha2</strong> – the weight of the similiarity of the target class from the given instance. The sum of alpha1 and alpha2 must be 1</p></li>
+<li><p><strong>metric</strong> – the distance metric to use to compute the distance between instances</p></li>
+<li><p><strong>ngen</strong> – the number of generations to run</p></li>
+<li><p><strong>mutpb</strong> – probability of mutation of a specific feature</p></li>
+<li><p><strong>cxpb</strong> – </p></li>
+<li><p><strong>tournsize</strong> – </p></li>
+<li><p><strong>halloffame_ratio</strong> – </p></li>
+<li><p><strong>random_seed</strong> – initial seed for the random number generator</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lore_sa.neighgen.GeneticGenerator.__init__" title="lore_sa.neighgen.GeneticGenerator.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([bbox, dataset, encoder, ocr, ...])</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param bbox<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the Black Box model to explain</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_halloffame</span></code>(population, halloffame)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">balance_neigh</span></code>(z, Z, num_samples)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lore_sa.neighgen.GeneticGenerator.check_generated" title="lore_sa.neighgen.GeneticGenerator.check_generated"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_generated</span></code></a>([filter_function, check_fuction])</p></td>
+<td><p>It contains the logic to check the requirements for generated data</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">clone</span></code>(x)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lore_sa.neighgen.GeneticGenerator.eaSimple" title="lore_sa.neighgen.GeneticGenerator.eaSimple"><code class="xref py py-obj docutils literal notranslate"><span class="pre">eaSimple</span></code></a>(toolbox, cxpb, mutpb, ngen[, ...])</p></td>
+<td><p>This algorithm reproduce the simplest evolutionary algorithm as presented in chapter 7 of <a class="reference internal" href="#back2000" id="id1"><span>[Back2000]</span></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code>(toolbox, population_size)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">fitness_equal</span></code>(z, z1)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">fitness_notequal</span></code>(z, z1)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lore_sa.neighgen.GeneticGenerator.generate" title="lore_sa.neighgen.GeneticGenerator.generate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate</span></code></a>(z, num_instances, descriptor, encoder)</p></td>
+<td><p>The generation is based on the strategy of generating a number of instances for the same class as the input instance and a number of instances for a different class.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_synthetic_instance</span></code>([from_z, mutpb])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lore_sa.neighgen.GeneticGenerator.mate" title="lore_sa.neighgen.GeneticGenerator.mate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mate</span></code></a>(ind1, ind2)</p></td>
+<td><p>Executes a two-point crossover on the input <span class="xref std std-term">sequence</span> individuals.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutate</span></code>(toolbox, x)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lore_sa.neighgen.GeneticGenerator.population_fitness_equal" title="lore_sa.neighgen.GeneticGenerator.population_fitness_equal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">population_fitness_equal</span></code></a>(z)</p></td>
+<td><p>This fitness function evaluate the feature_similarity and the target_similarity of a population against a given instance z.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">population_fitness_notequal</span></code>(z)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">random_init</span></code>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lore_sa.neighgen.GeneticGenerator.record_init" title="lore_sa.neighgen.GeneticGenerator.record_init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">record_init</span></code></a>(x)</p></td>
+<td><p>This function is used to generate a random instance to start the evolutionary algorithm.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setup_toolbox</span></code>(x, evaluate, population_size)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setup_toolbox_noteq</span></code>(x, x1, evaluate, ...)</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="lore_sa.neighgen.GeneticGenerator.check_generated">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">check_generated</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filter_function</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_fuction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lore_sa.neighgen.GeneticGenerator.check_generated" title="Permalink to this definition"></a></dt>
+<dd><p>It contains the logic to check the requirements for generated data</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lore_sa.neighgen.GeneticGenerator.eaSimple">
+<span class="sig-name descname"><span class="pre">eaSimple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toolbox</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cxpb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mutpb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ngen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stats</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">halloffame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/neighgen/genetic.html#GeneticGenerator.eaSimple"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.neighgen.GeneticGenerator.eaSimple" title="Permalink to this definition"></a></dt>
+<dd><p>This algorithm reproduce the simplest evolutionary algorithm as
+presented in chapter 7 of <a class="reference internal" href="#back2000" id="id2"><span>[Back2000]</span></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>population</strong> – A list of individuals.</p></li>
+<li><p><strong>toolbox</strong> – A <code class="xref py py-class docutils literal notranslate"><span class="pre">Toolbox</span></code> that contains the evolution
+operators.</p></li>
+<li><p><strong>cxpb</strong> – The probability of mating two individuals.</p></li>
+<li><p><strong>mutpb</strong> – The probability of mutating an individual.</p></li>
+<li><p><strong>ngen</strong> – The number of generation.</p></li>
+<li><p><strong>stats</strong> – A <code class="xref py py-class docutils literal notranslate"><span class="pre">Statistics</span></code> object that is updated
+inplace, optional.</p></li>
+<li><p><strong>halloffame</strong> – A <code class="xref py py-class docutils literal notranslate"><span class="pre">HallOfFame</span></code> object that will
+contain the best individuals, optional.</p></li>
+<li><p><strong>verbose</strong> – Whether or not to log the statistics.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The final population</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A class:<cite>~deap.tools.Logbook</cite> with the statistics of the
+evolution</p>
+</dd>
+</dl>
+<p>This implementation is an adaptation of the original algorithm implemented in the DEAP library.</p>
+<div role="list" class="citation-list">
+<div class="citation" id="back2000" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Back2000<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>)</span>
+<p>Back, Fogel and Michalewicz, “Evolutionary Computation 1 :
+Basic Algorithms and Operators”, 2000.</p>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lore_sa.neighgen.GeneticGenerator.generate">
+<span class="sig-name descname"><span class="pre">generate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_instances</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">descriptor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoder</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/neighgen/genetic.html#GeneticGenerator.generate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.neighgen.GeneticGenerator.generate" title="Permalink to this definition"></a></dt>
+<dd><p>The generation is based on the strategy of generating a number of instances for the same class
+as the input instance and a number of instances for a different class.
+The generation of the instances for each subgroup is done through a genetic algorithm based on
+two fitness fuctions: one for the same class and one for the different class.
+:param z: the input instance, from which the generation starts
+:param num_instances: how many elements to generate
+:param descriptor: the descriptor of the dataset. This provides the metadata of each feature to guide the generation
+:param encoder: the encoder to transform the data from/to the black box model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>a new set of instances generated from the input instance. The first element is the input instance</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lore_sa.neighgen.GeneticGenerator.mate">
+<span class="sig-name descname"><span class="pre">mate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ind1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ind2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lore_sa.neighgen.GeneticGenerator.mate" title="Permalink to this definition"></a></dt>
+<dd><p>Executes a two-point crossover on the input <span class="xref std std-term">sequence</span>
+individuals. The two individuals are modified in place and both keep
+their original length.
+This implementation uses the original implementation of the DEAP library. It adds a special case for the
+one-hot encoding, where the crossover is done taking into account the intervals of values imposed by
+the one-hot encoding.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ind1</strong> – The first individual participating in the crossover.</p></li>
+<li><p><strong>ind2</strong> – The second individual participating in the crossover.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple of two individuals.</p>
+</dd>
+</dl>
+<p>This function uses the <code class="xref py py-func docutils literal notranslate"><span class="pre">randint()</span></code> function from the Python
+base <code class="xref py py-mod docutils literal notranslate"><span class="pre">random</span></code> module.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lore_sa.neighgen.GeneticGenerator.population_fitness_equal">
+<span class="sig-name descname"><span class="pre">population_fitness_equal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/neighgen/genetic.html#GeneticGenerator.population_fitness_equal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.neighgen.GeneticGenerator.population_fitness_equal" title="Permalink to this definition"></a></dt>
+<dd><p>This fitness function evaluate the feature_similarity and the target_similarity of a population against a given
+instance z. The two similarities are computed using optimezed functions of <cite>numpy</cite> and <cite>scipy</cite> libraries.
+This improves the performance of the algorithm.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lore_sa.neighgen.GeneticGenerator.record_init">
+<span class="sig-name descname"><span class="pre">record_init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lore_sa.neighgen.GeneticGenerator.record_init" title="Permalink to this definition"></a></dt>
+<dd><p>This function is used to generate a random instance to start the evolutionary algorithm.
+In this case we repeat the input instance x for all the initial population</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>a (not so) random instance</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="lore_sa.neighgen.RandomGenerator.html" class="btn btn-neutral float-left" title="lore_sa.neighgen.RandomGenerator" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="lore_sa.discretizer.Discretizer.html" class="btn btn-neutral float-right" title="lore_sa.discretizer.Discretizer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Kode srl.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
