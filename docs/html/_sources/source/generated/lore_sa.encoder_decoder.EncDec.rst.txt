@@ -17,7 +17,9 @@
       ~EncDec.decode
       ~EncDec.decode_target_class
       ~EncDec.encode
+      ~EncDec.encode_target_class
       ~EncDec.get_encoded_features
+      ~EncDec.get_encoded_intervals
    
    
 

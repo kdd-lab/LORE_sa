@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>lore_sa.dataset.Dataset &mdash; LORE_sa  documentation</title>
+  <title>lore_sa.encoder_decoder.ColumnTransformerEnc &mdash; LORE_sa  documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -20,8 +20,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="lore_sa.dataset.TabularDataset" href="lore_sa.dataset.TabularDataset.html" />
-    <link rel="prev" title="lore_sa.bbox.AbstractBBox" href="lore_sa.bbox.AbstractBBox.html" />
+    <link rel="next" title="lore_sa.explanation.Explanation" href="lore_sa.explanation.Explanation.html" />
+    <link rel="prev" title="lore_sa.encoder_decoder.EncDec" href="lore_sa.encoder_decoder.EncDec.html" />
     <link href="../../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -160,9 +160,9 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="../modules.html#lore-sa-dataset-dataset-class"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.dataset</span></code>: Dataset class</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">lore_sa.dataset.Dataset</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#lore_sa.dataset.Dataset"><code class="docutils literal notranslate"><span class="pre">Dataset</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#lore-sa-dataset-dataset-class"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.dataset</span></code>: Dataset class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lore_sa.dataset.Dataset.html">lore_sa.dataset.Dataset</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lore_sa.dataset.Dataset.html#lore_sa.dataset.Dataset"><code class="docutils literal notranslate"><span class="pre">Dataset</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="lore_sa.dataset.TabularDataset.html">lore_sa.dataset.TabularDataset</a><ul>
@@ -197,13 +197,13 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../modules.html#lore-sa-encoder-decoder-encoder-decoder-classes-and-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.encoder_decoder</span></code>: Encoder/Decoder classes and functions</a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="../modules.html#lore-sa-encoder-decoder-encoder-decoder-classes-and-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.encoder_decoder</span></code>: Encoder/Decoder classes and functions</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="lore_sa.encoder_decoder.EncDec.html">lore_sa.encoder_decoder.EncDec</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="lore_sa.encoder_decoder.EncDec.html#lore_sa.encoder_decoder.EncDec"><code class="docutils literal notranslate"><span class="pre">EncDec</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="lore_sa.encoder_decoder.ColumnTransformerEnc.html">lore_sa.encoder_decoder.ColumnTransformerEnc</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="lore_sa.encoder_decoder.ColumnTransformerEnc.html#lore_sa.encoder_decoder.ColumnTransformerEnc"><code class="docutils literal notranslate"><span class="pre">ColumnTransformerEnc</span></code></a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">lore_sa.encoder_decoder.ColumnTransformerEnc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lore_sa.encoder_decoder.ColumnTransformerEnc"><code class="docutils literal notranslate"><span class="pre">ColumnTransformerEnc</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -297,9 +297,9 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../modules.html">Modules</a></li>
-      <li class="breadcrumb-item active">lore_sa.dataset.Dataset</li>
+      <li class="breadcrumb-item active">lore_sa.encoder_decoder.ColumnTransformerEnc</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/source/generated/lore_sa.dataset.Dataset.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/source/generated/lore_sa.encoder_decoder.ColumnTransformerEnc.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -307,96 +307,147 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="lore-sa-dataset-dataset">
-<h1>lore_sa.dataset.Dataset<a class="headerlink" href="#lore-sa-dataset-dataset" title="Permalink to this heading"></a></h1>
+  <section id="lore-sa-encoder-decoder-columntransformerenc">
+<h1>lore_sa.encoder_decoder.ColumnTransformerEnc<a class="headerlink" href="#lore-sa-encoder-decoder-columntransformerenc" title="Permalink to this heading"></a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="lore_sa.dataset.Dataset">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lore_sa.dataset.</span></span><span class="sig-name descname"><span class="pre">Dataset</span></span><a class="reference internal" href="../../_modules/lore_sa/dataset/dataset.html#Dataset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.dataset.Dataset" title="Permalink to this definition"></a></dt>
-<dd><p>Generic class to handle datasets</p>
+<dt class="sig sig-object py" id="lore_sa.encoder_decoder.ColumnTransformerEnc">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lore_sa.encoder_decoder.</span></span><span class="sig-name descname"><span class="pre">ColumnTransformerEnc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">descriptor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/encoder_decoder/tabular_enc.html#ColumnTransformerEnc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.encoder_decoder.ColumnTransformerEnc" title="Permalink to this definition"></a></dt>
+<dd><p>It provides an interface to access One Hot enconding (<a class="reference external" href="https://en.wikipedia.org/wiki/One-hot">https://en.wikipedia.org/wiki/One-hot</a>) functions.
+It relies on OneHotEncoder class from sklearn</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="lore_sa.dataset.Dataset.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lore_sa.dataset.Dataset.__init__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="lore_sa.encoder_decoder.ColumnTransformerEnc.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">descriptor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/encoder_decoder/tabular_enc.html#ColumnTransformerEnc.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.encoder_decoder.ColumnTransformerEnc.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Initialize the encoder/decoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dataset_descriptor</strong> (<em>dict</em>) – Dictionary containing feature information including
+‘numeric’, ‘categorical’, and ‘ordinal’ feature descriptors</p>
+</dd>
+</dl>
+</dd></dl>
 
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lore_sa.dataset.Dataset.__init__" title="lore_sa.dataset.Dataset.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>()</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lore_sa.encoder_decoder.ColumnTransformerEnc.__init__" title="lore_sa.encoder_decoder.ColumnTransformerEnc.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(descriptor)</p></td>
+<td><p>Initialize the encoder/decoder.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_categorical_columns</span></code>()</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lore_sa.encoder_decoder.ColumnTransformerEnc.decode" title="lore_sa.encoder_decoder.ColumnTransformerEnc.decode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">decode</span></code></a>(Z)</p></td>
+<td><p>Decode the array staring from the original descriptor</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lore_sa.dataset.Dataset.get_class_values" title="lore_sa.dataset.Dataset.get_class_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_class_values</span></code></a>()</p></td>
-<td><p>return the list of values of the target column :return:</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lore_sa.encoder_decoder.ColumnTransformerEnc.decode_target_class" title="lore_sa.encoder_decoder.ColumnTransformerEnc.decode_target_class"><code class="xref py py-obj docutils literal notranslate"><span class="pre">decode_target_class</span></code></a>(Z)</p></td>
+<td><p>Decode the target class</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lore_sa.dataset.Dataset.get_feature_name" title="lore_sa.dataset.Dataset.get_feature_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_feature_name</span></code></a>(index)</p></td>
-<td><p>Get the feature name by index :param index: :return: the name of the corresponding feature</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lore_sa.encoder_decoder.ColumnTransformerEnc.encode" title="lore_sa.encoder_decoder.ColumnTransformerEnc.encode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">encode</span></code></a>(X)</p></td>
+<td><p>It applies the encoder to the input features</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_feature_names</span></code>()</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lore_sa.encoder_decoder.ColumnTransformerEnc.encode_target_class" title="lore_sa.encoder_decoder.ColumnTransformerEnc.encode_target_class"><code class="xref py py-obj docutils literal notranslate"><span class="pre">encode_target_class</span></code></a>(X)</p></td>
+<td><p>Encode the target class :param X: :return:</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_number_of_features</span></code>()</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lore_sa.encoder_decoder.ColumnTransformerEnc.get_encoded_features" title="lore_sa.encoder_decoder.ColumnTransformerEnc.get_encoded_features"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_encoded_features</span></code></a>()</p></td>
+<td><p>Get a mapping of encoded feature indices to feature names.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_numeric_columns</span></code>()</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lore_sa.dataset.Dataset.set_class_name" title="lore_sa.dataset.Dataset.set_class_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_class_name</span></code></a>(class_name)</p></td>
-<td><p>Set the class name.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_descriptor</span></code>(descriptor)</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lore_sa.dataset.Dataset.set_target_label" title="lore_sa.dataset.Dataset.set_target_label"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_target_label</span></code></a>(descriptor)</p></td>
-<td><p>Set the target column into the dataset descriptor</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lore_sa.dataset.Dataset.update_descriptor" title="lore_sa.dataset.Dataset.update_descriptor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_descriptor</span></code></a>()</p></td>
-<td><p>it creates the dataset descriptor dictionary</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lore_sa.encoder_decoder.ColumnTransformerEnc.get_encoded_intervals" title="lore_sa.encoder_decoder.ColumnTransformerEnc.get_encoded_intervals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_encoded_intervals</span></code></a>()</p></td>
+<td><p>Get index intervals for each original feature in the encoded space.</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py method">
-<dt class="sig sig-object py" id="lore_sa.dataset.Dataset.get_class_values">
-<span class="sig-name descname"><span class="pre">get_class_values</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/dataset/dataset.html#Dataset.get_class_values"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.dataset.Dataset.get_class_values" title="Permalink to this definition"></a></dt>
-<dd><p>return the list of values of the target column
-:return:</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lore_sa.dataset.Dataset.get_feature_name">
-<span class="sig-name descname"><span class="pre">get_feature_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/dataset/dataset.html#Dataset.get_feature_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.dataset.Dataset.get_feature_name" title="Permalink to this definition"></a></dt>
-<dd><p>Get the feature name by index
-:param index:
-:return: the name of the corresponding feature</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lore_sa.dataset.Dataset.set_class_name">
-<span class="sig-name descname"><span class="pre">set_class_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">class_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/dataset/dataset.html#Dataset.set_class_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.dataset.Dataset.set_class_name" title="Permalink to this definition"></a></dt>
-<dd><p>Set the class name. Only the column name string
-:param [str] class_name:
-:return:</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lore_sa.dataset.Dataset.set_target_label">
-<span class="sig-name descname"><span class="pre">set_target_label</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">descriptor</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/dataset/dataset.html#Dataset.set_target_label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.dataset.Dataset.set_target_label" title="Permalink to this definition"></a></dt>
-<dd><p>Set the target column into the dataset descriptor</p>
+<dt class="sig sig-object py" id="lore_sa.encoder_decoder.ColumnTransformerEnc.decode">
+<span class="sig-name descname"><span class="pre">decode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.array</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/encoder_decoder/tabular_enc.html#ColumnTransformerEnc.decode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.encoder_decoder.ColumnTransformerEnc.decode" title="Permalink to this definition"></a></dt>
+<dd><p>Decode the array staring from the original descriptor</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>descriptor</strong> – </p>
+<dd class="field-odd"><p><strong>x</strong> (<em>[</em><em>Numpy array</em><em>]</em>) – Array to decode</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>a modified version of the input descriptor with a new key ‘target’</p>
+<dt class="field-even">Return [Numpy array]<span class="colon">:</span></dt>
+<dd class="field-even"><p>Decoded array</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="lore_sa.dataset.Dataset.update_descriptor">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">update_descriptor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/dataset/dataset.html#Dataset.update_descriptor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.dataset.Dataset.update_descriptor" title="Permalink to this definition"></a></dt>
-<dd><p>it creates the dataset descriptor dictionary</p>
+<dt class="sig sig-object py" id="lore_sa.encoder_decoder.ColumnTransformerEnc.decode_target_class">
+<span class="sig-name descname"><span class="pre">decode_target_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.array</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/encoder_decoder/tabular_enc.html#ColumnTransformerEnc.decode_target_class"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.encoder_decoder.ColumnTransformerEnc.decode_target_class" title="Permalink to this definition"></a></dt>
+<dd><p>Decode the target class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>[</em><em>Numpy array</em><em>]</em>) – Array containing the target class values to be decoded</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lore_sa.encoder_decoder.ColumnTransformerEnc.encode">
+<span class="sig-name descname"><span class="pre">encode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.array</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/encoder_decoder/tabular_enc.html#ColumnTransformerEnc.encode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.encoder_decoder.ColumnTransformerEnc.encode" title="Permalink to this definition"></a></dt>
+<dd><p>It applies the encoder to the input features</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>[</em><em>Numpy array</em><em>]</em>) – Array to encode</p>
+</dd>
+<dt class="field-even">Return [Numpy array]<span class="colon">:</span></dt>
+<dd class="field-even"><p>Encoded array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lore_sa.encoder_decoder.ColumnTransformerEnc.encode_target_class">
+<span class="sig-name descname"><span class="pre">encode_target_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.array</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/encoder_decoder/tabular_enc.html#ColumnTransformerEnc.encode_target_class"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.encoder_decoder.ColumnTransformerEnc.encode_target_class" title="Permalink to this definition"></a></dt>
+<dd><p>Encode the target class
+:param X:
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lore_sa.encoder_decoder.ColumnTransformerEnc.get_encoded_features">
+<span class="sig-name descname"><span class="pre">get_encoded_features</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/encoder_decoder/tabular_enc.html#ColumnTransformerEnc.get_encoded_features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.encoder_decoder.ColumnTransformerEnc.get_encoded_features" title="Permalink to this definition"></a></dt>
+<dd><p>Get a mapping of encoded feature indices to feature names.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>Dictionary mapping encoded feature indices to descriptive names.</dt><dd><p>For one-hot encoded features, names include the category value
+(e.g., ‘color=red’, ‘color=blue’).</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">features</span> <span class="o">=</span> <span class="n">encoder</span><span class="o">.</span><span class="n">get_encoded_features</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># {0: &#39;age&#39;, 1: &#39;color=red&#39;, 2: &#39;color=blue&#39;, 3: &#39;color=green&#39;}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lore_sa.encoder_decoder.ColumnTransformerEnc.get_encoded_intervals">
+<span class="sig-name descname"><span class="pre">get_encoded_intervals</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/encoder_decoder/tabular_enc.html#ColumnTransformerEnc.get_encoded_intervals"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.encoder_decoder.ColumnTransformerEnc.get_encoded_intervals" title="Permalink to this definition"></a></dt>
+<dd><p>Get index intervals for each original feature in the encoded space.</p>
+<p>This method returns a list of (start, end) tuples indicating the range of
+encoded indices that correspond to each original feature. This is useful
+when an original categorical feature is one-hot encoded into multiple columns.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>List of (start_idx, end_idx) tuples, one for each original feature.</dt><dd><p>For numerical features, start_idx == end_idx. For one-hot encoded
+categorical features, the interval spans multiple indices.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">intervals</span> <span class="o">=</span> <span class="n">encoder</span><span class="o">.</span><span class="n">get_encoded_intervals</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># [(0, 1), (1, 4), (4, 5)]  # age (1 col), color (3 cols), income (1 col)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </dd></dl>
@@ -407,8 +458,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="lore_sa.bbox.AbstractBBox.html" class="btn btn-neutral float-left" title="lore_sa.bbox.AbstractBBox" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="lore_sa.dataset.TabularDataset.html" class="btn btn-neutral float-right" title="lore_sa.dataset.TabularDataset" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="lore_sa.encoder_decoder.EncDec.html" class="btn btn-neutral float-left" title="lore_sa.encoder_decoder.EncDec" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="lore_sa.explanation.Explanation.html" class="btn btn-neutral float-right" title="lore_sa.explanation.Explanation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

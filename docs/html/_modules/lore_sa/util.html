@@ -43,6 +43,112 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../get_started.html">Get started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#welcome-to-lore-sa">Welcome to LORE_sa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#what-is-lore">What is LORE?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#using-virtualenv">Using virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#using-conda">Using conda</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#quick-start">Quick Start</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#basic-usage">Basic Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#key-components">Key Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#choosing-an-explainer">Choosing an Explainer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#tabularrandomgeneratorlore">TabularRandomGeneratorLore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#tabulargeneticgeneratorlore">TabularGeneticGeneratorLore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#tabularrandgengeneratorlore">TabularRandGenGeneratorLore</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#understanding-the-explanation">Understanding the Explanation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#rule">Rule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#counterfactuals">Counterfactuals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#deltas">Deltas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#feature-importances">Feature Importances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#fidelity">Fidelity</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#next-steps">Next Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#common-pitfalls">Common Pitfalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#getting-help">Getting Help</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../architecture.html">Architecture and Methodology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#theoretical-foundation">Theoretical Foundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#the-four-stage-process">The Four-Stage Process</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#stage-1-instance-encoding">Stage 1: Instance Encoding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#stage-2-neighborhood-generation">Stage 2: Neighborhood Generation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#stage-3-surrogate-training">Stage 3: Surrogate Training</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#stage-4-rule-extraction">Stage 4: Rule Extraction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#architecture-components">Architecture Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#black-box-wrapper-abstractbbox">Black Box Wrapper (AbstractBBox)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#dataset-tabulardataset">Dataset (TabularDataset)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#encoder-decoder-encdec">Encoder/Decoder (EncDec)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#neighborhood-generator-neighborhoodgenerator">Neighborhood Generator (NeighborhoodGenerator)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#surrogate-model-surrogate">Surrogate Model (Surrogate)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#rule-and-expression-classes">Rule and Expression Classes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#workflow-diagram">Workflow Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#best-practices">Best Practices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#choosing-num-instances">Choosing num_instances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#interpreting-fidelity">Interpreting Fidelity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#handling-low-fidelity">Handling Low Fidelity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#feature-importance-interpretation">Feature Importance Interpretation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#computational-complexity">Computational Complexity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#time-complexity">Time Complexity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#space-complexity">Space Complexity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#typical-running-times">Typical Running Times</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#references">References</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#primary-paper">Primary Paper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#related-work">Related Work</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#key-differences-from-lime">Key Differences from LIME</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#implementation-notes">Implementation Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#thread-safety">Thread Safety</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#memory-considerations">Memory Considerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#reproducibility">Reproducibility</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#future-extensions">Future Extensions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/tabular_explanations_example.html">Tabular explanation example</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#learning-and-explaining-german-credit-dataset">Learning and explaining German Credit Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#loading-and-preparation-of-data">Loading and preparation of data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#learning-a-random-forest-classfier">Learning a Random Forest classfier</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#explaining-the-prediction">Explaining the prediction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#shap-explainer">SHAP explainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#lore-explainer">LORE explainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#lime-explainer">LIME explainer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#learning-a-different-model">Learning a different model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#learning-a-logistic-regressor">Learning a Logistic Regressor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#id1">Explaining the prediction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#id2">LORE explainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#id3">LIME explainer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../source/modules.html">Modules</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../source/modules.html#lore-sa-bbox-blackbox-abstract-class"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.bbox</span></code>: BlackBox abstract class</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../source/generated/lore_sa.bbox.AbstractBBox.html">lore_sa.bbox.AbstractBBox</a><ul>
@@ -71,6 +177,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../../source/generated/lore_sa.neighgen.RandomGenerator.html#lore_sa.neighgen.RandomGenerator"><code class="docutils literal notranslate"><span class="pre">RandomGenerator</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../../source/generated/lore_sa.neighgen.GeneticGenerator.html">lore_sa.neighgen.GeneticGenerator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../source/generated/lore_sa.neighgen.GeneticGenerator.html#lore_sa.neighgen.GeneticGenerator"><code class="docutils literal notranslate"><span class="pre">GeneticGenerator</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../source/modules.html#lore-sa-discretizer-discretizer-classes-and-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.discretizer</span></code>: Discretizer classes and functions</a><ul>
@@ -89,16 +199,8 @@
 <li class="toctree-l4"><a class="reference internal" href="../../source/generated/lore_sa.encoder_decoder.EncDec.html#lore_sa.encoder_decoder.EncDec"><code class="docutils literal notranslate"><span class="pre">EncDec</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../source/generated/lore_sa.encoder_decoder.OneHotEnc.html">lore_sa.encoder_decoder.OneHotEnc</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../source/generated/lore_sa.encoder_decoder.OneHotEnc.html#lore_sa.encoder_decoder.OneHotEnc"><code class="docutils literal notranslate"><span class="pre">OneHotEnc</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../source/generated/lore_sa.encoder_decoder.LabelEnc.html">lore_sa.encoder_decoder.LabelEnc</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../source/generated/lore_sa.encoder_decoder.LabelEnc.html#lore_sa.encoder_decoder.LabelEnc"><code class="docutils literal notranslate"><span class="pre">LabelEnc</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../source/generated/lore_sa.encoder_decoder.TabularEnc.html">lore_sa.encoder_decoder.TabularEnc</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../source/generated/lore_sa.encoder_decoder.TabularEnc.html#lore_sa.encoder_decoder.TabularEnc"><code class="docutils literal notranslate"><span class="pre">TabularEnc</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../source/generated/lore_sa.encoder_decoder.ColumnTransformerEnc.html">lore_sa.encoder_decoder.ColumnTransformerEnc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../source/generated/lore_sa.encoder_decoder.ColumnTransformerEnc.html#lore_sa.encoder_decoder.ColumnTransformerEnc"><code class="docutils literal notranslate"><span class="pre">ColumnTransformerEnc</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -176,31 +278,6 @@
 </ul>
 </li>
 </ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../examples/tabular_explanations_example.html">Tabular explanation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#learning-and-explaining-german-credit-dataset">Learning and explaining German Credit Dataset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#loading-and-preparation-of-data">Loading and preparation of data</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#learning-a-random-forest-classfier">Learning a Random Forest classfier</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#explaining-the-prediction">Explaining the prediction</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#shap-explainer">SHAP explainer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#lore-explainer">LORE explainer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#lime-explainer">LIME explainer</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#learning-a-different-model">Learning a different model</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#learning-a-logistic-regressor">Learning a Logistic Regressor</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#id1">Explaining the prediction</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#id2">LORE explainer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#id3">LIME explainer</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
 
         </div>
       </div>
@@ -234,12 +311,13 @@
 <span class="kn">from</span> <span class="nn">scipy.spatial.distance</span> <span class="kn">import</span> <span class="n">jaccard</span>
 <span class="kn">import</span> <span class="nn">warnings</span>
 
-<span class="kn">from</span> <span class="nn">lore_sa.encoder_decoder</span> <span class="kn">import</span> <span class="n">OneHotEnc</span>
+<span class="kn">from</span> <span class="nn">.encoder_decoder</span> <span class="kn">import</span> <span class="n">ColumnTransformerEnc</span>
 
 
 <div class="viewcode-block" id="vector2dict"><a class="viewcode-back" href="../../source/generated/lore_sa.util.html#lore_sa.util.vector2dict">[docs]</a><span class="k">def</span> <span class="nf">vector2dict</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">feature_names</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Return a dictionary feature name : value</span>
+<span class="sd">    Given an array ```x&#39;&#39;&#39; and an ordered list of feature names, returns a dictionary</span>
+<span class="sd">    where each entry has the form ```feature_name : value&#39;&#39;&#39; for each feature in x.</span>
 <span class="sd">    :param x: list of values</span>
 <span class="sd">    :param feature_names: ordered feature list as the x instance</span>
 <span class="sd">    :return:</span>
@@ -264,24 +342,9 @@
         <span class="k">elif</span> <span class="n">encdec</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> = </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">att</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">encdec</span><span class="p">,</span> <span class="n">OneHotEnc</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">encdec</span><span class="p">,</span> <span class="n">ColumnTransformerEnc</span><span class="p">):</span>
                 <span class="n">att_split</span> <span class="o">=</span> <span class="n">att</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="p">)</span>
                 <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> = </span><span class="si">%s</span><span class="s1">, &#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">att_split</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">att_split</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-
-<span class="w">            </span><span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">            if encdec:</span>
-<span class="sd">                att_split = [None]*2</span>
-<span class="sd">                att_split[0] = att</span>
-<span class="sd">                try:</span>
-<span class="sd">                    ind = feature_names.tolist().index(att)</span>
-<span class="sd">                except:</span>
-<span class="sd">                    print(&#39;in except&#39;, feature_names)</span>
-<span class="sd">                    ind = feature_names.index(att)</span>
-<span class="sd">                att_split[1] = x_dec[0][ind]</span>
-<span class="sd">            else:</span>
-<span class="sd">                att_split = att.split(&#39;=&#39;)</span>
-<span class="sd">            #print(&#39;att split &#39;, att_split)</span>
-<span class="sd">            s += &#39;%s = %s, &#39; % (att_split[0], att_split[1])&#39;&#39;&#39;</span>
 
     <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39; }&#39;</span>
     <span class="k">return</span> <span class="n">s</span>
@@ -446,45 +509,6 @@
     <span class="k">return</span> <span class="n">best_distribution</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">best_params</span></div>
 
 
-<span class="c1"># def amp2math(c):</span>
-<span class="c1">#     if &#39;&amp;le;&#39; in c:</span>
-<span class="c1">#         idx = c.find(&#39;&amp;le;&#39;)</span>
-<span class="c1">#         cnew = &#39;%s%s%s&#39; % (c[:idx], &#39;&lt;=&#39;, c[idx + 4:])</span>
-<span class="c1">#         return cnew</span>
-<span class="c1">#     elif &#39;&amp;lt;&#39; in c:</span>
-<span class="c1">#         idx = c.find(&#39;&amp;lt;&#39;)</span>
-<span class="c1">#         cnew = &#39;%s%s%s&#39; % (c[:idx], &#39;&lt;&#39;, c[idx + 4:])</span>
-<span class="c1">#         return cnew</span>
-<span class="c1">#     elif &#39;&amp;gl;&#39; in c:</span>
-<span class="c1">#         idx = c.find(&#39;&amp;gl;&#39;)</span>
-<span class="c1">#         cnew = &#39;%s%s%s&#39; % (c[:idx], &#39;&gt;=&#39;, c[idx + 4:])</span>
-<span class="c1">#         return cnew</span>
-<span class="c1">#     elif &#39;&amp;gt;&#39; in c:</span>
-<span class="c1">#         idx = c.find(&#39;&amp;gt;&#39;)</span>
-<span class="c1">#         cnew = &#39;%s%s%s&#39; % (c[:idx], &#39;&gt;&#39;, c[idx + 4:])</span>
-<span class="c1">#         return cnew</span>
-<span class="c1">#     return c</span>
-<span class="c1">#</span>
-<span class="c1">#</span>
-<span class="c1"># def math2amp(c):</span>
-<span class="c1">#     if &#39;&lt;=&#39; in c:</span>
-<span class="c1">#         idx = c.find(&#39;&lt;=&#39;)</span>
-<span class="c1">#         cnew = &#39;%s%s%s&#39; % (c[:idx], &#39;&amp;le;&#39;, c[idx + 2:])</span>
-<span class="c1">#         return cnew</span>
-<span class="c1">#     elif &#39;&lt;&#39; in c:</span>
-<span class="c1">#         idx = c.find(&#39;&lt;&#39;)</span>
-<span class="c1">#         cnew = &#39;%s%s%s&#39; % (c[:idx], &#39;&amp;lt;&#39;, c[idx + 1:])</span>
-<span class="c1">#         return cnew</span>
-<span class="c1">#     elif &#39;&gt;=&#39; in c:</span>
-<span class="c1">#         idx = c.find(&#39;&gt;=&#39;)</span>
-<span class="c1">#         cnew = &#39;%s%s%s&#39; % (c[:idx], &#39;&amp;gl;&#39;, c[idx + 2:])</span>
-<span class="c1">#         return cnew</span>
-<span class="c1">#     elif &#39;&gt;&#39; in c:</span>
-<span class="c1">#         idx = c.find(&#39;&gt;&#39;)</span>
-<span class="c1">#         cnew = &#39;%s%s%s&#39; % (c[:idx], &#39;&amp;gt;&#39;, c[idx + 1:])</span>
-<span class="c1">#         return cnew</span>
-<span class="c1">#     return c</span>
-
 
 <div class="viewcode-block" id="sigmoid"><a class="viewcode-back" href="../../source/generated/lore_sa.util.html#lore_sa.util.sigmoid">[docs]</a><span class="k">def</span> <span class="nf">sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x0</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mf">10.0</span><span class="p">,</span> <span class="n">L</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
@@ -500,7 +524,7 @@
 
 
 <span class="k">def</span> <span class="nf">neuclidean</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-    <span class="k">return</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+    <span class="k">return</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.0000001</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">nmeandev</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>  <span class="c1"># normalized mean deviation</span>

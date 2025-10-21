@@ -43,8 +43,88 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="get_started.html">Get started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples/tabular_explanations_example.html">Tabular explanation</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="get_started.html">Get started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#welcome-to-lore-sa">Welcome to LORE_sa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#what-is-lore">What is LORE?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="get_started.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_started.html#using-virtualenv">Using virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_started.html#using-conda">Using conda</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#quick-start">Quick Start</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="get_started.html#basic-usage">Basic Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#key-components">Key Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#choosing-an-explainer">Choosing an Explainer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="get_started.html#tabularrandomgeneratorlore">TabularRandomGeneratorLore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_started.html#tabulargeneticgeneratorlore">TabularGeneticGeneratorLore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_started.html#tabularrandgengeneratorlore">TabularRandGenGeneratorLore</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#understanding-the-explanation">Understanding the Explanation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="get_started.html#rule">Rule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_started.html#counterfactuals">Counterfactuals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_started.html#deltas">Deltas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_started.html#feature-importances">Feature Importances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_started.html#fidelity">Fidelity</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#next-steps">Next Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#common-pitfalls">Common Pitfalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#getting-help">Getting Help</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture and Methodology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#theoretical-foundation">Theoretical Foundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#the-four-stage-process">The Four-Stage Process</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#stage-1-instance-encoding">Stage 1: Instance Encoding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#stage-2-neighborhood-generation">Stage 2: Neighborhood Generation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#stage-3-surrogate-training">Stage 3: Surrogate Training</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#stage-4-rule-extraction">Stage 4: Rule Extraction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#architecture-components">Architecture Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#black-box-wrapper-abstractbbox">Black Box Wrapper (AbstractBBox)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#dataset-tabulardataset">Dataset (TabularDataset)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#encoder-decoder-encdec">Encoder/Decoder (EncDec)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#neighborhood-generator-neighborhoodgenerator">Neighborhood Generator (NeighborhoodGenerator)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#surrogate-model-surrogate">Surrogate Model (Surrogate)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#rule-and-expression-classes">Rule and Expression Classes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#workflow-diagram">Workflow Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#best-practices">Best Practices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#choosing-num-instances">Choosing num_instances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#interpreting-fidelity">Interpreting Fidelity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#handling-low-fidelity">Handling Low Fidelity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#feature-importance-interpretation">Feature Importance Interpretation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#computational-complexity">Computational Complexity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#time-complexity">Time Complexity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#space-complexity">Space Complexity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#typical-running-times">Typical Running Times</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#references">References</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#primary-paper">Primary Paper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#related-work">Related Work</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#key-differences-from-lime">Key Differences from LIME</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#implementation-notes">Implementation Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#thread-safety">Thread Safety</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#memory-considerations">Memory Considerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#reproducibility">Reproducibility</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#future-extensions">Future Extensions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples/tabular_explanations_example.html">Tabular explanation example</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="examples/tabular_explanations_example.html#learning-and-explaining-german-credit-dataset">Learning and explaining German Credit Dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples/tabular_explanations_example.html#loading-and-preparation-of-data">Loading and preparation of data</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="examples/tabular_explanations_example.html#learning-a-random-forest-classfier">Learning a Random Forest classfier</a></li>
@@ -119,16 +199,8 @@
 <li class="toctree-l4"><a class="reference internal" href="source/generated/lore_sa.encoder_decoder.EncDec.html#lore_sa.encoder_decoder.EncDec"><code class="docutils literal notranslate"><span class="pre">EncDec</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="source/generated/lore_sa.encoder_decoder.OneHotEnc.html">lore_sa.encoder_decoder.OneHotEnc</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="source/generated/lore_sa.encoder_decoder.OneHotEnc.html#lore_sa.encoder_decoder.OneHotEnc"><code class="docutils literal notranslate"><span class="pre">OneHotEnc</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="source/generated/lore_sa.encoder_decoder.LabelEnc.html">lore_sa.encoder_decoder.LabelEnc</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="source/generated/lore_sa.encoder_decoder.LabelEnc.html#lore_sa.encoder_decoder.LabelEnc"><code class="docutils literal notranslate"><span class="pre">LabelEnc</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="source/generated/lore_sa.encoder_decoder.TabularEnc.html">lore_sa.encoder_decoder.TabularEnc</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="source/generated/lore_sa.encoder_decoder.TabularEnc.html#lore_sa.encoder_decoder.TabularEnc"><code class="docutils literal notranslate"><span class="pre">TabularEnc</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/generated/lore_sa.encoder_decoder.ColumnTransformerEnc.html">lore_sa.encoder_decoder.ColumnTransformerEnc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="source/generated/lore_sa.encoder_decoder.ColumnTransformerEnc.html#lore_sa.encoder_decoder.ColumnTransformerEnc"><code class="docutils literal notranslate"><span class="pre">ColumnTransformerEnc</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -244,6 +316,7 @@
  | <a href="#G"><strong>G</strong></a>
  | <a href="#I"><strong>I</strong></a>
  | <a href="#J"><strong>J</strong></a>
+ | <a href="#K"><strong>K</strong></a>
  | <a href="#L"><strong>L</strong></a>
  | <a href="#M"><strong>M</strong></a>
  | <a href="#O"><strong>O</strong></a>
@@ -269,13 +342,9 @@
 </li>
         <li><a href="source/generated/lore_sa.discretizer.RMEPDiscretizer.html#lore_sa.discretizer.RMEPDiscretizer.__init__">(lore_sa.discretizer.RMEPDiscretizer method)</a>
 </li>
+        <li><a href="source/generated/lore_sa.encoder_decoder.ColumnTransformerEnc.html#lore_sa.encoder_decoder.ColumnTransformerEnc.__init__">(lore_sa.encoder_decoder.ColumnTransformerEnc method)</a>
+</li>
         <li><a href="source/generated/lore_sa.encoder_decoder.EncDec.html#lore_sa.encoder_decoder.EncDec.__init__">(lore_sa.encoder_decoder.EncDec method)</a>
-</li>
-        <li><a href="source/generated/lore_sa.encoder_decoder.LabelEnc.html#lore_sa.encoder_decoder.LabelEnc.__init__">(lore_sa.encoder_decoder.LabelEnc method)</a>
-</li>
-        <li><a href="source/generated/lore_sa.encoder_decoder.OneHotEnc.html#lore_sa.encoder_decoder.OneHotEnc.__init__">(lore_sa.encoder_decoder.OneHotEnc method)</a>
-</li>
-        <li><a href="source/generated/lore_sa.encoder_decoder.TabularEnc.html#lore_sa.encoder_decoder.TabularEnc.__init__">(lore_sa.encoder_decoder.TabularEnc method)</a>
 </li>
         <li><a href="source/generated/lore_sa.explanation.Explanation.html#lore_sa.explanation.Explanation.__init__">(lore_sa.explanation.Explanation method)</a>
 </li>
@@ -334,7 +403,13 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="source/generated/lore_sa.bbox.AbstractBBox.html#lore_sa.bbox.AbstractBBox.classifier">classifier (lore_sa.bbox.AbstractBBox attribute)</a>
+</li>
+      <li><a href="source/generated/lore_sa.encoder_decoder.ColumnTransformerEnc.html#lore_sa.encoder_decoder.ColumnTransformerEnc">ColumnTransformerEnc (class in lore_sa.encoder_decoder)</a>
+</li>
       <li><a href="source/generated/lore_sa.surrogate.DecisionTreeSurrogate.html#lore_sa.surrogate.DecisionTreeSurrogate.compact_premises">compact_premises() (lore_sa.surrogate.DecisionTreeSurrogate method)</a>
+</li>
+      <li><a href="source/generated/lore_sa.rule.Rule.html#lore_sa.rule.Rule.consequences">consequences (lore_sa.rule.Rule attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -344,20 +419,24 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="source/generated/lore_sa.dataset.Dataset.html#lore_sa.dataset.Dataset">Dataset (class in lore_sa.dataset)</a>
 </li>
+      <li><a href="source/generated/lore_sa.encoder_decoder.EncDec.html#lore_sa.encoder_decoder.EncDec.dataset_descriptor">dataset_descriptor (lore_sa.encoder_decoder.EncDec attribute)</a>
+</li>
       <li><a href="source/generated/lore_sa.surrogate.DecisionTreeSurrogate.html#lore_sa.surrogate.DecisionTreeSurrogate">DecisionTreeSurrogate (class in lore_sa.surrogate)</a>
 </li>
-      <li><a href="source/generated/lore_sa.encoder_decoder.LabelEnc.html#lore_sa.encoder_decoder.LabelEnc.decode">decode() (lore_sa.encoder_decoder.LabelEnc method)</a>
+      <li><a href="source/generated/lore_sa.encoder_decoder.ColumnTransformerEnc.html#lore_sa.encoder_decoder.ColumnTransformerEnc.decode">decode() (lore_sa.encoder_decoder.ColumnTransformerEnc method)</a>
 
       <ul>
-        <li><a href="source/generated/lore_sa.encoder_decoder.OneHotEnc.html#lore_sa.encoder_decoder.OneHotEnc.decode">(lore_sa.encoder_decoder.OneHotEnc method)</a>
+        <li><a href="source/generated/lore_sa.encoder_decoder.EncDec.html#id0">(lore_sa.encoder_decoder.EncDec method)</a>, <a href="source/generated/lore_sa.encoder_decoder.EncDec.html#lore_sa.encoder_decoder.EncDec.decode">[1]</a>
 </li>
-        <li><a href="source/generated/lore_sa.encoder_decoder.TabularEnc.html#lore_sa.encoder_decoder.TabularEnc.decode">(lore_sa.encoder_decoder.TabularEnc method)</a>
+      </ul></li>
+      <li><a href="source/generated/lore_sa.encoder_decoder.ColumnTransformerEnc.html#lore_sa.encoder_decoder.ColumnTransformerEnc.decode_target_class">decode_target_class() (lore_sa.encoder_decoder.ColumnTransformerEnc method)</a>
+
+      <ul>
+        <li><a href="source/generated/lore_sa.encoder_decoder.EncDec.html#lore_sa.encoder_decoder.EncDec.decode_target_class">(lore_sa.encoder_decoder.EncDec method)</a>
 </li>
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="source/generated/lore_sa.encoder_decoder.TabularEnc.html#lore_sa.encoder_decoder.TabularEnc.decode_target_class">decode_target_class() (lore_sa.encoder_decoder.TabularEnc method)</a>
-</li>
       <li><a href="source/generated/lore_sa.explanation.ExplanationEncoder.html#lore_sa.explanation.ExplanationEncoder.default">default() (lore_sa.explanation.ExplanationEncoder method)</a>
 
       <ul>
@@ -376,24 +455,34 @@
 <h2 id="E">E</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="source/generated/lore_sa.neighgen.GeneticGenerator.html#lore_sa.neighgen.GeneticGenerator.eaSimple">eaSimple() (lore_sa.neighgen.GeneticGenerator method)</a>
+</li>
       <li><a href="source/generated/lore_sa.encoder_decoder.EncDec.html#lore_sa.encoder_decoder.EncDec">EncDec (class in lore_sa.encoder_decoder)</a>
 </li>
-      <li><a href="source/generated/lore_sa.encoder_decoder.EncDec.html#lore_sa.encoder_decoder.EncDec.encode">encode() (lore_sa.encoder_decoder.EncDec method)</a>
+      <li><a href="source/generated/lore_sa.encoder_decoder.ColumnTransformerEnc.html#lore_sa.encoder_decoder.ColumnTransformerEnc.encode">encode() (lore_sa.encoder_decoder.ColumnTransformerEnc method)</a>
 
       <ul>
-        <li><a href="source/generated/lore_sa.encoder_decoder.LabelEnc.html#lore_sa.encoder_decoder.LabelEnc.encode">(lore_sa.encoder_decoder.LabelEnc method)</a>
-</li>
-        <li><a href="source/generated/lore_sa.encoder_decoder.OneHotEnc.html#lore_sa.encoder_decoder.OneHotEnc.encode">(lore_sa.encoder_decoder.OneHotEnc method)</a>
-</li>
-        <li><a href="source/generated/lore_sa.encoder_decoder.TabularEnc.html#lore_sa.encoder_decoder.TabularEnc.encode">(lore_sa.encoder_decoder.TabularEnc method)</a>
+        <li><a href="source/generated/lore_sa.encoder_decoder.EncDec.html#id1">(lore_sa.encoder_decoder.EncDec method)</a>, <a href="source/generated/lore_sa.encoder_decoder.EncDec.html#lore_sa.encoder_decoder.EncDec.encode">[1]</a>
 </li>
         <li><a href="source/generated/lore_sa.explanation.ExplanationEncoder.html#lore_sa.explanation.ExplanationEncoder.encode">(lore_sa.explanation.ExplanationEncoder method)</a>
 </li>
         <li><a href="source/generated/lore_sa.rule.RuleEncoder.html#lore_sa.rule.RuleEncoder.encode">(lore_sa.rule.RuleEncoder method)</a>
 </li>
       </ul></li>
+      <li><a href="source/generated/lore_sa.encoder_decoder.ColumnTransformerEnc.html#lore_sa.encoder_decoder.ColumnTransformerEnc.encode_target_class">encode_target_class() (lore_sa.encoder_decoder.ColumnTransformerEnc method)</a>
+
+      <ul>
+        <li><a href="source/generated/lore_sa.encoder_decoder.EncDec.html#lore_sa.encoder_decoder.EncDec.encode_target_class">(lore_sa.encoder_decoder.EncDec method)</a>
+</li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="source/generated/lore_sa.encoder_decoder.EncDec.html#lore_sa.encoder_decoder.EncDec.encoded_descriptor">encoded_descriptor (lore_sa.encoder_decoder.EncDec attribute)</a>
+</li>
+      <li><a href="source/generated/lore_sa.encoder_decoder.EncDec.html#lore_sa.encoder_decoder.EncDec.encoded_features">encoded_features (lore_sa.encoder_decoder.EncDec attribute)</a>
+</li>
+      <li><a href="source/generated/lore_sa.rule.Rule.html#lore_sa.rule.Rule.encoder">encoder (lore_sa.rule.Rule attribute)</a>
+</li>
       <li><a href="source/generated/lore_sa.explanation.Explanation.html#lore_sa.explanation.Explanation">Explanation (class in lore_sa.explanation)</a>
 </li>
       <li><a href="source/generated/lore_sa.explanation.ExplanationEncoder.html#lore_sa.explanation.ExplanationEncoder">ExplanationEncoder (class in lore_sa.explanation)</a>
@@ -406,10 +495,12 @@
 <h2 id="F">F</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="source/generated/lore_sa.dataset.TabularDataset.html#lore_sa.dataset.TabularDataset.from_csv">from_csv() (lore_sa.dataset.TabularDataset class method)</a>
+      <li><a href="source/generated/lore_sa.surrogate.Surrogate.html#lore_sa.surrogate.Surrogate.fidelity">fidelity (lore_sa.surrogate.Surrogate attribute)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="source/generated/lore_sa.dataset.TabularDataset.html#lore_sa.dataset.TabularDataset.from_csv">from_csv() (lore_sa.dataset.TabularDataset class method)</a>
+</li>
       <li><a href="source/generated/lore_sa.dataset.TabularDataset.html#lore_sa.dataset.TabularDataset.from_dict">from_dict() (lore_sa.dataset.TabularDataset class method)</a>
 </li>
   </ul></td>
@@ -424,6 +515,12 @@
         <li><a href="source/generated/lore_sa.neighgen.RandomGenerator.html#lore_sa.neighgen.RandomGenerator.generate">(lore_sa.neighgen.RandomGenerator method)</a>
 </li>
       </ul></li>
+      <li><a href="source/generated/lore_sa.neighgen.GeneticGenerator.html#lore_sa.neighgen.GeneticGenerator.generate_synthetic_instance">generate_synthetic_instance() (lore_sa.neighgen.GeneticGenerator method)</a>
+
+      <ul>
+        <li><a href="source/generated/lore_sa.neighgen.RandomGenerator.html#lore_sa.neighgen.RandomGenerator.generate_synthetic_instance">(lore_sa.neighgen.RandomGenerator method)</a>
+</li>
+      </ul></li>
       <li><a href="source/generated/lore_sa.neighgen.GeneticGenerator.html#lore_sa.neighgen.GeneticGenerator">GeneticGenerator (class in lore_sa.neighgen)</a>
 </li>
       <li><a href="source/generated/lore_sa.dataset.Dataset.html#lore_sa.dataset.Dataset.get_class_values">get_class_values() (lore_sa.dataset.Dataset method)</a>
@@ -433,19 +530,25 @@
 </li>
       </ul></li>
       <li><a href="source/generated/lore_sa.surrogate.DecisionTreeSurrogate.html#lore_sa.surrogate.DecisionTreeSurrogate.get_counterfactual_rules">get_counterfactual_rules() (lore_sa.surrogate.DecisionTreeSurrogate method)</a>
-</li>
-      <li><a href="source/generated/lore_sa.encoder_decoder.EncDec.html#lore_sa.encoder_decoder.EncDec.get_encoded_features">get_encoded_features() (lore_sa.encoder_decoder.EncDec method)</a>
 
       <ul>
-        <li><a href="source/generated/lore_sa.encoder_decoder.LabelEnc.html#lore_sa.encoder_decoder.LabelEnc.get_encoded_features">(lore_sa.encoder_decoder.LabelEnc method)</a>
-</li>
-        <li><a href="source/generated/lore_sa.encoder_decoder.OneHotEnc.html#lore_sa.encoder_decoder.OneHotEnc.get_encoded_features">(lore_sa.encoder_decoder.OneHotEnc method)</a>
-</li>
-        <li><a href="source/generated/lore_sa.encoder_decoder.TabularEnc.html#lore_sa.encoder_decoder.TabularEnc.get_encoded_features">(lore_sa.encoder_decoder.TabularEnc method)</a>
+        <li><a href="source/generated/lore_sa.surrogate.Surrogate.html#id0">(lore_sa.surrogate.Surrogate method)</a>, <a href="source/generated/lore_sa.surrogate.Surrogate.html#lore_sa.surrogate.Surrogate.get_counterfactual_rules">[1]</a>
 </li>
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="source/generated/lore_sa.encoder_decoder.ColumnTransformerEnc.html#lore_sa.encoder_decoder.ColumnTransformerEnc.get_encoded_features">get_encoded_features() (lore_sa.encoder_decoder.ColumnTransformerEnc method)</a>
+
+      <ul>
+        <li><a href="source/generated/lore_sa.encoder_decoder.EncDec.html#id2">(lore_sa.encoder_decoder.EncDec method)</a>, <a href="source/generated/lore_sa.encoder_decoder.EncDec.html#lore_sa.encoder_decoder.EncDec.get_encoded_features">[1]</a>
+</li>
+      </ul></li>
+      <li><a href="source/generated/lore_sa.encoder_decoder.ColumnTransformerEnc.html#lore_sa.encoder_decoder.ColumnTransformerEnc.get_encoded_intervals">get_encoded_intervals() (lore_sa.encoder_decoder.ColumnTransformerEnc method)</a>
+
+      <ul>
+        <li><a href="source/generated/lore_sa.encoder_decoder.EncDec.html#id3">(lore_sa.encoder_decoder.EncDec method)</a>, <a href="source/generated/lore_sa.encoder_decoder.EncDec.html#lore_sa.encoder_decoder.EncDec.get_encoded_intervals">[1]</a>
+</li>
+      </ul></li>
       <li><a href="source/generated/lore_sa.surrogate.DecisionTreeSurrogate.html#lore_sa.surrogate.DecisionTreeSurrogate.get_falsified_conditions">get_falsified_conditions() (lore_sa.surrogate.DecisionTreeSurrogate method)</a>
 </li>
       <li><a href="source/generated/lore_sa.dataset.Dataset.html#lore_sa.dataset.Dataset.get_feature_name">get_feature_name() (lore_sa.dataset.Dataset method)</a>
@@ -455,7 +558,11 @@
 </li>
       </ul></li>
       <li><a href="source/generated/lore_sa.surrogate.DecisionTreeSurrogate.html#lore_sa.surrogate.DecisionTreeSurrogate.get_rule">get_rule() (lore_sa.surrogate.DecisionTreeSurrogate method)</a>
+
+      <ul>
+        <li><a href="source/generated/lore_sa.surrogate.Surrogate.html#id1">(lore_sa.surrogate.Surrogate method)</a>, <a href="source/generated/lore_sa.surrogate.Surrogate.html#lore_sa.surrogate.Surrogate.get_rule">[1]</a>
 </li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -491,11 +598,17 @@
   </ul></td>
 </tr></table>
 
+<h2 id="K">K</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="source/generated/lore_sa.surrogate.Surrogate.html#lore_sa.surrogate.Surrogate.kind">kind (lore_sa.surrogate.Surrogate attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
 <h2 id="L">L</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="source/generated/lore_sa.encoder_decoder.LabelEnc.html#lore_sa.encoder_decoder.LabelEnc">LabelEnc (class in lore_sa.encoder_decoder)</a>
-</li>
       <li>
     lore_sa.dataset.utils
 
@@ -518,7 +631,9 @@
 <h2 id="M">M</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="source/generated/lore_sa.bbox.AbstractBBox.html#lore_sa.bbox.AbstractBBox.model">model() (lore_sa.bbox.AbstractBBox method)</a>
+      <li><a href="source/generated/lore_sa.neighgen.GeneticGenerator.html#lore_sa.neighgen.GeneticGenerator.mate">mate() (lore_sa.neighgen.GeneticGenerator method)</a>
+</li>
+      <li><a href="source/generated/lore_sa.bbox.AbstractBBox.html#id0">model() (lore_sa.bbox.AbstractBBox method)</a>, <a href="source/generated/lore_sa.bbox.AbstractBBox.html#lore_sa.bbox.AbstractBBox.model">[1]</a>
 </li>
       <li>
     module
@@ -539,7 +654,7 @@
 <h2 id="O">O</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="source/generated/lore_sa.encoder_decoder.OneHotEnc.html#lore_sa.encoder_decoder.OneHotEnc">OneHotEnc (class in lore_sa.encoder_decoder)</a>
+      <li><a href="source/generated/lore_sa.rule.Expression.html#lore_sa.rule.Expression.operator">operator (lore_sa.rule.Expression attribute)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -551,13 +666,19 @@
 <h2 id="P">P</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="source/generated/lore_sa.bbox.AbstractBBox.html#lore_sa.bbox.AbstractBBox.predict">predict() (lore_sa.bbox.AbstractBBox method)</a>
+      <li><a href="source/generated/lore_sa.neighgen.GeneticGenerator.html#lore_sa.neighgen.GeneticGenerator.population_fitness_equal">population_fitness_equal() (lore_sa.neighgen.GeneticGenerator method)</a>
 </li>
-      <li><a href="source/generated/lore_sa.bbox.AbstractBBox.html#lore_sa.bbox.AbstractBBox.predict_proba">predict_proba() (lore_sa.bbox.AbstractBBox method)</a>
+      <li><a href="source/generated/lore_sa.bbox.AbstractBBox.html#id1">predict() (lore_sa.bbox.AbstractBBox method)</a>, <a href="source/generated/lore_sa.bbox.AbstractBBox.html#lore_sa.bbox.AbstractBBox.predict">[1]</a>
+</li>
+      <li><a href="source/generated/lore_sa.bbox.AbstractBBox.html#id2">predict_proba() (lore_sa.bbox.AbstractBBox method)</a>, <a href="source/generated/lore_sa.bbox.AbstractBBox.html#lore_sa.bbox.AbstractBBox.predict_proba">[1]</a>
+</li>
+      <li><a href="source/generated/lore_sa.rule.Rule.html#lore_sa.rule.Rule.premises">premises (lore_sa.rule.Rule attribute)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="source/generated/lore_sa.dataset.utils.html#lore_sa.dataset.utils.prepare_bank_dataset">prepare_bank_dataset() (in module lore_sa.dataset.utils)</a>
+</li>
+      <li><a href="source/generated/lore_sa.surrogate.Surrogate.html#lore_sa.surrogate.Surrogate.preprocessing">preprocessing (lore_sa.surrogate.Surrogate attribute)</a>
 </li>
       <li><a href="source/generated/lore_sa.surrogate.DecisionTreeSurrogate.html#lore_sa.surrogate.DecisionTreeSurrogate.prune_duplicate_leaves">prune_duplicate_leaves() (lore_sa.surrogate.DecisionTreeSurrogate method)</a>
 </li>
@@ -571,10 +692,12 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="source/generated/lore_sa.neighgen.RandomGenerator.html#lore_sa.neighgen.RandomGenerator">RandomGenerator (class in lore_sa.neighgen)</a>
 </li>
-      <li><a href="source/generated/lore_sa.discretizer.RMEPDiscretizer.html#lore_sa.discretizer.RMEPDiscretizer">RMEPDiscretizer (class in lore_sa.discretizer)</a>
+      <li><a href="source/generated/lore_sa.neighgen.GeneticGenerator.html#lore_sa.neighgen.GeneticGenerator.record_init">record_init() (lore_sa.neighgen.GeneticGenerator method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="source/generated/lore_sa.discretizer.RMEPDiscretizer.html#lore_sa.discretizer.RMEPDiscretizer">RMEPDiscretizer (class in lore_sa.discretizer)</a>
+</li>
       <li><a href="source/generated/lore_sa.rule.Rule.html#lore_sa.rule.Rule">Rule (class in lore_sa.rule)</a>
 </li>
       <li><a href="source/generated/lore_sa.rule.RuleEncoder.html#lore_sa.rule.RuleEncoder">RuleEncoder (class in lore_sa.rule)</a>
@@ -611,14 +734,18 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="source/generated/lore_sa.dataset.TabularDataset.html#lore_sa.dataset.TabularDataset">TabularDataset (class in lore_sa.dataset)</a>
 </li>
-      <li><a href="source/generated/lore_sa.encoder_decoder.TabularEnc.html#lore_sa.encoder_decoder.TabularEnc">TabularEnc (class in lore_sa.encoder_decoder)</a>
+      <li><a href="source/generated/lore_sa.explanation.TextExplanation.html#lore_sa.explanation.TextExplanation">TextExplanation (class in lore_sa.explanation)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="source/generated/lore_sa.explanation.TextExplanation.html#lore_sa.explanation.TextExplanation">TextExplanation (class in lore_sa.explanation)</a>
+      <li><a href="source/generated/lore_sa.rule.Expression.html#lore_sa.rule.Expression.to_dict">to_dict() (lore_sa.rule.Expression method)</a>
 </li>
       <li><a href="source/generated/lore_sa.surrogate.DecisionTreeSurrogate.html#lore_sa.surrogate.DecisionTreeSurrogate.train">train() (lore_sa.surrogate.DecisionTreeSurrogate method)</a>
+
+      <ul>
+        <li><a href="source/generated/lore_sa.surrogate.Surrogate.html#id2">(lore_sa.surrogate.Surrogate method)</a>, <a href="source/generated/lore_sa.surrogate.Surrogate.html#lore_sa.surrogate.Surrogate.train">[1]</a>
 </li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -637,6 +764,12 @@
 <h2 id="V">V</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="source/generated/lore_sa.rule.Expression.html#lore_sa.rule.Expression.value">value (lore_sa.rule.Expression attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="source/generated/lore_sa.rule.Expression.html#lore_sa.rule.Expression.variable">variable (lore_sa.rule.Expression attribute)</a>
+</li>
       <li><a href="source/generated/lore_sa.util.html#lore_sa.util.vector2dict">vector2dict() (in module lore_sa.util)</a>
 </li>
   </ul></td>

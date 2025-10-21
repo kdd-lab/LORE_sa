@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Get started &mdash; LORE_sa  documentation</title>
+  <title>Get Started &mdash; LORE_sa  documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -20,6 +20,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Architecture and Methodology" href="architecture.html" />
+    <link rel="prev" title="lore_sa - Local Rule-based Explanations" href="index.html" />
     <link href="_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -43,7 +45,113 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Get started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#welcome-to-lore-sa">Welcome to LORE_sa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-lore">What is LORE?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-virtualenv">Using virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-conda">Using conda</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#quick-start">Quick Start</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#basic-usage">Basic Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#key-components">Key Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#choosing-an-explainer">Choosing an Explainer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tabularrandomgeneratorlore">TabularRandomGeneratorLore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tabulargeneticgeneratorlore">TabularGeneticGeneratorLore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tabularrandgengeneratorlore">TabularRandGenGeneratorLore</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#understanding-the-explanation">Understanding the Explanation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rule">Rule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#counterfactuals">Counterfactuals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deltas">Deltas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#feature-importances">Feature Importances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fidelity">Fidelity</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#next-steps">Next Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#common-pitfalls">Common Pitfalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-help">Getting Help</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture and Methodology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#theoretical-foundation">Theoretical Foundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#the-four-stage-process">The Four-Stage Process</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#stage-1-instance-encoding">Stage 1: Instance Encoding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#stage-2-neighborhood-generation">Stage 2: Neighborhood Generation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#stage-3-surrogate-training">Stage 3: Surrogate Training</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#stage-4-rule-extraction">Stage 4: Rule Extraction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#architecture-components">Architecture Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#black-box-wrapper-abstractbbox">Black Box Wrapper (AbstractBBox)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#dataset-tabulardataset">Dataset (TabularDataset)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#encoder-decoder-encdec">Encoder/Decoder (EncDec)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#neighborhood-generator-neighborhoodgenerator">Neighborhood Generator (NeighborhoodGenerator)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#surrogate-model-surrogate">Surrogate Model (Surrogate)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#rule-and-expression-classes">Rule and Expression Classes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#workflow-diagram">Workflow Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#best-practices">Best Practices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#choosing-num-instances">Choosing num_instances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#interpreting-fidelity">Interpreting Fidelity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#handling-low-fidelity">Handling Low Fidelity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#feature-importance-interpretation">Feature Importance Interpretation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#computational-complexity">Computational Complexity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#time-complexity">Time Complexity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#space-complexity">Space Complexity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#typical-running-times">Typical Running Times</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#references">References</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#primary-paper">Primary Paper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#related-work">Related Work</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#key-differences-from-lime">Key Differences from LIME</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#implementation-notes">Implementation Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#thread-safety">Thread Safety</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#memory-considerations">Memory Considerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#reproducibility">Reproducibility</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#future-extensions">Future Extensions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples/tabular_explanations_example.html">Tabular explanation example</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples/tabular_explanations_example.html#learning-and-explaining-german-credit-dataset">Learning and explaining German Credit Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/tabular_explanations_example.html#loading-and-preparation-of-data">Loading and preparation of data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples/tabular_explanations_example.html#learning-a-random-forest-classfier">Learning a Random Forest classfier</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="examples/tabular_explanations_example.html#explaining-the-prediction">Explaining the prediction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples/tabular_explanations_example.html#shap-explainer">SHAP explainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/tabular_explanations_example.html#lore-explainer">LORE explainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/tabular_explanations_example.html#lime-explainer">LIME explainer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="examples/tabular_explanations_example.html#learning-a-different-model">Learning a different model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples/tabular_explanations_example.html#learning-a-logistic-regressor">Learning a Logistic Regressor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="examples/tabular_explanations_example.html#id1">Explaining the prediction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples/tabular_explanations_example.html#id2">LORE explainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/tabular_explanations_example.html#id3">LIME explainer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="source/modules.html">Modules</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="source/modules.html#lore-sa-bbox-blackbox-abstract-class"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.bbox</span></code>: BlackBox abstract class</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="source/generated/lore_sa.bbox.AbstractBBox.html">lore_sa.bbox.AbstractBBox</a><ul>
@@ -72,6 +180,10 @@
 <li class="toctree-l4"><a class="reference internal" href="source/generated/lore_sa.neighgen.RandomGenerator.html#lore_sa.neighgen.RandomGenerator"><code class="docutils literal notranslate"><span class="pre">RandomGenerator</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="source/generated/lore_sa.neighgen.GeneticGenerator.html">lore_sa.neighgen.GeneticGenerator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="source/generated/lore_sa.neighgen.GeneticGenerator.html#lore_sa.neighgen.GeneticGenerator"><code class="docutils literal notranslate"><span class="pre">GeneticGenerator</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="source/modules.html#lore-sa-discretizer-discretizer-classes-and-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.discretizer</span></code>: Discretizer classes and functions</a><ul>
@@ -90,16 +202,8 @@
 <li class="toctree-l4"><a class="reference internal" href="source/generated/lore_sa.encoder_decoder.EncDec.html#lore_sa.encoder_decoder.EncDec"><code class="docutils literal notranslate"><span class="pre">EncDec</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="source/generated/lore_sa.encoder_decoder.OneHotEnc.html">lore_sa.encoder_decoder.OneHotEnc</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="source/generated/lore_sa.encoder_decoder.OneHotEnc.html#lore_sa.encoder_decoder.OneHotEnc"><code class="docutils literal notranslate"><span class="pre">OneHotEnc</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="source/generated/lore_sa.encoder_decoder.LabelEnc.html">lore_sa.encoder_decoder.LabelEnc</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="source/generated/lore_sa.encoder_decoder.LabelEnc.html#lore_sa.encoder_decoder.LabelEnc"><code class="docutils literal notranslate"><span class="pre">LabelEnc</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="source/generated/lore_sa.encoder_decoder.TabularEnc.html">lore_sa.encoder_decoder.TabularEnc</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="source/generated/lore_sa.encoder_decoder.TabularEnc.html#lore_sa.encoder_decoder.TabularEnc"><code class="docutils literal notranslate"><span class="pre">TabularEnc</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="source/generated/lore_sa.encoder_decoder.ColumnTransformerEnc.html">lore_sa.encoder_decoder.ColumnTransformerEnc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="source/generated/lore_sa.encoder_decoder.ColumnTransformerEnc.html#lore_sa.encoder_decoder.ColumnTransformerEnc"><code class="docutils literal notranslate"><span class="pre">ColumnTransformerEnc</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -177,31 +281,6 @@
 </ul>
 </li>
 </ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="examples/tabular_explanations_example.html">Tabular explanation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="examples/tabular_explanations_example.html#learning-and-explaining-german-credit-dataset">Learning and explaining German Credit Dataset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples/tabular_explanations_example.html#loading-and-preparation-of-data">Loading and preparation of data</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="examples/tabular_explanations_example.html#learning-a-random-forest-classfier">Learning a Random Forest classfier</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="examples/tabular_explanations_example.html#explaining-the-prediction">Explaining the prediction</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="examples/tabular_explanations_example.html#shap-explainer">SHAP explainer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="examples/tabular_explanations_example.html#lore-explainer">LORE explainer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="examples/tabular_explanations_example.html#lime-explainer">LIME explainer</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="examples/tabular_explanations_example.html#learning-a-different-model">Learning a different model</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="examples/tabular_explanations_example.html#learning-a-logistic-regressor">Learning a Logistic Regressor</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="examples/tabular_explanations_example.html#id1">Explaining the prediction</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="examples/tabular_explanations_example.html#id2">LORE explainer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="examples/tabular_explanations_example.html#id3">LIME explainer</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
 
         </div>
       </div>
@@ -217,7 +296,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Get started</li>
+      <li class="breadcrumb-item active">Get Started</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/get_started.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -228,14 +307,248 @@
            <div itemprop="articleBody">
              
   <section id="get-started">
-<h1>Get started<a class="headerlink" href="#get-started" title="Permalink to this heading"></a></h1>
-<p>Work in progress</p>
+<h1>Get Started<a class="headerlink" href="#get-started" title="Permalink to this heading"></a></h1>
+<section id="welcome-to-lore-sa">
+<h2>Welcome to LORE_sa<a class="headerlink" href="#welcome-to-lore-sa" title="Permalink to this heading"></a></h2>
+<p>LORE (LOcal Rule-based Explanations) is a model-agnostic explanation method for black box classifiers.
+It provides interpretable explanations for individual predictions by generating decision rules,
+counterfactual scenarios, and feature importance scores.</p>
+<p>This implementation is stable and actionable, designed for production use with tabular data.</p>
+</section>
+<section id="what-is-lore">
+<h2>What is LORE?<a class="headerlink" href="#what-is-lore" title="Permalink to this heading"></a></h2>
+<p>LORE is an explanation method that answers three key questions about a black box model’s prediction:</p>
+<ol class="arabic simple">
+<li><p><strong>Why?</strong> - Provides a decision rule explaining the prediction</p></li>
+<li><p><strong>What if?</strong> - Shows counterfactual rules for different predictions</p></li>
+<li><p><strong>Which features?</strong> - Identifies the most important features</p></li>
+</ol>
+<p>The method works by:</p>
+<ol class="arabic simple">
+<li><p>Generating a synthetic neighborhood around the instance to explain</p></li>
+<li><p>Training an interpretable surrogate model (decision tree) on this neighborhood</p></li>
+<li><p>Extracting rules and counterfactuals from the surrogate</p></li>
+<li><p>Computing feature importances</p></li>
+</ol>
+<p>For more details, see the paper:</p>
+<blockquote>
+<div><p>Guidotti, R., Monreale, A., Ruggieri, S., Pedreschi, D., Turini, F., &amp; Giannotti, F. (2018).
+Local rule-based explanations of black box decision systems.
+arXiv:1805.10820. https://arxiv.org/abs/1805.10820</p>
+</div></blockquote>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
+<section id="prerequisites">
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Python 3.7 or higher</p></li>
+<li><p>pip package manager</p></li>
+</ul>
+<p>We recommend using a virtual environment to avoid dependency conflicts.</p>
+</section>
+<section id="using-virtualenv">
+<h3>Using virtualenv<a class="headerlink" href="#using-virtualenv" title="Permalink to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a virtual environment</span>
+virtualenv<span class="w"> </span>venv
+
+<span class="c1"># Activate the environment (Linux/Mac)</span>
+<span class="nb">source</span><span class="w"> </span>venv/bin/activate
+
+<span class="c1"># Activate the environment (Windows)</span>
+venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
+
+<span class="c1"># Install requirements</span>
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+</section>
+<section id="using-conda">
+<h3>Using conda<a class="headerlink" href="#using-conda" title="Permalink to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a conda environment</span>
+conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>lore_env<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9
+
+<span class="c1"># Activate the environment</span>
+conda<span class="w"> </span>activate<span class="w"> </span>lore_env
+
+<span class="c1"># Install requirements</span>
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+</section>
+</section>
+<section id="quick-start">
+<h2>Quick Start<a class="headerlink" href="#quick-start" title="Permalink to this heading"></a></h2>
+<section id="basic-usage">
+<h3>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this heading"></a></h3>
+<p>Here’s a minimal example to get you started:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">lore_sa</span> <span class="kn">import</span> <span class="n">TabularGeneticGeneratorLore</span>
+<span class="kn">from</span> <span class="nn">lore_sa.dataset</span> <span class="kn">import</span> <span class="n">TabularDataset</span>
+<span class="kn">from</span> <span class="nn">lore_sa.bbox</span> <span class="kn">import</span> <span class="n">sklearn_classifier_bbox</span>
+
+<span class="c1"># 1. Load your dataset</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">TabularDataset</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span><span class="s1">&#39;data.csv&#39;</span><span class="p">,</span> <span class="n">class_name</span><span class="o">=</span><span class="s1">&#39;target&#39;</span><span class="p">)</span>
+
+<span class="c1"># 2. Wrap your trained model</span>
+<span class="n">bbox</span> <span class="o">=</span> <span class="n">sklearn_classifier_bbox</span><span class="o">.</span><span class="n">sklearnBBox</span><span class="p">(</span><span class="n">trained_model</span><span class="p">)</span>
+
+<span class="c1"># 3. Create the LORE explainer</span>
+<span class="n">explainer</span> <span class="o">=</span> <span class="n">TabularGeneticGeneratorLore</span><span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">dataset</span><span class="p">)</span>
+
+<span class="c1"># 4. Explain a single instance</span>
+<span class="n">explanation</span> <span class="o">=</span> <span class="n">explainer</span><span class="o">.</span><span class="n">explain_instance</span><span class="p">(</span><span class="n">instance</span><span class="p">)</span>
+
+<span class="c1"># 5. Access the explanation components</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Factual rule:&quot;</span><span class="p">,</span> <span class="n">explanation</span><span class="p">[</span><span class="s1">&#39;rule&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fidelity:&quot;</span><span class="p">,</span> <span class="n">explanation</span><span class="p">[</span><span class="s1">&#39;fidelity&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Top features:&quot;</span><span class="p">,</span> <span class="n">explanation</span><span class="p">[</span><span class="s1">&#39;feature_importances&#39;</span><span class="p">][:</span><span class="mi">5</span><span class="p">])</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="key-components">
+<h2>Key Components<a class="headerlink" href="#key-components" title="Permalink to this heading"></a></h2>
+<p>LORE consists of four main components:</p>
+<ol class="arabic">
+<li><p><strong>Black Box Wrapper</strong> (<code class="docutils literal notranslate"><span class="pre">AbstractBBox</span></code>)</p>
+<p>Wraps your machine learning model to provide a consistent interface:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sklearn_classifier_bbox.sklearnBBox</span></code> for scikit-learn models</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keras_classifier_wrapper</span></code> for Keras/TensorFlow models</p></li>
+</ul>
+</li>
+<li><p><strong>Dataset</strong> (<code class="docutils literal notranslate"><span class="pre">TabularDataset</span></code>)</p>
+<p>Contains your data and feature descriptors (types, ranges, categories):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="n">TabularDataset</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span><span class="s1">&#39;data.csv&#39;</span><span class="p">,</span> <span class="n">class_name</span><span class="o">=</span><span class="s1">&#39;target&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Encoder/Decoder</strong> (<code class="docutils literal notranslate"><span class="pre">EncDec</span></code>)</p>
+<p>Handles feature transformations (e.g., one-hot encoding for categorical features):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">lore_sa.encoder_decoder</span> <span class="kn">import</span> <span class="n">ColumnTransformerEnc</span>
+<span class="n">encoder</span> <span class="o">=</span> <span class="n">ColumnTransformerEnc</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">descriptor</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Neighborhood Generator</strong> (<code class="docutils literal notranslate"><span class="pre">NeighborhoodGenerator</span></code>)</p>
+<p>Creates synthetic instances around the instance to explain:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">RandomGenerator</span></code>: Simple random sampling</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GeneticGenerator</span></code>: Genetic algorithm for better neighborhoods</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GeneticProbaGenerator</span></code>: Probabilistic genetic variant</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="choosing-an-explainer">
+<h2>Choosing an Explainer<a class="headerlink" href="#choosing-an-explainer" title="Permalink to this heading"></a></h2>
+<p>LORE provides three pre-configured explainer classes:</p>
+<section id="tabularrandomgeneratorlore">
+<h3>TabularRandomGeneratorLore<a class="headerlink" href="#tabularrandomgeneratorlore" title="Permalink to this heading"></a></h3>
+<p>Uses random sampling for neighborhood generation. Fastest but may produce less accurate explanations.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">lore_sa</span> <span class="kn">import</span> <span class="n">TabularRandomGeneratorLore</span>
+<span class="n">explainer</span> <span class="o">=</span> <span class="n">TabularRandomGeneratorLore</span><span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">dataset</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Best for:</strong> Quick exploratory analysis, simple datasets</p>
+</section>
+<section id="tabulargeneticgeneratorlore">
+<h3>TabularGeneticGeneratorLore<a class="headerlink" href="#tabulargeneticgeneratorlore" title="Permalink to this heading"></a></h3>
+<p>Uses a genetic algorithm to evolve high-quality neighborhoods. Recommended for most use cases.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">lore_sa</span> <span class="kn">import</span> <span class="n">TabularGeneticGeneratorLore</span>
+<span class="n">explainer</span> <span class="o">=</span> <span class="n">TabularGeneticGeneratorLore</span><span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">dataset</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Best for:</strong> Production use, complex datasets, when explanation quality is critical</p>
+</section>
+<section id="tabularrandgengeneratorlore">
+<h3>TabularRandGenGeneratorLore<a class="headerlink" href="#tabularrandgengeneratorlore" title="Permalink to this heading"></a></h3>
+<p>Uses a probabilistic genetic algorithm. Balance between speed and quality.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">lore_sa</span> <span class="kn">import</span> <span class="n">TabularRandGenGeneratorLore</span>
+<span class="n">explainer</span> <span class="o">=</span> <span class="n">TabularRandGenGeneratorLore</span><span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">dataset</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Best for:</strong> Medium-complexity datasets, when you need a balance of speed and quality</p>
+</section>
+</section>
+<section id="understanding-the-explanation">
+<h2>Understanding the Explanation<a class="headerlink" href="#understanding-the-explanation" title="Permalink to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">explain_instance()</span></code> method returns a dictionary with several components:</p>
+<section id="rule">
+<h3>Rule<a class="headerlink" href="#rule" title="Permalink to this heading"></a></h3>
+<p>The factual rule explaining the prediction:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rule</span> <span class="o">=</span> <span class="n">explanation</span><span class="p">[</span><span class="s1">&#39;rule&#39;</span><span class="p">]</span>
+<span class="c1"># Example: IF age &gt; 30 AND income &lt;= 50000 THEN class = 0</span>
+</pre></div>
+</div>
+</section>
+<section id="counterfactuals">
+<h3>Counterfactuals<a class="headerlink" href="#counterfactuals" title="Permalink to this heading"></a></h3>
+<p>Alternative scenarios that would lead to different predictions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">counterfactuals</span> <span class="o">=</span> <span class="n">explanation</span><span class="p">[</span><span class="s1">&#39;counterfactuals&#39;</span><span class="p">]</span>
+<span class="c1"># Example: IF age &lt;= 30 OR income &gt; 50000 THEN class = 1</span>
+</pre></div>
+</div>
+</section>
+<section id="deltas">
+<h3>Deltas<a class="headerlink" href="#deltas" title="Permalink to this heading"></a></h3>
+<p>Minimal changes needed to reach each counterfactual:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">deltas</span> <span class="o">=</span> <span class="n">explanation</span><span class="p">[</span><span class="s1">&#39;deltas&#39;</span><span class="p">]</span>
+<span class="c1"># Example: [age &lt;= 30] (decrease age to at most 30)</span>
+</pre></div>
+</div>
+</section>
+<section id="feature-importances">
+<h3>Feature Importances<a class="headerlink" href="#feature-importances" title="Permalink to this heading"></a></h3>
+<p>Importance of each feature in the decision:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">importances</span> <span class="o">=</span> <span class="n">explanation</span><span class="p">[</span><span class="s1">&#39;feature_importances&#39;</span><span class="p">]</span>
+<span class="c1"># Example: [(&#39;age&#39;, 0.45), (&#39;income&#39;, 0.32), (&#39;education&#39;, 0.15), ...]</span>
+</pre></div>
+</div>
+</section>
+<section id="fidelity">
+<h3>Fidelity<a class="headerlink" href="#fidelity" title="Permalink to this heading"></a></h3>
+<p>How well the explanation approximates the black box (0 to 1):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fidelity</span> <span class="o">=</span> <span class="n">explanation</span><span class="p">[</span><span class="s1">&#39;fidelity&#39;</span><span class="p">]</span>
+<span class="c1"># Example: 0.95 (the surrogate agrees with the black box 95% of the time)</span>
+</pre></div>
+</div>
+<p>A fidelity close to 1.0 indicates the explanation is highly reliable.</p>
+</section>
+</section>
+<section id="next-steps">
+<h2>Next Steps<a class="headerlink" href="#next-steps" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>See the <a class="reference internal" href="examples/tabular_explanations_example.html"><span class="doc">Tabular explanations example</span></a> for a complete walkthrough</p></li>
+<li><p>Check the <a class="reference internal" href="source/modules.html"><span class="doc">Modules</span></a> for detailed API reference</p></li>
+<li><p>Read the paper at <a class="reference external" href="https://arxiv.org/abs/1805.10820">https://arxiv.org/abs/1805.10820</a> for the theoretical foundation</p></li>
+</ul>
+</section>
+<section id="common-pitfalls">
+<h2>Common Pitfalls<a class="headerlink" href="#common-pitfalls" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Missing target class</strong>: Ensure you specify <code class="docutils literal notranslate"><span class="pre">class_name</span></code> when creating the dataset</p></li>
+<li><p><strong>Feature order</strong>: The instance to explain must have features in the same order as the training data</p></li>
+<li><p><strong>Low fidelity</strong>: If fidelity is low (&lt;0.7), try increasing <code class="docutils literal notranslate"><span class="pre">num_instances</span></code> in <code class="docutils literal notranslate"><span class="pre">explain()</span></code></p></li>
+<li><p><strong>Categorical features</strong>: Make sure categorical columns are properly identified in the dataset</p></li>
+</ol>
+</section>
+<section id="getting-help">
+<h2>Getting Help<a class="headerlink" href="#getting-help" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>GitHub Issues: <a class="reference external" href="https://github.com/kdd-lab/LORE_sa/issues">https://github.com/kdd-lab/LORE_sa/issues</a></p></li>
+<li><p>Documentation: <a class="reference external" href="https://kdd-lab.github.io/LORE_sa/html/index.html">https://kdd-lab.github.io/LORE_sa/html/index.html</a></p></li>
+</ul>
+</section>
 </section>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="lore_sa - Local Rule-based Explanations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="architecture.html" class="btn btn-neutral float-right" title="Architecture and Methodology" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

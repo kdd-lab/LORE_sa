@@ -15,6 +15,7 @@
    
       ~Expression.__init__
       ~Expression.operator2string
+      ~Expression.to_dict
    
    
 

@@ -62,9 +62,7 @@ Modules
    :toctree: generated/
 
    encoder_decoder.EncDec
-   encoder_decoder.OneHotEnc
-   encoder_decoder.LabelEnc
-   encoder_decoder.TabularEnc
+   encoder_decoder.ColumnTransformerEnc
 
 :mod:`lore_sa.explanation`: Explanation classes and functions
 =============================================================

@@ -15,12 +15,65 @@ __all__ = ["NeighborhoodGenerator"]
 
 class NeighborhoodGenerator(object):
     """
-    Abstract class for Neighborhood generator. It defines the basic functionalities
-    to balance the instances of the different classes in the generated data
+    Abstract base class for generating synthetic neighborhoods.
+    
+    A neighborhood generator creates synthetic instances around a specific instance
+    to be explained. These synthetic instances are used to train a local surrogate
+    model that approximates the black box's behavior in that region.
+    
+    The key challenge is generating a diverse neighborhood that:
+    1. Covers the local decision boundary
+    2. Includes instances with both the same and different predicted classes
+    3. Is similar enough to the original instance to provide a local explanation
+    
+    Different generators use different strategies:
+    - RandomGenerator: Pure random sampling within feature ranges
+    - GeneticGenerator: Genetic algorithm to evolve good neighborhoods
+    - GeneticProbaGenerator: Probabilistic variant of genetic generation
+    
+    Attributes:
+        bbox (AbstractBBox): The black box model to explain
+        dataset (Dataset): Dataset with feature descriptors
+        encoder (EncDec): Encoder/decoder for feature transformations
+        ocr (float): One-Class Ratio - controls the balance between instances with
+            the same class (1-ocr) and different classes (ocr) in the neighborhood
+        generated_data: The generated neighborhood instances
+        columns: Feature names for the generated instances
+    
+    Methods:
+        generate: Generate a synthetic neighborhood
+        generate_synthetic_instance: Generate a single synthetic instance
+        balance_neigh: Balance the class distribution in the neighborhood
+    
+    Example:
+        >>> from lore_sa.neighgen import GeneticGenerator
+        >>> 
+        >>> generator = GeneticGenerator(bbox, dataset, encoder, ocr=0.1)
+        >>> neighborhood = generator.generate(encoded_instance, 
+        ...                                   num_instances=1000, 
+        ...                                   descriptor=dataset.descriptor,
+        ...                                   encoder=encoder)
+    
+    See Also:
+        RandomGenerator: Simple random sampling
+        GeneticGenerator: Genetic algorithm-based generation
+        GeneticProbaGenerator: Probabilistic genetic generation
     """
 
     @abstractmethod
     def __init__(self, bbox: AbstractBBox, dataset: Dataset, encoder: EncDec, ocr=0.1):
+        """
+        Initialize the neighborhood generator.
+        
+        Args:
+            bbox (AbstractBBox): The black box model to explain
+            dataset (Dataset): Dataset containing feature descriptors
+            encoder (EncDec): Encoder/decoder for feature transformations
+            ocr (float, optional): One-Class Ratio, controls the balance between
+                instances with the same class and different classes. Default is 0.1,
+                meaning 90% of instances will have the same predicted class as the
+                original instance, and 10% will have different classes.
+        """
         self.generated_data = None
         self.bbox = bbox
         self.dataset = dataset
@@ -30,6 +83,28 @@ class NeighborhoodGenerator(object):
         return
 
     def generate_synthetic_instance(self, from_z=None, mutpb=1.0):
+        """
+        Generate a single synthetic instance.
+        
+        This method creates one synthetic instance by randomly sampling or mutating
+        feature values. For categorical features, it randomly selects from valid values.
+        For numerical features, it samples from the feature's range.
+        
+        Args:
+            from_z (np.array, optional): Starting instance in encoded space to mutate.
+                If None, generates a completely random instance. If provided, features
+                are mutated with probability mutpb.
+            mutpb (float, optional): Mutation probability for each feature (0 to 1).
+                Only used when from_z is provided. Default is 1.0 (mutate all features).
+        
+        Returns:
+            np.array: A single synthetic instance in encoded space, shape (n_encoded_features,)
+        
+        Note:
+            The method respects feature types and valid ranges from the dataset descriptor.
+            For categorical features, it ensures the one-hot encoding constraint (exactly
+            one category is active).
+        """
 
         if from_z is None:
             raise RuntimeError("Missing parameter 'from_z' in generate_synthetic_instance")

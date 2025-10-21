@@ -43,8 +43,88 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../get_started.html">Get started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../examples/tabular_explanations_example.html">Tabular explanation</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../get_started.html">Get started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#welcome-to-lore-sa">Welcome to LORE_sa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#what-is-lore">What is LORE?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#using-virtualenv">Using virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#using-conda">Using conda</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#quick-start">Quick Start</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#basic-usage">Basic Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#key-components">Key Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#choosing-an-explainer">Choosing an Explainer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#tabularrandomgeneratorlore">TabularRandomGeneratorLore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#tabulargeneticgeneratorlore">TabularGeneticGeneratorLore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#tabularrandgengeneratorlore">TabularRandGenGeneratorLore</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#understanding-the-explanation">Understanding the Explanation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#rule">Rule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#counterfactuals">Counterfactuals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#deltas">Deltas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#feature-importances">Feature Importances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#fidelity">Fidelity</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#next-steps">Next Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#common-pitfalls">Common Pitfalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#getting-help">Getting Help</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../architecture.html">Architecture and Methodology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../architecture.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../architecture.html#theoretical-foundation">Theoretical Foundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../architecture.html#the-four-stage-process">The Four-Stage Process</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#stage-1-instance-encoding">Stage 1: Instance Encoding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#stage-2-neighborhood-generation">Stage 2: Neighborhood Generation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#stage-3-surrogate-training">Stage 3: Surrogate Training</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#stage-4-rule-extraction">Stage 4: Rule Extraction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../architecture.html#architecture-components">Architecture Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#black-box-wrapper-abstractbbox">Black Box Wrapper (AbstractBBox)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#dataset-tabulardataset">Dataset (TabularDataset)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#encoder-decoder-encdec">Encoder/Decoder (EncDec)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#neighborhood-generator-neighborhoodgenerator">Neighborhood Generator (NeighborhoodGenerator)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#surrogate-model-surrogate">Surrogate Model (Surrogate)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#rule-and-expression-classes">Rule and Expression Classes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../architecture.html#workflow-diagram">Workflow Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../architecture.html#best-practices">Best Practices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#choosing-num-instances">Choosing num_instances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#interpreting-fidelity">Interpreting Fidelity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#handling-low-fidelity">Handling Low Fidelity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#feature-importance-interpretation">Feature Importance Interpretation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../architecture.html#computational-complexity">Computational Complexity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#time-complexity">Time Complexity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#space-complexity">Space Complexity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#typical-running-times">Typical Running Times</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../architecture.html#references">References</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#primary-paper">Primary Paper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#related-work">Related Work</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#key-differences-from-lime">Key Differences from LIME</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../architecture.html#implementation-notes">Implementation Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#thread-safety">Thread Safety</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#memory-considerations">Memory Considerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#reproducibility">Reproducibility</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../architecture.html#future-extensions">Future Extensions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../examples/tabular_explanations_example.html">Tabular explanation example</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#learning-and-explaining-german-credit-dataset">Learning and explaining German Credit Dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#loading-and-preparation-of-data">Loading and preparation of data</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#learning-a-random-forest-classfier">Learning a Random Forest classfier</a></li>
@@ -119,16 +199,8 @@
 <li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.encoder_decoder.EncDec.html#lore_sa.encoder_decoder.EncDec"><code class="docutils literal notranslate"><span class="pre">EncDec</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.encoder_decoder.OneHotEnc.html">lore_sa.encoder_decoder.OneHotEnc</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.encoder_decoder.OneHotEnc.html#lore_sa.encoder_decoder.OneHotEnc"><code class="docutils literal notranslate"><span class="pre">OneHotEnc</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.encoder_decoder.LabelEnc.html">lore_sa.encoder_decoder.LabelEnc</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.encoder_decoder.LabelEnc.html#lore_sa.encoder_decoder.LabelEnc"><code class="docutils literal notranslate"><span class="pre">LabelEnc</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.encoder_decoder.TabularEnc.html">lore_sa.encoder_decoder.TabularEnc</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.encoder_decoder.TabularEnc.html#lore_sa.encoder_decoder.TabularEnc"><code class="docutils literal notranslate"><span class="pre">TabularEnc</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.encoder_decoder.ColumnTransformerEnc.html">lore_sa.encoder_decoder.ColumnTransformerEnc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.encoder_decoder.ColumnTransformerEnc.html#lore_sa.encoder_decoder.ColumnTransformerEnc"><code class="docutils literal notranslate"><span class="pre">ColumnTransformerEnc</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -236,25 +308,24 @@
 <span class="kn">import</span> <span class="nn">pickle</span>
 <span class="kn">import</span> <span class="nn">random</span>
 
+<span class="kn">from</span> <span class="nn">deap.algorithms</span> <span class="kn">import</span> <span class="n">varAnd</span><span class="p">,</span> <span class="n">eaSimple</span>
 <span class="kn">from</span> <span class="nn">scipy.spatial.distance</span> <span class="kn">import</span> <span class="n">cdist</span><span class="p">,</span> <span class="n">hamming</span>
-
-<span class="kn">from</span> <span class="nn">lore_sa.logger</span> <span class="kn">import</span> <span class="n">logger</span>
-<span class="kn">from</span> <span class="nn">lore_sa.neighgen.neighborhood_generator</span> <span class="kn">import</span> <span class="n">NeighborhoodGenerator</span>
+<span class="kn">from</span> <span class="nn">.neighborhood_generator</span> <span class="kn">import</span> <span class="n">NeighborhoodGenerator</span>
 <span class="kn">from</span> <span class="nn">deap</span> <span class="kn">import</span> <span class="n">base</span><span class="p">,</span> <span class="n">creator</span><span class="p">,</span> <span class="n">tools</span><span class="p">,</span> <span class="n">algorithms</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;NeighborhoodGenerator&quot;</span><span class="p">,</span> <span class="s2">&quot;GeneticGenerator&quot;</span><span class="p">]</span>
 
-<span class="kn">from</span> <span class="nn">lore_sa.util</span> <span class="kn">import</span> <span class="n">neuclidean</span><span class="p">,</span> <span class="n">sigmoid</span>
+<span class="kn">from</span> <span class="nn">..util</span> <span class="kn">import</span> <span class="n">neuclidean</span><span class="p">,</span> <span class="n">sigmoid</span>
 
 
-<div class="viewcode-block" id="GeneticGenerator"><a class="viewcode-back" href="../../../source/generated/lore_sa.neighgen.GeneticGenerator.html#lore_sa.neighgen.GeneticGenerator">[docs]</a><span class="k">class</span> <span class="nc">GeneticGenerator</span><span class="p">(</span><span class="n">NeighborhoodGenerator</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">LegacyGeneticGenerator</span><span class="p">(</span><span class="n">NeighborhoodGenerator</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Random Generator creates neighbor instances by generating random values starting from an input instance and</span>
 <span class="sd">    pruning the generation around a fitness function based on proximity to the instance to explain</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-<div class="viewcode-block" id="GeneticGenerator.__init__"><a class="viewcode-back" href="../../../source/generated/lore_sa.neighgen.GeneticGenerator.html#lore_sa.neighgen.GeneticGenerator.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dataset</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">encoder</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ocr</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dataset</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">encoder</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ocr</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
                  <span class="n">alpha1</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">alpha2</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">neuclidean</span><span class="p">,</span> <span class="n">ngen</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">mutpb</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">cxpb</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
                  <span class="n">tournsize</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">halloffame_ratio</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">random_seed</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -286,32 +357,33 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">tournsize</span> <span class="o">=</span> <span class="n">tournsize</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">halloffame_ratio</span> <span class="o">=</span> <span class="n">halloffame_ratio</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">random_seed</span> <span class="o">=</span> <span class="n">random_seed</span>
-        <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">random_seed</span><span class="p">)</span></div>
+        <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">random_seed</span><span class="p">)</span>
 
-<div class="viewcode-block" id="GeneticGenerator.generate"><a class="viewcode-back" href="../../../source/generated/lore_sa.neighgen.GeneticGenerator.html#lore_sa.neighgen.GeneticGenerator.generate">[docs]</a>    <span class="k">def</span> <span class="nf">generate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">num_instances</span><span class="p">,</span> <span class="n">descriptor</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">generate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">num_instances</span><span class="p">,</span> <span class="n">descriptor</span><span class="p">,</span> <span class="n">encoder</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        The generation is based on the strategy of generating a number of instances for the same class as the input</span>
 <span class="sd">        instance and a number of instances for a different class.</span>
 <span class="sd">        The generation of the instances for each subgroup is done through a genetic algorithm based on two fitness</span>
 <span class="sd">        fuctions: one for the same class and one for the different class.</span>
-<span class="sd">        :param x: the input instance</span>
+<span class="sd">        :param z: the input instance</span>
 <span class="sd">        :param num_instances: how many elements to generate</span>
 <span class="sd">        :param descriptor: the descriptor of the dataset</span>
 <span class="sd">        :return:</span>
 <span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">new_x</span> <span class="o">=</span> <span class="n">z</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
         <span class="c1"># determine the number of instances to generate for the same class and for a different class</span>
         <span class="n">num_samples_eq</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">num_instances</span> <span class="o">*</span> <span class="mf">0.5</span><span class="p">))</span>
         <span class="n">num_samples_neq</span> <span class="o">=</span> <span class="n">num_instances</span> <span class="o">-</span> <span class="n">num_samples_eq</span>
 
         <span class="c1"># generate the instances for the same class</span>
-        <span class="n">toolbox_eq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">setup_toolbox</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fitness_equal</span><span class="p">,</span> <span class="n">num_samples_eq</span><span class="p">)</span>
+        <span class="n">toolbox_eq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">setup_toolbox</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fitness_equal</span><span class="p">,</span> <span class="n">num_samples_eq</span><span class="p">)</span>
         <span class="n">population_eq</span><span class="p">,</span> <span class="n">halloffame_eq</span><span class="p">,</span> <span class="n">logbook_eq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">toolbox_eq</span><span class="p">,</span> <span class="n">num_samples_eq</span><span class="p">)</span>
         <span class="n">Z_eq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_halloffame</span><span class="p">(</span><span class="n">population_eq</span><span class="p">,</span> <span class="n">halloffame_eq</span><span class="p">)</span>
         <span class="c1"># print(logbook_eq)</span>
 
         <span class="c1"># generate the instances for a different class</span>
-        <span class="n">toolbox_noteq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">setup_toolbox</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fitness_notequal</span><span class="p">,</span> <span class="n">num_samples_neq</span><span class="p">)</span>
+        <span class="n">toolbox_noteq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">setup_toolbox</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fitness_notequal</span><span class="p">,</span> <span class="n">num_samples_neq</span><span class="p">)</span>
         <span class="n">population_noteq</span><span class="p">,</span> <span class="n">halloffame_noteq</span><span class="p">,</span> <span class="n">logbook_noteq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">toolbox_noteq</span><span class="p">,</span> <span class="n">num_samples_neq</span><span class="p">)</span>
         <span class="n">Z_noteq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_halloffame</span><span class="p">(</span><span class="n">population_noteq</span><span class="p">,</span> <span class="n">halloffame_noteq</span><span class="p">)</span>
         <span class="c1"># print(logbook_noteq)</span>
@@ -320,10 +392,11 @@
         <span class="n">Z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">Z_eq</span><span class="p">,</span> <span class="n">Z_noteq</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
         <span class="c1"># balance the instances according to the minority class</span>
-        <span class="n">Z</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">GeneticGenerator</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">balance_neigh</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">num_instances</span><span class="p">)</span>
+        <span class="n">Z</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">LegacyGeneticGenerator</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">balance_neigh</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">num_instances</span><span class="p">)</span>
         <span class="c1"># the first element is the input instance</span>
-        <span class="n">Z</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">Z</span></div>
+
+        <span class="n">Z</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_x</span>
+        <span class="k">return</span> <span class="n">Z</span>
 
     <span class="k">def</span> <span class="nf">add_halloffame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">population</span><span class="p">,</span> <span class="n">halloffame</span><span class="p">):</span>
         <span class="n">fitness_values</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">fitness</span><span class="o">.</span><span class="n">wvalues</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">population</span><span class="p">]</span>
@@ -359,8 +432,9 @@
         <span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;population&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">initRepeat</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="n">toolbox</span><span class="o">.</span><span class="n">individual</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">population_size</span><span class="p">)</span>
 
         <span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;clone&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">clone</span><span class="p">)</span>
+        <span class="c1"># toolbox.register(&quot;evaluate&quot;, self.constraint_decorator(evaluate, x))</span>
         <span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;evaluate&quot;</span><span class="p">,</span> <span class="n">evaluate</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-        <span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;mate&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">cxTwoPoint</span><span class="p">)</span>
+        <span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;mate&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mate</span><span class="p">)</span>
         <span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;mutate&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mutate</span><span class="p">,</span> <span class="n">toolbox</span><span class="p">)</span>
         <span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;select&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">selTournament</span><span class="p">,</span> <span class="n">tournsize</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">tournsize</span><span class="p">)</span>
 
@@ -368,13 +442,13 @@
 
     <span class="k">def</span> <span class="nf">setup_toolbox_noteq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">evaluate</span><span class="p">,</span> <span class="n">population_size</span><span class="p">):</span>
 
-        <span class="n">creator</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;fitness&quot;</span><span class="p">,</span> <span class="n">base</span><span class="o">.</span><span class="n">Fitness</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,))</span>
-        <span class="n">creator</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;individual&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">fitness</span><span class="o">=</span><span class="n">creator</span><span class="o">.</span><span class="n">fitness</span><span class="p">)</span>
+        <span class="n">creator</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;fitness_noteg&quot;</span><span class="p">,</span> <span class="n">base</span><span class="o">.</span><span class="n">Fitness</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,))</span>
+        <span class="n">creator</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;individual_noteq&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">fitness</span><span class="o">=</span><span class="n">creator</span><span class="o">.</span><span class="n">fitness_noteq</span><span class="p">)</span>
 
         <span class="n">toolbox</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">Toolbox</span><span class="p">()</span>
         <span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;feature_values&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">record_init</span><span class="p">,</span> <span class="n">x1</span><span class="p">)</span>
-        <span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;individual&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">initIterate</span><span class="p">,</span> <span class="n">creator</span><span class="o">.</span><span class="n">individual</span><span class="p">,</span> <span class="n">toolbox</span><span class="o">.</span><span class="n">feature_values</span><span class="p">)</span>
-        <span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;population&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">initRepeat</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="n">toolbox</span><span class="o">.</span><span class="n">individual</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">population_size</span><span class="p">)</span>
+        <span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;individual&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">initIterate</span><span class="p">,</span> <span class="n">creator</span><span class="o">.</span><span class="n">individual_noteq</span><span class="p">,</span> <span class="n">toolbox</span><span class="o">.</span><span class="n">feature_values</span><span class="p">)</span>
+        <span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;population&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">initRepeat</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="n">toolbox</span><span class="o">.</span><span class="n">individual_noteq</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">population_size</span><span class="p">)</span>
 
         <span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;clone&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">clone</span><span class="p">)</span>
         <span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;evaluate&quot;</span><span class="p">,</span> <span class="n">evaluate</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
@@ -396,17 +470,24 @@
         <span class="n">stats</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;min&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">)</span>
         <span class="n">stats</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;max&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">)</span>
 
-        <span class="n">population</span><span class="p">,</span> <span class="n">logbook</span> <span class="o">=</span> <span class="n">algorithms</span><span class="o">.</span><span class="n">eaSimple</span><span class="p">(</span><span class="n">population</span><span class="p">,</span> <span class="n">toolbox</span><span class="p">,</span> <span class="n">cxpb</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cxpb</span><span class="p">,</span> <span class="n">mutpb</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mutpb</span><span class="p">,</span>
+        <span class="n">population</span><span class="p">,</span> <span class="n">logbook</span> <span class="o">=</span> <span class="n">eaSimple</span><span class="p">(</span><span class="n">population</span><span class="p">,</span> <span class="n">toolbox</span><span class="p">,</span> <span class="n">cxpb</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cxpb</span><span class="p">,</span> <span class="n">mutpb</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mutpb</span><span class="p">,</span>
                                                   <span class="n">ngen</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ngen</span><span class="p">,</span> <span class="n">stats</span><span class="o">=</span><span class="n">stats</span><span class="p">,</span> <span class="n">halloffame</span><span class="o">=</span><span class="n">halloffame</span><span class="p">,</span>
                                                   <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
         <span class="k">return</span> <span class="n">population</span><span class="p">,</span> <span class="n">halloffame</span><span class="p">,</span> <span class="n">logbook</span>
 
     <span class="k">def</span> <span class="nf">record_init</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        This function is used to generate a random instance to start the evolutionary algorithm.</span>
+<span class="sd">        In this case we repeat the input instance x for all the initial population</span>
+
+<span class="sd">        :return: a (not so) random instance</span>
+<span class="sd">        &#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="n">x</span>
 
     <span class="k">def</span> <span class="nf">random_init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">z</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_synthetic_instance</span><span class="p">()</span>
+
         <span class="k">return</span> <span class="n">z</span>
 
     <span class="k">def</span> <span class="nf">clone</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
@@ -414,24 +495,70 @@
 
     <span class="k">def</span> <span class="nf">mutate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">toolbox</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="n">z</span> <span class="o">=</span> <span class="n">toolbox</span><span class="o">.</span><span class="n">clone</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-        <span class="c1"># for i in range(self.nbr_features):</span>
-        <span class="c1">#         #     if np.random.random() &lt;= self.mutpb:</span>
-        <span class="c1">#         #         z[i] = np.random.choice(self.feature_values[i], size=1, replace=True)</span>
         <span class="n">z</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_synthetic_instance</span><span class="p">(</span><span class="n">from_z</span><span class="o">=</span><span class="n">z</span><span class="p">,</span> <span class="n">mutpb</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mutpb</span><span class="p">)</span>
+
         <span class="k">return</span> <span class="n">z</span><span class="p">,</span>
 
-    <span class="k">def</span> <span class="nf">fitness_equal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">x1</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">mate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ind1</span><span class="p">,</span> <span class="n">ind2</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Executes a two-point crossover on the input :term:`sequence`</span>
+<span class="sd">        individuals. The two individuals are modified in place and both keep</span>
+<span class="sd">        their original length.</span>
+<span class="sd">        This implementation uses the original implementation of the DEAP library. It adds a special case for the</span>
+<span class="sd">        one-hot encoding, where the crossover is done taking into account the intervals of values imposed by</span>
+<span class="sd">        the one-hot encoding.</span>
+
+<span class="sd">        :param ind1: The first individual participating in the crossover.</span>
+<span class="sd">        :param ind2: The second individual participating in the crossover.</span>
+<span class="sd">        :returns: A tuple of two individuals.</span>
+
+<span class="sd">        This function uses the :func:`~random.randint` function from the Python</span>
+<span class="sd">        base :mod:`random` module.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s1">&#39;one-hot&#39;</span><span class="p">:</span>
+            <span class="n">intervals</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder</span><span class="o">.</span><span class="n">get_encoded_intervals</span><span class="p">()</span>
+            <span class="n">cxInterval1</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">intervals</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">cxInterval2</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">intervals</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">cxInterval1</span> <span class="o">&gt;</span> <span class="n">cxInterval2</span><span class="p">:</span>
+                <span class="c1"># Swap the two cx intervals</span>
+                <span class="n">cxInterval1</span><span class="p">,</span> <span class="n">cxInterval2</span> <span class="o">=</span> <span class="n">cxInterval2</span><span class="p">,</span> <span class="n">cxInterval1</span>
+
+            <span class="n">cxpoint1</span> <span class="o">=</span> <span class="n">intervals</span><span class="p">[</span><span class="n">cxInterval1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">cxpoint2</span> <span class="o">=</span> <span class="n">intervals</span><span class="p">[</span><span class="n">cxInterval2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">ind1</span><span class="p">[</span><span class="n">cxpoint1</span><span class="p">:</span><span class="n">cxpoint2</span><span class="p">],</span> <span class="n">ind2</span><span class="p">[</span><span class="n">cxpoint1</span><span class="p">:</span><span class="n">cxpoint2</span><span class="p">]</span> \
+                <span class="o">=</span> <span class="n">ind2</span><span class="p">[</span><span class="n">cxpoint1</span><span class="p">:</span><span class="n">cxpoint2</span><span class="p">],</span> <span class="n">ind1</span><span class="p">[</span><span class="n">cxpoint1</span><span class="p">:</span><span class="n">cxpoint2</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">size</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ind1</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">ind2</span><span class="p">))</span>
+            <span class="n">cxpoint1</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="p">)</span>
+            <span class="n">cxpoint2</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">cxpoint2</span> <span class="o">&gt;=</span> <span class="n">cxpoint1</span><span class="p">:</span>
+                <span class="n">cxpoint2</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>  <span class="c1"># Swap the two cx points</span>
+                <span class="n">cxpoint1</span><span class="p">,</span> <span class="n">cxpoint2</span> <span class="o">=</span> <span class="n">cxpoint2</span><span class="p">,</span> <span class="n">cxpoint1</span>
+
+            <span class="n">ind1</span><span class="p">[</span><span class="n">cxpoint1</span><span class="p">:</span><span class="n">cxpoint2</span><span class="p">],</span> <span class="n">ind2</span><span class="p">[</span><span class="n">cxpoint1</span><span class="p">:</span><span class="n">cxpoint2</span><span class="p">]</span> \
+                <span class="o">=</span> <span class="n">ind2</span><span class="p">[</span><span class="n">cxpoint1</span><span class="p">:</span><span class="n">cxpoint2</span><span class="p">],</span> <span class="n">ind1</span><span class="p">[</span><span class="n">cxpoint1</span><span class="p">:</span><span class="n">cxpoint2</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">ind1</span><span class="p">,</span> <span class="n">ind2</span>
+
+
+
+    <span class="k">def</span> <span class="nf">fitness_equal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">z1</span><span class="p">):</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">metric</span><span class="p">,</span> <span class="n">numbers</span><span class="o">.</span><span class="n">Number</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">metric</span> <span class="o">=</span> <span class="n">neuclidean</span>
-        <span class="n">feature_similarity_score</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">-</span> <span class="n">cdist</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">x1</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">metric</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">metric</span><span class="p">)</span><span class="o">.</span><span class="n">ravel</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">feature_similarity_score</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">-</span> <span class="n">cdist</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">z1</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">metric</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">metric</span><span class="p">)</span><span class="o">.</span><span class="n">ravel</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
         <span class="c1"># feature_similarity = feature_similarity_score if feature_similarity_score &gt;= self.eta1 else 0.0</span>
         <span class="n">feature_similarity</span> <span class="o">=</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">feature_similarity_score</span><span class="p">)</span> <span class="k">if</span> <span class="n">feature_similarity_score</span> <span class="o">&lt;</span> <span class="mf">1.0</span> <span class="k">else</span> <span class="mf">0.0</span>
         <span class="c1"># feature_similarity = sigmoid(feature_similarity_score)</span>
 
         <span class="c1"># y = self.bb_predict(x.reshape(1, -1))[0]</span>
         <span class="c1"># y1 = self.bb_predict(x1.reshape(1, -1))[0]</span>
-        <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bbox</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
-        <span class="n">y1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bbox</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x1</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bbox</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="n">x1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">z1</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+        <span class="c1"># if None in x1[0]:</span>
+        <span class="c1">#     x1 = x</span>
+        <span class="n">y1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bbox</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span>
 
         <span class="n">target_similarity_score</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">-</span> <span class="n">hamming</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y1</span><span class="p">)</span>
         <span class="c1"># target_similarity = target_similarity_score if target_similarity_score &gt;= self.eta2 else 0.0</span>
@@ -440,23 +567,288 @@
         <span class="n">evaluation</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">alpha1</span> <span class="o">*</span> <span class="n">feature_similarity</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">alpha2</span> <span class="o">*</span> <span class="n">target_similarity</span>
         <span class="k">return</span> <span class="n">evaluation</span><span class="p">,</span>
 
-    <span class="k">def</span> <span class="nf">fitness_notequal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">x1</span><span class="p">):</span>
-        <span class="n">feature_similarity_score</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">-</span> <span class="n">cdist</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">x1</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">metric</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">metric</span><span class="p">)</span><span class="o">.</span><span class="n">ravel</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">fitness_notequal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">z1</span><span class="p">):</span>
+        <span class="n">feature_similarity_score</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">-</span> <span class="n">cdist</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">z1</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">metric</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">metric</span><span class="p">)</span><span class="o">.</span><span class="n">ravel</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
         <span class="c1"># feature_similarity = feature_similarity_score if feature_similarity_score &gt;= self.eta1 else 0.0</span>
         <span class="n">feature_similarity</span> <span class="o">=</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">feature_similarity_score</span><span class="p">)</span>
 
         <span class="c1"># y = self.bb_predict(x.reshape(1, -1))[0]</span>
         <span class="c1"># y1 = self.bb_predict(x1.reshape(1, -1))[0]</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bbox</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
-        <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bbox</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
-        <span class="n">y1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bbox</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x1</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+        <span class="n">x1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">z1</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+        <span class="c1"># if None in x1[0]:</span>
+        <span class="c1">#     x1 = x</span>
+        <span class="n">y1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bbox</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span>
 
         <span class="n">target_similarity_score</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">-</span> <span class="n">hamming</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y1</span><span class="p">)</span>
         <span class="c1"># target_similarity = target_similarity_score if target_similarity_score &lt; self.eta2 else 0.0</span>
         <span class="n">target_similarity</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">-</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">target_similarity_score</span><span class="p">)</span>
 
         <span class="n">evaluation</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">alpha1</span> <span class="o">*</span> <span class="n">feature_similarity</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">alpha2</span> <span class="o">*</span> <span class="n">target_similarity</span>
-        <span class="k">return</span> <span class="n">evaluation</span><span class="p">,</span></div>
+        <span class="k">return</span> <span class="n">evaluation</span><span class="p">,</span>
+
+
+
+<div class="viewcode-block" id="GeneticGenerator"><a class="viewcode-back" href="../../../source/generated/lore_sa.neighgen.GeneticGenerator.html#lore_sa.neighgen.GeneticGenerator">[docs]</a><span class="k">class</span> <span class="nc">GeneticGenerator</span><span class="p">(</span><span class="n">LegacyGeneticGenerator</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Random Generator creates neighbor instances by generating random values starting from an input instance and</span>
+<span class="sd">    pruning the generation around a fitness function based on proximity to the instance to explain</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="GeneticGenerator.__init__"><a class="viewcode-back" href="../../../source/generated/lore_sa.neighgen.GeneticGenerator.html#lore_sa.neighgen.GeneticGenerator.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dataset</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">encoder</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ocr</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
+                 <span class="n">alpha1</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">alpha2</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">neuclidean</span><span class="p">,</span> <span class="n">ngen</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">mutpb</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">cxpb</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+                 <span class="n">tournsize</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">halloffame_ratio</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">random_seed</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        :param bbox: the Black Box model to explain</span>
+<span class="sd">        :param dataset: the dataset with the descriptor of the original dataset</span>
+<span class="sd">        :param encoder: an encoder to transfrom the data from/to the black box model</span>
+<span class="sd">        :param ocr: acronym for One Class Ratio, it is the ratio of the number of instances of the minority class</span>
+<span class="sd">        :param alpha1: the weight of the similarity of the features from the given instance. The sum of alpha1 and alpha2 must be 1</span>
+<span class="sd">        :param alpha2: the weight of the similiarity of the target class from the given instance. The sum of alpha1 and alpha2 must be 1</span>
+<span class="sd">        :param metric: the distance metric to use to compute the distance between instances</span>
+<span class="sd">        :param ngen: the number of generations to run</span>
+<span class="sd">        :param mutpb: probability of mutation of a specific feature</span>
+<span class="sd">        :param cxpb:</span>
+<span class="sd">        :param tournsize:</span>
+<span class="sd">        :param halloffame_ratio:</span>
+<span class="sd">        :param random_seed: initial seed for the random number generator</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bbox</span> <span class="o">=</span> <span class="n">bbox</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">encoder</span> <span class="o">=</span> <span class="n">encoder</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ocr</span> <span class="o">=</span> <span class="n">ocr</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">alpha1</span> <span class="o">=</span> <span class="n">alpha1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">alpha2</span> <span class="o">=</span> <span class="n">alpha2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">metric</span> <span class="o">=</span> <span class="n">metric</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ngen</span> <span class="o">=</span> <span class="n">ngen</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mutpb</span> <span class="o">=</span> <span class="n">mutpb</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cxpb</span> <span class="o">=</span> <span class="n">cxpb</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tournsize</span> <span class="o">=</span> <span class="n">tournsize</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">halloffame_ratio</span> <span class="o">=</span> <span class="n">halloffame_ratio</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">random_seed</span> <span class="o">=</span> <span class="n">random_seed</span>
+        <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">random_seed</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="GeneticGenerator.generate"><a class="viewcode-back" href="../../../source/generated/lore_sa.neighgen.GeneticGenerator.html#lore_sa.neighgen.GeneticGenerator.generate">[docs]</a>    <span class="k">def</span> <span class="nf">generate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">num_instances</span><span class="p">,</span> <span class="n">descriptor</span><span class="p">,</span> <span class="n">encoder</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The generation is based on the strategy of generating a number of instances for the same class</span>
+<span class="sd">        as the input instance and a number of instances for a different class.</span>
+<span class="sd">        The generation of the instances for each subgroup is done through a genetic algorithm based on</span>
+<span class="sd">        two fitness fuctions: one for the same class and one for the different class.</span>
+<span class="sd">        :param z: the input instance, from which the generation starts</span>
+<span class="sd">        :param num_instances: how many elements to generate</span>
+<span class="sd">        :param descriptor: the descriptor of the dataset. This provides the metadata of each feature to guide the generation</span>
+<span class="sd">        :param encoder: the encoder to transform the data from/to the black box model</span>
+
+<span class="sd">        :return: a new set of instances generated from the input instance. The first element is the input instance</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">new_x</span> <span class="o">=</span> <span class="n">z</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+        <span class="c1"># determine the number of instances to generate for the same class and for a different class</span>
+        <span class="n">num_samples_eq</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">num_instances</span> <span class="o">*</span> <span class="mf">0.5</span><span class="p">))</span>
+        <span class="n">num_samples_neq</span> <span class="o">=</span> <span class="n">num_instances</span> <span class="o">-</span> <span class="n">num_samples_eq</span>
+
+        <span class="c1"># generate the instances for the same class</span>
+        <span class="n">toolbox_eq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">setup_toolbox</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">population_fitness_equal</span><span class="p">(</span><span class="n">z</span><span class="p">),</span> <span class="n">num_samples_eq</span><span class="p">)</span>
+        <span class="n">population_eq</span><span class="p">,</span> <span class="n">halloffame_eq</span><span class="p">,</span> <span class="n">logbook_eq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">toolbox_eq</span><span class="p">,</span> <span class="n">num_samples_eq</span><span class="p">)</span>
+        <span class="n">Z_eq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_halloffame</span><span class="p">(</span><span class="n">population_eq</span><span class="p">,</span> <span class="n">halloffame_eq</span><span class="p">)</span>
+        <span class="c1"># print(logbook_eq)</span>
+
+        <span class="c1"># generate the instances for a different class</span>
+        <span class="n">toolbox_noteq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">setup_toolbox</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">population_fitness_notequal</span><span class="p">(</span><span class="n">z</span><span class="p">),</span> <span class="n">num_samples_neq</span><span class="p">)</span>
+        <span class="n">population_noteq</span><span class="p">,</span> <span class="n">halloffame_noteq</span><span class="p">,</span> <span class="n">logbook_noteq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">toolbox_noteq</span><span class="p">,</span> <span class="n">num_samples_neq</span><span class="p">)</span>
+        <span class="n">Z_noteq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_halloffame</span><span class="p">(</span><span class="n">population_noteq</span><span class="p">,</span> <span class="n">halloffame_noteq</span><span class="p">)</span>
+        <span class="c1"># print(logbook_noteq)</span>
+
+        <span class="c1"># concatenate the two sets of instances</span>
+        <span class="n">Z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">Z_eq</span><span class="p">,</span> <span class="n">Z_noteq</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="c1"># balance the instances according to the minority class</span>
+        <span class="n">Z</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">GeneticGenerator</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">balance_neigh</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">num_instances</span><span class="p">)</span>
+        <span class="c1"># the first element is the input instance</span>
+
+        <span class="n">Z</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_x</span>
+        <span class="k">return</span> <span class="n">Z</span></div>
+
+    <span class="c1"># def add_halloffame(self, population, halloffame):</span>
+    <span class="c1">#     fitness_values = [p.fitness.wvalues[0] for p in population]</span>
+    <span class="c1">#     fitness_values = sorted(fitness_values)</span>
+    <span class="c1">#     fitness_diff = [fitness_values[i + 1] - fitness_values[i] for i in range(0, len(fitness_values) - 1)]</span>
+    <span class="c1">#</span>
+    <span class="c1">#     sorted_array = np.argwhere(fitness_diff == np.amax(fitness_diff)).flatten().tolist()</span>
+    <span class="c1">#     if len(sorted_array) == 0:</span>
+    <span class="c1">#         fitness_value_thr = -np.inf</span>
+    <span class="c1">#     else:</span>
+    <span class="c1">#         index = np.max(sorted_array)</span>
+    <span class="c1">#         fitness_value_thr = fitness_values[index]</span>
+    <span class="c1">#</span>
+    <span class="c1">#     Z = list()</span>
+    <span class="c1">#     for p in population:</span>
+    <span class="c1">#         # if p.fitness.wvalues[0] &gt; fitness_value_thr:</span>
+    <span class="c1">#         Z.append(p)</span>
+    <span class="c1">#</span>
+    <span class="c1">#     for h in halloffame:</span>
+    <span class="c1">#         if h.fitness.wvalues[0] &gt; fitness_value_thr:</span>
+    <span class="c1">#             Z.append(h)</span>
+    <span class="c1">#</span>
+    <span class="c1">#     return np.array(Z)</span>
+
+    <span class="k">def</span> <span class="nf">setup_toolbox</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">evaluate</span><span class="p">,</span> <span class="n">population_size</span><span class="p">):</span>
+
+        <span class="n">creator</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;fitness&quot;</span><span class="p">,</span> <span class="n">base</span><span class="o">.</span><span class="n">Fitness</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,))</span>
+        <span class="n">creator</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;individual&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">fitness</span><span class="o">=</span><span class="n">creator</span><span class="o">.</span><span class="n">fitness</span><span class="p">)</span>
+
+        <span class="n">toolbox</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">Toolbox</span><span class="p">()</span>
+        <span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;feature_values&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">record_init</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+        <span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;individual&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">initIterate</span><span class="p">,</span> <span class="n">creator</span><span class="o">.</span><span class="n">individual</span><span class="p">,</span> <span class="n">toolbox</span><span class="o">.</span><span class="n">feature_values</span><span class="p">)</span>
+        <span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;population&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">initRepeat</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="n">toolbox</span><span class="o">.</span><span class="n">individual</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">population_size</span><span class="p">)</span>
+
+        <span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;clone&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">clone</span><span class="p">)</span>
+        <span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;evaluate&quot;</span><span class="p">,</span> <span class="n">evaluate</span><span class="p">)</span>
+        <span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;mate&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mate</span><span class="p">)</span>
+        <span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;mutate&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mutate</span><span class="p">,</span> <span class="n">toolbox</span><span class="p">)</span>
+        <span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;select&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">selTournament</span><span class="p">,</span> <span class="n">tournsize</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">tournsize</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">toolbox</span>
+
+
+    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">toolbox</span><span class="p">,</span> <span class="n">population_size</span><span class="p">):</span>
+
+        <span class="n">halloffame_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">population_size</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">halloffame_ratio</span><span class="p">))</span>
+
+        <span class="n">population</span> <span class="o">=</span> <span class="n">toolbox</span><span class="o">.</span><span class="n">population</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">population_size</span><span class="p">)</span>
+        <span class="n">halloffame</span> <span class="o">=</span> <span class="n">tools</span><span class="o">.</span><span class="n">HallOfFame</span><span class="p">(</span><span class="n">halloffame_size</span><span class="p">,</span> <span class="n">similar</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">)</span>
+
+        <span class="n">stats</span> <span class="o">=</span> <span class="n">tools</span><span class="o">.</span><span class="n">Statistics</span><span class="p">(</span><span class="k">lambda</span> <span class="n">ind</span><span class="p">:</span> <span class="n">ind</span><span class="o">.</span><span class="n">fitness</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+        <span class="n">stats</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;avg&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">)</span>
+        <span class="n">stats</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;min&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">)</span>
+        <span class="n">stats</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;max&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">)</span>
+        <span class="n">stats</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;std&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">)</span>
+
+        <span class="n">population</span><span class="p">,</span> <span class="n">logbook</span> <span class="o">=</span> <span class="n">GeneticGenerator</span><span class="o">.</span><span class="n">eaSimple</span><span class="p">(</span><span class="n">population</span><span class="p">,</span> <span class="n">toolbox</span><span class="p">,</span> <span class="n">cxpb</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cxpb</span><span class="p">,</span> <span class="n">mutpb</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mutpb</span><span class="p">,</span>
+                                                  <span class="n">ngen</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ngen</span><span class="p">,</span> <span class="n">stats</span><span class="o">=</span><span class="n">stats</span><span class="p">,</span> <span class="n">halloffame</span><span class="o">=</span><span class="n">halloffame</span><span class="p">,</span>
+                                                  <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">population</span><span class="p">,</span> <span class="n">halloffame</span><span class="p">,</span> <span class="n">logbook</span>
+
+<div class="viewcode-block" id="GeneticGenerator.eaSimple"><a class="viewcode-back" href="../../../source/generated/lore_sa.neighgen.GeneticGenerator.html#lore_sa.neighgen.GeneticGenerator.eaSimple">[docs]</a>    <span class="k">def</span> <span class="nf">eaSimple</span><span class="p">(</span><span class="n">population</span><span class="p">,</span> <span class="n">toolbox</span><span class="p">,</span> <span class="n">cxpb</span><span class="p">,</span> <span class="n">mutpb</span><span class="p">,</span> <span class="n">ngen</span><span class="p">,</span> <span class="n">stats</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">halloffame</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="n">__debug__</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;This algorithm reproduce the simplest evolutionary algorithm as</span>
+<span class="sd">        presented in chapter 7 of [Back2000]_.</span>
+
+<span class="sd">        :param population: A list of individuals.</span>
+<span class="sd">        :param toolbox: A :class:`~deap.base.Toolbox` that contains the evolution</span>
+<span class="sd">                        operators.</span>
+<span class="sd">        :param cxpb: The probability of mating two individuals.</span>
+<span class="sd">        :param mutpb: The probability of mutating an individual.</span>
+<span class="sd">        :param ngen: The number of generation.</span>
+<span class="sd">        :param stats: A :class:`~deap.tools.Statistics` object that is updated</span>
+<span class="sd">                      inplace, optional.</span>
+<span class="sd">        :param halloffame: A :class:`~deap.tools.HallOfFame` object that will</span>
+<span class="sd">                           contain the best individuals, optional.</span>
+<span class="sd">        :param verbose: Whether or not to log the statistics.</span>
+<span class="sd">        :returns: The final population</span>
+<span class="sd">        :returns: A class:`~deap.tools.Logbook` with the statistics of the</span>
+<span class="sd">                  evolution</span>
+
+<span class="sd">        This implementation is an adaptation of the original algorithm implemented in the DEAP library.</span>
+
+<span class="sd">        .. [Back2000] Back, Fogel and Michalewicz, &quot;Evolutionary Computation 1 :</span>
+<span class="sd">           Basic Algorithms and Operators&quot;, 2000.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">logbook</span> <span class="o">=</span> <span class="n">tools</span><span class="o">.</span><span class="n">Logbook</span><span class="p">()</span>
+        <span class="n">logbook</span><span class="o">.</span><span class="n">header</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;gen&#39;</span><span class="p">,</span> <span class="s1">&#39;nevals&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">fields</span> <span class="k">if</span> <span class="n">stats</span> <span class="k">else</span> <span class="p">[])</span>
+
+        <span class="c1"># Evaluate the individuals with an invalid fitness</span>
+        <span class="n">invalid_ind</span> <span class="o">=</span> <span class="p">[</span><span class="n">ind</span> <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="n">population</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">ind</span><span class="o">.</span><span class="n">fitness</span><span class="o">.</span><span class="n">valid</span><span class="p">]</span>
+        <span class="n">fitnesses</span> <span class="o">=</span> <span class="n">toolbox</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">invalid_ind</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">ind</span><span class="p">,</span> <span class="n">fit</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">invalid_ind</span><span class="p">,</span> <span class="n">fitnesses</span><span class="p">):</span>
+            <span class="n">ind</span><span class="o">.</span><span class="n">fitness</span><span class="o">.</span><span class="n">values</span> <span class="o">=</span> <span class="p">(</span><span class="n">fit</span><span class="p">,)</span>
+
+        <span class="k">if</span> <span class="n">halloffame</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">halloffame</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">population</span><span class="p">)</span>
+
+        <span class="n">record</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">population</span><span class="p">)</span> <span class="k">if</span> <span class="n">stats</span> <span class="k">else</span> <span class="p">{}</span>
+        <span class="n">logbook</span><span class="o">.</span><span class="n">record</span><span class="p">(</span><span class="n">gen</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">nevals</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">invalid_ind</span><span class="p">),</span> <span class="o">**</span><span class="n">record</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">logbook</span><span class="o">.</span><span class="n">stream</span><span class="p">)</span>
+
+        <span class="c1"># Begin the generational process</span>
+        <span class="k">for</span> <span class="n">gen</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">ngen</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="c1"># Select the next generation individuals</span>
+            <span class="n">offspring</span> <span class="o">=</span> <span class="n">toolbox</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">population</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">population</span><span class="p">))</span>
+
+            <span class="c1"># Vary the pool of individuals</span>
+            <span class="n">offspring</span> <span class="o">=</span> <span class="n">varAnd</span><span class="p">(</span><span class="n">offspring</span><span class="p">,</span> <span class="n">toolbox</span><span class="p">,</span> <span class="n">cxpb</span><span class="p">,</span> <span class="n">mutpb</span><span class="p">)</span>
+
+            <span class="c1"># Evaluate the individuals with an invalid fitness</span>
+            <span class="n">invalid_ind</span> <span class="o">=</span> <span class="p">[</span><span class="n">ind</span> <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="n">offspring</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">ind</span><span class="o">.</span><span class="n">fitness</span><span class="o">.</span><span class="n">valid</span><span class="p">]</span>
+            <span class="n">fitnesses</span> <span class="o">=</span> <span class="n">toolbox</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">invalid_ind</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">ind</span><span class="p">,</span> <span class="n">fit</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">invalid_ind</span><span class="p">,</span> <span class="n">fitnesses</span><span class="p">):</span>
+                <span class="n">ind</span><span class="o">.</span><span class="n">fitness</span><span class="o">.</span><span class="n">values</span> <span class="o">=</span> <span class="p">(</span><span class="n">fit</span><span class="p">,</span> <span class="p">)</span>
+
+            <span class="c1"># Update the hall of fame with the generated individuals</span>
+            <span class="k">if</span> <span class="n">halloffame</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">halloffame</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">offspring</span><span class="p">)</span>
+
+            <span class="c1"># Replace the current population by the offspring</span>
+            <span class="n">population</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">offspring</span>
+
+            <span class="c1"># Append the current generation statistics to the logbook</span>
+            <span class="n">record</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">population</span><span class="p">)</span> <span class="k">if</span> <span class="n">stats</span> <span class="k">else</span> <span class="p">{}</span>
+            <span class="n">logbook</span><span class="o">.</span><span class="n">record</span><span class="p">(</span><span class="n">gen</span><span class="o">=</span><span class="n">gen</span><span class="p">,</span> <span class="n">nevals</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">invalid_ind</span><span class="p">),</span> <span class="o">**</span><span class="n">record</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">logbook</span><span class="o">.</span><span class="n">stream</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">population</span><span class="p">,</span> <span class="n">logbook</span></div>
+
+
+<div class="viewcode-block" id="GeneticGenerator.population_fitness_equal"><a class="viewcode-back" href="../../../source/generated/lore_sa.neighgen.GeneticGenerator.html#lore_sa.neighgen.GeneticGenerator.population_fitness_equal">[docs]</a>    <span class="k">def</span> <span class="nf">population_fitness_equal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This fitness function evaluate the feature_similarity and the target_similarity of a population against a given</span>
+<span class="sd">        instance z. The two similarities are computed using optimezed functions of `numpy` and `scipy` libraries.</span>
+<span class="sd">        This improves the performance of the algorithm.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="n">population</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">metric</span><span class="p">,</span> <span class="n">numbers</span><span class="o">.</span><span class="n">Number</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">metric</span> <span class="o">=</span> <span class="n">neuclidean</span>
+            <span class="n">feature_similarity_score</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">-</span> <span class="n">cdist</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">population</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">metric</span><span class="p">)</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+            <span class="n">feature_similarity</span> <span class="o">=</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">feature_similarity_score</span><span class="p">)</span>
+
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+            <span class="n">pop</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">population</span><span class="p">))</span>
+            <span class="n">pop_y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bbox</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">pop</span><span class="p">)</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bbox</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+            <span class="n">target_similarity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">sigmoid</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">hamming</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="p">[</span><span class="n">y1</span><span class="p">]))</span> <span class="k">for</span> <span class="n">y1</span> <span class="ow">in</span> <span class="n">pop_y</span><span class="p">])</span>
+
+
+            <span class="n">evaluation</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">alpha1</span> <span class="o">*</span> <span class="n">feature_similarity</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">alpha2</span> <span class="o">*</span> <span class="n">target_similarity</span>
+
+            <span class="k">return</span> <span class="n">evaluation</span>
+        <span class="k">return</span> <span class="n">wrapper</span></div>
+
+    <span class="k">def</span> <span class="nf">population_fitness_notequal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="n">population</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">metric</span><span class="p">,</span> <span class="n">numbers</span><span class="o">.</span><span class="n">Number</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">metric</span> <span class="o">=</span> <span class="n">neuclidean</span>
+            <span class="n">feature_similarity_score</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">-</span> <span class="n">cdist</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">population</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">metric</span><span class="p">)</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+            <span class="n">feature_similarity</span> <span class="o">=</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">feature_similarity_score</span><span class="p">)</span>
+
+            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+            <span class="n">pop</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">population</span><span class="p">))</span>
+            <span class="n">pop_y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bbox</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">pop</span><span class="p">)</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bbox</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+            <span class="n">target_similarity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">sigmoid</span><span class="p">(</span><span class="n">hamming</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="p">[</span><span class="n">y1</span><span class="p">]))</span> <span class="k">for</span> <span class="n">y1</span> <span class="ow">in</span> <span class="n">pop_y</span><span class="p">])</span>
+
+
+            <span class="n">evaluation</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">alpha1</span> <span class="o">*</span> <span class="n">feature_similarity</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">alpha2</span> <span class="o">*</span> <span class="n">target_similarity</span>
+
+            <span class="k">return</span> <span class="n">evaluation</span>
+        <span class="k">return</span> <span class="n">wrapper</span></div>
 </pre></div>
 
            </div>

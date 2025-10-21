@@ -43,6 +43,112 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../get_started.html">Get started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#welcome-to-lore-sa">Welcome to LORE_sa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#what-is-lore">What is LORE?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#using-virtualenv">Using virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#using-conda">Using conda</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#quick-start">Quick Start</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#basic-usage">Basic Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#key-components">Key Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#choosing-an-explainer">Choosing an Explainer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#tabularrandomgeneratorlore">TabularRandomGeneratorLore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#tabulargeneticgeneratorlore">TabularGeneticGeneratorLore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#tabularrandgengeneratorlore">TabularRandGenGeneratorLore</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#understanding-the-explanation">Understanding the Explanation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#rule">Rule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#counterfactuals">Counterfactuals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#deltas">Deltas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#feature-importances">Feature Importances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#fidelity">Fidelity</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#next-steps">Next Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#common-pitfalls">Common Pitfalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#getting-help">Getting Help</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../architecture.html">Architecture and Methodology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#theoretical-foundation">Theoretical Foundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#the-four-stage-process">The Four-Stage Process</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#stage-1-instance-encoding">Stage 1: Instance Encoding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#stage-2-neighborhood-generation">Stage 2: Neighborhood Generation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#stage-3-surrogate-training">Stage 3: Surrogate Training</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#stage-4-rule-extraction">Stage 4: Rule Extraction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#architecture-components">Architecture Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#black-box-wrapper-abstractbbox">Black Box Wrapper (AbstractBBox)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#dataset-tabulardataset">Dataset (TabularDataset)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#encoder-decoder-encdec">Encoder/Decoder (EncDec)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#neighborhood-generator-neighborhoodgenerator">Neighborhood Generator (NeighborhoodGenerator)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#surrogate-model-surrogate">Surrogate Model (Surrogate)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#rule-and-expression-classes">Rule and Expression Classes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#workflow-diagram">Workflow Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#best-practices">Best Practices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#choosing-num-instances">Choosing num_instances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#interpreting-fidelity">Interpreting Fidelity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#handling-low-fidelity">Handling Low Fidelity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#feature-importance-interpretation">Feature Importance Interpretation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#computational-complexity">Computational Complexity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#time-complexity">Time Complexity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#space-complexity">Space Complexity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#typical-running-times">Typical Running Times</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#references">References</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#primary-paper">Primary Paper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#related-work">Related Work</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#key-differences-from-lime">Key Differences from LIME</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#implementation-notes">Implementation Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#thread-safety">Thread Safety</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#memory-considerations">Memory Considerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#reproducibility">Reproducibility</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#future-extensions">Future Extensions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/tabular_explanations_example.html">Tabular explanation example</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#learning-and-explaining-german-credit-dataset">Learning and explaining German Credit Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#loading-and-preparation-of-data">Loading and preparation of data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#learning-a-random-forest-classfier">Learning a Random Forest classfier</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#explaining-the-prediction">Explaining the prediction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#shap-explainer">SHAP explainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#lore-explainer">LORE explainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#lime-explainer">LIME explainer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#learning-a-different-model">Learning a different model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#learning-a-logistic-regressor">Learning a Logistic Regressor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#id1">Explaining the prediction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#id2">LORE explainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#id3">LIME explainer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../source/modules.html">Modules</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../source/modules.html#lore-sa-bbox-blackbox-abstract-class"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.bbox</span></code>: BlackBox abstract class</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../source/generated/lore_sa.bbox.AbstractBBox.html">lore_sa.bbox.AbstractBBox</a><ul>
@@ -71,6 +177,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../../source/generated/lore_sa.neighgen.RandomGenerator.html#lore_sa.neighgen.RandomGenerator"><code class="docutils literal notranslate"><span class="pre">RandomGenerator</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../../source/generated/lore_sa.neighgen.GeneticGenerator.html">lore_sa.neighgen.GeneticGenerator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../source/generated/lore_sa.neighgen.GeneticGenerator.html#lore_sa.neighgen.GeneticGenerator"><code class="docutils literal notranslate"><span class="pre">GeneticGenerator</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../source/modules.html#lore-sa-discretizer-discretizer-classes-and-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.discretizer</span></code>: Discretizer classes and functions</a><ul>
@@ -89,16 +199,8 @@
 <li class="toctree-l4"><a class="reference internal" href="../../source/generated/lore_sa.encoder_decoder.EncDec.html#lore_sa.encoder_decoder.EncDec"><code class="docutils literal notranslate"><span class="pre">EncDec</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../source/generated/lore_sa.encoder_decoder.OneHotEnc.html">lore_sa.encoder_decoder.OneHotEnc</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../source/generated/lore_sa.encoder_decoder.OneHotEnc.html#lore_sa.encoder_decoder.OneHotEnc"><code class="docutils literal notranslate"><span class="pre">OneHotEnc</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../source/generated/lore_sa.encoder_decoder.LabelEnc.html">lore_sa.encoder_decoder.LabelEnc</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../source/generated/lore_sa.encoder_decoder.LabelEnc.html#lore_sa.encoder_decoder.LabelEnc"><code class="docutils literal notranslate"><span class="pre">LabelEnc</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../source/generated/lore_sa.encoder_decoder.TabularEnc.html">lore_sa.encoder_decoder.TabularEnc</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../source/generated/lore_sa.encoder_decoder.TabularEnc.html#lore_sa.encoder_decoder.TabularEnc"><code class="docutils literal notranslate"><span class="pre">TabularEnc</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../source/generated/lore_sa.encoder_decoder.ColumnTransformerEnc.html">lore_sa.encoder_decoder.ColumnTransformerEnc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../source/generated/lore_sa.encoder_decoder.ColumnTransformerEnc.html#lore_sa.encoder_decoder.ColumnTransformerEnc"><code class="docutils literal notranslate"><span class="pre">ColumnTransformerEnc</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -176,31 +278,6 @@
 </ul>
 </li>
 </ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../examples/tabular_explanations_example.html">Tabular explanation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#learning-and-explaining-german-credit-dataset">Learning and explaining German Credit Dataset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#loading-and-preparation-of-data">Loading and preparation of data</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#learning-a-random-forest-classfier">Learning a Random Forest classfier</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#explaining-the-prediction">Explaining the prediction</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#shap-explainer">SHAP explainer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#lore-explainer">LORE explainer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#lime-explainer">LIME explainer</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#learning-a-different-model">Learning a different model</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#learning-a-logistic-regressor">Learning a Logistic Regressor</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#id1">Explaining the prediction</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#id2">LORE explainer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#id3">LIME explainer</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
 
         </div>
       </div>
@@ -229,8 +306,8 @@
   <h1>Source code for lore_sa.rule</h1><div class="highlight"><pre>
 <span></span><span class="kn">import</span> <span class="nn">json</span>
 
-<span class="kn">from</span> <span class="nn">lore_sa.encoder_decoder</span> <span class="kn">import</span> <span class="n">EncDec</span>
-<span class="kn">from</span> <span class="nn">lore_sa.util</span> <span class="kn">import</span> <span class="n">vector2dict</span>
+<span class="kn">from</span> <span class="nn">.encoder_decoder</span> <span class="kn">import</span> <span class="n">EncDec</span>
+<span class="kn">from</span> <span class="nn">.util</span> <span class="kn">import</span> <span class="n">vector2dict</span>
 <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Callable</span>
 <span class="kn">import</span> <span class="nn">operator</span>
 
@@ -246,14 +323,46 @@
 
 <div class="viewcode-block" id="Expression"><a class="viewcode-back" href="../../source/generated/lore_sa.rule.Expression.html#lore_sa.rule.Expression">[docs]</a><span class="k">class</span> <span class="nc">Expression</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Utility object to define a logical expression. It is used to define the premises of a Rule emitted from a surrogate model.</span>
+<span class="sd">    Logical expression representing a condition in a rule.</span>
+<span class="sd">    </span>
+<span class="sd">    An Expression represents a single condition (premise) in a decision rule,</span>
+<span class="sd">    consisting of a variable name, a comparison operator, and a threshold value.</span>
+<span class="sd">    For example: &quot;age &gt; 30&quot; or &quot;income &lt;= 50000&quot;.</span>
+<span class="sd">    </span>
+<span class="sd">    Expressions are used to build Rule objects that explain black box predictions.</span>
+<span class="sd">    </span>
+<span class="sd">    Attributes:</span>
+<span class="sd">        variable (str): Name of the feature/variable in the condition</span>
+<span class="sd">        operator (Callable): Comparison operator from the operator module </span>
+<span class="sd">            (e.g., operator.gt, operator.lt, operator.eq, operator.ge, operator.le)</span>
+<span class="sd">        value (float or int): Threshold value for the comparison</span>
+<span class="sd">    </span>
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; import operator</span>
+<span class="sd">        &gt;&gt;&gt; from lore_sa.rule import Expression</span>
+<span class="sd">        &gt;&gt;&gt; </span>
+<span class="sd">        &gt;&gt;&gt; # Create an expression: age &gt; 30</span>
+<span class="sd">        &gt;&gt;&gt; expr = Expression(&#39;age&#39;, operator.gt, 30)</span>
+<span class="sd">        &gt;&gt;&gt; print(expr)  # Output: age &gt; 30</span>
+<span class="sd">        &gt;&gt;&gt; </span>
+<span class="sd">        &gt;&gt;&gt; # Create an expression: income &lt;= 50000</span>
+<span class="sd">        &gt;&gt;&gt; expr2 = Expression(&#39;income&#39;, operator.le, 50000)</span>
+<span class="sd">        &gt;&gt;&gt; print(expr2)  # Output: income &lt;= 50000</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
 <div class="viewcode-block" id="Expression.__init__"><a class="viewcode-back" href="../../source/generated/lore_sa.rule.Expression.html#lore_sa.rule.Expression.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">variable</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">operator</span><span class="p">:</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        :param[str] variable: name of the variable that defines the rule</span>
-<span class="sd">        :param[Callable] operator: logical operator involved in the rule</span>
-<span class="sd">        :param value: numerical value to define the rule. E.g. variable &gt; value </span>
+<span class="sd">        Initialize a logical expression.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            variable (str): Name of the variable/feature that the expression refers to</span>
+<span class="sd">            operator (Callable): Logical comparison operator. Use one from the operator </span>
+<span class="sd">                module: operator.gt (&gt;), operator.lt (&lt;), operator.eq (=), </span>
+<span class="sd">                operator.ge (&gt;=), operator.le (&lt;=), operator.ne (!=)</span>
+<span class="sd">            value (float or int): Numerical threshold value to compare against</span>
+<span class="sd">        </span>
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If an unsupported operator is provided</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">variable</span> <span class="o">=</span> <span class="n">variable</span>
@@ -262,7 +371,18 @@
 
 <div class="viewcode-block" id="Expression.operator2string"><a class="viewcode-back" href="../../source/generated/lore_sa.rule.Expression.html#lore_sa.rule.Expression.operator2string">[docs]</a>    <span class="k">def</span> <span class="nf">operator2string</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        it converts the logical operator into a string representation. E.g.: operator2string(operator.gt) = &quot;&gt;&quot;)</span>
+<span class="sd">        Convert the logical operator to its string representation.</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            str: String representation of the operator (e.g., &#39;&gt;&#39;, &#39;&lt;&#39;, &#39;=&#39;, &#39;&gt;=&#39;, &#39;&lt;=&#39;, &#39;!=&#39;)</span>
+<span class="sd">        </span>
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If the operator is not one of the recognized comparison operators</span>
+<span class="sd">        </span>
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; import operator</span>
+<span class="sd">            &gt;&gt;&gt; expr = Expression(&#39;age&#39;, operator.gt, 30)</span>
+<span class="sd">            &gt;&gt;&gt; expr.operator2string()  # Returns &#39;&gt;&#39;</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="n">operator_strings</span> <span class="o">=</span> <span class="p">{</span><span class="n">operator</span><span class="o">.</span><span class="n">gt</span><span class="p">:</span> <span class="s1">&#39;&gt;&#39;</span><span class="p">,</span> <span class="n">operator</span><span class="o">.</span><span class="n">lt</span><span class="p">:</span> <span class="s1">&#39;&lt;&#39;</span><span class="p">,</span> <span class="n">operator</span><span class="o">.</span><span class="n">ne</span><span class="p">:</span> <span class="s1">&#39;!=&#39;</span><span class="p">,</span>
@@ -274,19 +394,81 @@
 
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        It writes the expression as a string</span>
+<span class="sd">        Return a human-readable string representation of the expression.</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            str: String in the format &quot;variable operator value&quot; (e.g., &quot;age &gt; 30&quot;)</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">variable</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">operator2string</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span></div>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">variable</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">operator2string</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">variable</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">variable</span> <span class="ow">and</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">operator</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">operator</span> <span class="ow">and</span>
+                <span class="nb">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">-</span> <span class="n">other</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1e-6</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Expression.to_dict"><a class="viewcode-back" href="../../source/generated/lore_sa.rule.Expression.html#lore_sa.rule.Expression.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Convert the expression to a dictionary representation.</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            dict: Dictionary with keys &#39;att&#39; (attribute/variable name), </span>
+<span class="sd">                &#39;op&#39; (operator as string), and &#39;thr&#39; (threshold value)</span>
+<span class="sd">        </span>
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; expr = Expression(&#39;age&#39;, operator.gt, 30)</span>
+<span class="sd">            &gt;&gt;&gt; expr.to_dict()</span>
+<span class="sd">            {&#39;att&#39;: &#39;age&#39;, &#39;op&#39;: &#39;&gt;&#39;, &#39;thr&#39;: 30}</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s1">&#39;att&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">variable</span><span class="p">,</span>
+            <span class="s1">&#39;op&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">operator2string</span><span class="p">(),</span>
+            <span class="s1">&#39;thr&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span>
+        <span class="p">}</span></div></div>
 
 
 <div class="viewcode-block" id="Rule"><a class="viewcode-back" href="../../source/generated/lore_sa.rule.Rule.html#lore_sa.rule.Rule">[docs]</a><span class="k">class</span> <span class="nc">Rule</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Decision rule with premises (conditions) and consequences (predictions).</span>
+<span class="sd">    </span>
+<span class="sd">    A Rule represents an if-then decision rule extracted from an interpretable model.</span>
+<span class="sd">    It consists of:</span>
+<span class="sd">    - Premises: A list of Expression objects that form the &quot;if&quot; part (conditions)</span>
+<span class="sd">    - Consequences: An Expression representing the &quot;then&quot; part (predicted class)</span>
+<span class="sd">    </span>
+<span class="sd">    Rules are the primary output of LORE explanations, describing when and why </span>
+<span class="sd">    a black box model makes specific predictions.</span>
+<span class="sd">    </span>
+<span class="sd">    Attributes:</span>
+<span class="sd">        premises (list): List of Expression objects representing the conditions</span>
+<span class="sd">        consequences (Expression): Expression representing the predicted outcome</span>
+<span class="sd">        encoder (EncDec): Encoder/decoder for handling feature transformations</span>
+<span class="sd">    </span>
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; # Rule: IF age &gt; 30 AND income &lt;= 50000 THEN class = 0</span>
+<span class="sd">        &gt;&gt;&gt; premises = [</span>
+<span class="sd">        ...     Expression(&#39;age&#39;, operator.gt, 30),</span>
+<span class="sd">        ...     Expression(&#39;income&#39;, operator.le, 50000)</span>
+<span class="sd">        ... ]</span>
+<span class="sd">        &gt;&gt;&gt; consequence = Expression(&#39;class&#39;, operator.eq, 0)</span>
+<span class="sd">        &gt;&gt;&gt; rule = Rule(premises, consequence, encoder)</span>
+<span class="sd">        &gt;&gt;&gt; print(rule)  # Output: { age &gt; 30, income &lt;= 50000 } --&gt; { class = 0 }</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
 <div class="viewcode-block" id="Rule.__init__"><a class="viewcode-back" href="../../source/generated/lore_sa.rule.Rule.html#lore_sa.rule.Rule.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">premises</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">consequences</span><span class="p">:</span> <span class="n">Expression</span><span class="p">,</span> <span class="n">encoder</span><span class="p">:</span> <span class="n">EncDec</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        :param [list] premises: list of Expression objects representing the premises</span>
-<span class="sd">        :param [Expression] consequences: Expression representing the consequence</span>
-<span class="sd">        :param [EncDec] encoder: encoder to decode categorical rules</span>
+<span class="sd">        Initialize a decision rule.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            premises (list): List of Expression objects representing the rule&#39;s conditions.</span>
+<span class="sd">                These are combined with AND logic.</span>
+<span class="sd">            consequences (Expression): Expression representing the rule&#39;s prediction/outcome</span>
+<span class="sd">            encoder (EncDec): Encoder/decoder object used to decode categorical features </span>
+<span class="sd">                back to their original representation</span>
+<span class="sd">        </span>
+<span class="sd">        Note:</span>
+<span class="sd">            The encoder is used to decode one-hot encoded categorical features back to </span>
+<span class="sd">            their original categorical values, making the rule more interpretable.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">encoder</span> <span class="o">=</span> <span class="n">encoder</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">premises</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">decode_rule</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">premises</span><span class="p">]</span>
@@ -313,6 +495,20 @@
     <span class="k">def</span> <span class="fm">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">hash</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span>
 
+    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">premises</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;attr&#39;</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">variable</span><span class="p">,</span> <span class="s1">&#39;val&#39;</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;op&#39;</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">operator2string</span><span class="p">()}</span>
+                    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">premises</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s1">&#39;premises&#39;</span><span class="p">:</span> <span class="n">premises</span><span class="p">,</span>
+            <span class="s1">&#39;consequence&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;attr&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">consequences</span><span class="o">.</span><span class="n">variable</span><span class="p">,</span>
+                <span class="s1">&#39;val&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">consequences</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                <span class="s1">&#39;op&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">consequences</span><span class="o">.</span><span class="n">operator2string</span><span class="p">()</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+
     <span class="k">def</span> <span class="nf">decode_rule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rule</span><span class="p">:</span> <span class="n">Expression</span><span class="p">):</span>
         <span class="k">if</span> <span class="s1">&#39;categorical&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder</span><span class="o">.</span><span class="n">dataset_descriptor</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder</span><span class="o">.</span><span class="n">dataset_descriptor</span><span class="p">[</span><span class="s1">&#39;categorical&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="p">{}:</span>
             <span class="k">return</span> <span class="n">rule</span>
@@ -321,11 +517,11 @@
             <span class="n">decoded_label</span> <span class="o">=</span> <span class="n">rule</span><span class="o">.</span><span class="n">variable</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
             <span class="n">decoded_value</span> <span class="o">=</span> <span class="n">rule</span><span class="o">.</span><span class="n">variable</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
             <span class="n">rule</span><span class="o">.</span><span class="n">variable</span> <span class="o">=</span> <span class="n">decoded_label</span>
-            <span class="n">rule</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">decoded_value</span>
-            <span class="k">if</span> <span class="n">rule</span><span class="o">.</span><span class="n">operator</span> <span class="o">==</span> <span class="n">operator</span><span class="o">.</span><span class="n">le</span><span class="p">:</span>
-                <span class="n">rule</span><span class="o">.</span><span class="n">operator</span> <span class="o">=</span> <span class="n">operator</span><span class="o">.</span><span class="n">ne</span>
-            <span class="k">if</span> <span class="n">rule</span><span class="o">.</span><span class="n">operator</span> <span class="o">==</span> <span class="n">operator</span><span class="o">.</span><span class="n">gt</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">rule</span><span class="o">.</span><span class="n">value</span><span class="p">:</span>
                 <span class="n">rule</span><span class="o">.</span><span class="n">operator</span> <span class="o">=</span> <span class="n">operator</span><span class="o">.</span><span class="n">eq</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">rule</span><span class="o">.</span><span class="n">operator</span> <span class="o">=</span> <span class="n">operator</span><span class="o">.</span><span class="n">ne</span>
+            <span class="n">rule</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">decoded_value</span>
             <span class="k">return</span> <span class="n">rule</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">rule</span>

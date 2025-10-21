@@ -16,6 +16,7 @@
       ~Rule.__init__
       ~Rule.decode_rule
       ~Rule.is_covered
+      ~Rule.to_dict
    
    
 

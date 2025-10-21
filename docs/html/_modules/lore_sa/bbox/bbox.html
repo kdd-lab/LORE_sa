@@ -43,6 +43,112 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../get_started.html">Get started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#welcome-to-lore-sa">Welcome to LORE_sa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#what-is-lore">What is LORE?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#using-virtualenv">Using virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#using-conda">Using conda</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#quick-start">Quick Start</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#basic-usage">Basic Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#key-components">Key Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#choosing-an-explainer">Choosing an Explainer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#tabularrandomgeneratorlore">TabularRandomGeneratorLore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#tabulargeneticgeneratorlore">TabularGeneticGeneratorLore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#tabularrandgengeneratorlore">TabularRandGenGeneratorLore</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#understanding-the-explanation">Understanding the Explanation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#rule">Rule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#counterfactuals">Counterfactuals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#deltas">Deltas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#feature-importances">Feature Importances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#fidelity">Fidelity</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#next-steps">Next Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#common-pitfalls">Common Pitfalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#getting-help">Getting Help</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../architecture.html">Architecture and Methodology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../architecture.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../architecture.html#theoretical-foundation">Theoretical Foundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../architecture.html#the-four-stage-process">The Four-Stage Process</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#stage-1-instance-encoding">Stage 1: Instance Encoding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#stage-2-neighborhood-generation">Stage 2: Neighborhood Generation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#stage-3-surrogate-training">Stage 3: Surrogate Training</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#stage-4-rule-extraction">Stage 4: Rule Extraction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../architecture.html#architecture-components">Architecture Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#black-box-wrapper-abstractbbox">Black Box Wrapper (AbstractBBox)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#dataset-tabulardataset">Dataset (TabularDataset)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#encoder-decoder-encdec">Encoder/Decoder (EncDec)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#neighborhood-generator-neighborhoodgenerator">Neighborhood Generator (NeighborhoodGenerator)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#surrogate-model-surrogate">Surrogate Model (Surrogate)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#rule-and-expression-classes">Rule and Expression Classes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../architecture.html#workflow-diagram">Workflow Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../architecture.html#best-practices">Best Practices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#choosing-num-instances">Choosing num_instances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#interpreting-fidelity">Interpreting Fidelity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#handling-low-fidelity">Handling Low Fidelity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#feature-importance-interpretation">Feature Importance Interpretation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../architecture.html#computational-complexity">Computational Complexity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#time-complexity">Time Complexity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#space-complexity">Space Complexity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#typical-running-times">Typical Running Times</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../architecture.html#references">References</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#primary-paper">Primary Paper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#related-work">Related Work</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#key-differences-from-lime">Key Differences from LIME</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../architecture.html#implementation-notes">Implementation Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#thread-safety">Thread Safety</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#memory-considerations">Memory Considerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#reproducibility">Reproducibility</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../architecture.html#future-extensions">Future Extensions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../examples/tabular_explanations_example.html">Tabular explanation example</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#learning-and-explaining-german-credit-dataset">Learning and explaining German Credit Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#loading-and-preparation-of-data">Loading and preparation of data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#learning-a-random-forest-classfier">Learning a Random Forest classfier</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#explaining-the-prediction">Explaining the prediction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#shap-explainer">SHAP explainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#lore-explainer">LORE explainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#lime-explainer">LIME explainer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#learning-a-different-model">Learning a different model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#learning-a-logistic-regressor">Learning a Logistic Regressor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#id1">Explaining the prediction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#id2">LORE explainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#id3">LIME explainer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../source/modules.html">Modules</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../source/modules.html#lore-sa-bbox-blackbox-abstract-class"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.bbox</span></code>: BlackBox abstract class</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.bbox.AbstractBBox.html">lore_sa.bbox.AbstractBBox</a><ul>
@@ -71,6 +177,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.neighgen.RandomGenerator.html#lore_sa.neighgen.RandomGenerator"><code class="docutils literal notranslate"><span class="pre">RandomGenerator</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.neighgen.GeneticGenerator.html">lore_sa.neighgen.GeneticGenerator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.neighgen.GeneticGenerator.html#lore_sa.neighgen.GeneticGenerator"><code class="docutils literal notranslate"><span class="pre">GeneticGenerator</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../source/modules.html#lore-sa-discretizer-discretizer-classes-and-functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lore_sa.discretizer</span></code>: Discretizer classes and functions</a><ul>
@@ -89,16 +199,8 @@
 <li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.encoder_decoder.EncDec.html#lore_sa.encoder_decoder.EncDec"><code class="docutils literal notranslate"><span class="pre">EncDec</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.encoder_decoder.OneHotEnc.html">lore_sa.encoder_decoder.OneHotEnc</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.encoder_decoder.OneHotEnc.html#lore_sa.encoder_decoder.OneHotEnc"><code class="docutils literal notranslate"><span class="pre">OneHotEnc</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.encoder_decoder.LabelEnc.html">lore_sa.encoder_decoder.LabelEnc</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.encoder_decoder.LabelEnc.html#lore_sa.encoder_decoder.LabelEnc"><code class="docutils literal notranslate"><span class="pre">LabelEnc</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.encoder_decoder.TabularEnc.html">lore_sa.encoder_decoder.TabularEnc</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.encoder_decoder.TabularEnc.html#lore_sa.encoder_decoder.TabularEnc"><code class="docutils literal notranslate"><span class="pre">TabularEnc</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../source/generated/lore_sa.encoder_decoder.ColumnTransformerEnc.html">lore_sa.encoder_decoder.ColumnTransformerEnc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../source/generated/lore_sa.encoder_decoder.ColumnTransformerEnc.html#lore_sa.encoder_decoder.ColumnTransformerEnc"><code class="docutils literal notranslate"><span class="pre">ColumnTransformerEnc</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -176,31 +278,6 @@
 </ul>
 </li>
 </ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../examples/tabular_explanations_example.html">Tabular explanation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#learning-and-explaining-german-credit-dataset">Learning and explaining German Credit Dataset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#loading-and-preparation-of-data">Loading and preparation of data</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#learning-a-random-forest-classfier">Learning a Random Forest classfier</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#explaining-the-prediction">Explaining the prediction</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#shap-explainer">SHAP explainer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#lore-explainer">LORE explainer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#lime-explainer">LIME explainer</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#learning-a-different-model">Learning a different model</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#learning-a-logistic-regressor">Learning a Logistic Regressor</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#id1">Explaining the prediction</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#id2">LORE explainer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#id3">LIME explainer</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
 
         </div>
       </div>
@@ -233,40 +310,111 @@
 
 <div class="viewcode-block" id="AbstractBBox"><a class="viewcode-back" href="../../../source/generated/lore_sa.bbox.AbstractBBox.html#lore_sa.bbox.AbstractBBox">[docs]</a><span class="k">class</span> <span class="nc">AbstractBBox</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Generic Black Box class witch provides two sklearn-like methods.</span>
-
-<span class="sd">    pass</span>
+<span class="sd">    Abstract base class for wrapping black box models.</span>
+<span class="sd">    </span>
+<span class="sd">    This class provides a unified interface for different types of black box models</span>
+<span class="sd">    (e.g., scikit-learn, Keras, PyTorch) to be explained by LORE. Any black box model</span>
+<span class="sd">    must be wrapped in a subclass of AbstractBBox that implements the predict() and</span>
+<span class="sd">    predict_proba() methods.</span>
+<span class="sd">    </span>
+<span class="sd">    The wrapper allows LORE to interact with any machine learning model in a consistent</span>
+<span class="sd">    way, regardless of the underlying framework or implementation.</span>
+<span class="sd">    </span>
+<span class="sd">    Attributes:</span>
+<span class="sd">        classifier: The underlying black box model</span>
+<span class="sd">    </span>
+<span class="sd">    Methods:</span>
+<span class="sd">        predict: Predict class labels for samples</span>
+<span class="sd">        predict_proba: Predict class probabilities for samples</span>
+<span class="sd">        model: Return the underlying model</span>
+<span class="sd">    </span>
+<span class="sd">    Example:</span>
+<span class="sd">        To create a wrapper for a custom model:</span>
+<span class="sd">        </span>
+<span class="sd">        &gt;&gt;&gt; from lore_sa.bbox import AbstractBBox</span>
+<span class="sd">        &gt;&gt;&gt; </span>
+<span class="sd">        &gt;&gt;&gt; class MyCustomBBox(AbstractBBox):</span>
+<span class="sd">        ...     def __init__(self, model):</span>
+<span class="sd">        ...         self.classifier = model</span>
+<span class="sd">        ...     </span>
+<span class="sd">        ...     def predict(self, X):</span>
+<span class="sd">        ...         return self.classifier.predict(X)</span>
+<span class="sd">        ...     </span>
+<span class="sd">        ...     def predict_proba(self, X):</span>
+<span class="sd">        ...         return self.classifier.predict_proba(X)</span>
+<span class="sd">    </span>
+<span class="sd">    See Also:</span>
+<span class="sd">        sklearn_classifier_bbox.sklearnBBox: Pre-built wrapper for scikit-learn models</span>
+<span class="sd">        keras_classifier_wrapper: Pre-built wrapper for Keras models</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
 <div class="viewcode-block" id="AbstractBBox.__init__"><a class="viewcode-back" href="../../../source/generated/lore_sa.bbox.AbstractBBox.html#lore_sa.bbox.AbstractBBox.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">classifier</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize the black box wrapper.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            classifier: The machine learning model to wrap. The model should have</span>
+<span class="sd">                methods compatible with the predict() and predict_proba() interface.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 
 <div class="viewcode-block" id="AbstractBBox.model"><a class="viewcode-back" href="../../../source/generated/lore_sa.bbox.AbstractBBox.html#lore_sa.bbox.AbstractBBox.model">[docs]</a>    <span class="k">def</span> <span class="nf">model</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Provides the bbox.</span>
+<span class="sd">        Return the underlying black box model.</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            The wrapped classifier/model object.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="AbstractBBox.predict"><a class="viewcode-back" href="../../../source/generated/lore_sa.bbox.AbstractBBox.html#lore_sa.bbox.AbstractBBox.predict">[docs]</a>    <span class="nd">@abstractmethod</span>
     <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sample_matrix</span><span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Wrap of sklearn predict method, that predict the class labels for the provided data.</span>
-
-<span class="sd">        :param sample_matrix: {array-like, sparse matrix} of shape (n_queries, n_features) samples.</span>
-<span class="sd">        :return: ndarray of shape (n_queries, n_classes), or a list of n_outputs of such arrays if n_outputs &gt; 1.</span>
-
+<span class="sd">        Predict class labels for samples (sklearn-like interface).</span>
+<span class="sd">        </span>
+<span class="sd">        This method wraps the underlying model&#39;s predict method to provide a</span>
+<span class="sd">        consistent interface for LORE to get class predictions.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            sample_matrix (array-like): Array of shape (n_samples, n_features) </span>
+<span class="sd">                containing the samples to predict. Can be a list, numpy array,</span>
+<span class="sd">                or sparse matrix depending on the model&#39;s requirements.</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            np.ndarray: Array of shape (n_samples,) containing the predicted </span>
+<span class="sd">                class labels for each sample.</span>
+<span class="sd">        </span>
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; predictions = bbox.predict([[1, 2, 3], [4, 5, 6]])</span>
+<span class="sd">            &gt;&gt;&gt; print(predictions)  # e.g., array([0, 1])</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="AbstractBBox.predict_proba"><a class="viewcode-back" href="../../../source/generated/lore_sa.bbox.AbstractBBox.html#lore_sa.bbox.AbstractBBox.predict_proba">[docs]</a>    <span class="nd">@abstractmethod</span>
     <span class="k">def</span> <span class="nf">predict_proba</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sample_matrix</span><span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Wrap of sklearn predict_proba method, that return probability estimates for the test data.</span>
-
-<span class="sd">        :param sample_matrix: {array-like, sparse matrix} of shape (n_queries, n_features) samples</span>
-<span class="sd">        :return: ndarray of shape (n_queries, n_classes), or a list of n_outputs of such arrays if n_outputs &gt; 1.</span>
-
+<span class="sd">        Predict class probabilities for samples (sklearn-like interface).</span>
+<span class="sd">        </span>
+<span class="sd">        This method wraps the underlying model&#39;s predict_proba method to provide</span>
+<span class="sd">        probability estimates for each class for the given samples.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            sample_matrix (array-like): Array of shape (n_samples, n_features) </span>
+<span class="sd">                containing the samples to predict. Can be a list, numpy array,</span>
+<span class="sd">                or sparse matrix depending on the model&#39;s requirements.</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            np.ndarray: Array of shape (n_samples, n_classes) containing the </span>
+<span class="sd">                class probabilities for each sample. Each row sums to 1.0.</span>
+<span class="sd">        </span>
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; probas = bbox.predict_proba([[1, 2, 3], [4, 5, 6]])</span>
+<span class="sd">            &gt;&gt;&gt; print(probas)  # e.g., array([[0.8, 0.2], [0.3, 0.7]])</span>
+<span class="sd">        </span>
+<span class="sd">        Note:</span>
+<span class="sd">            For multi-class classification, the array has shape (n_samples, n_classes).</span>
+<span class="sd">            For binary classification, it typically has shape (n_samples, 2).</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>
