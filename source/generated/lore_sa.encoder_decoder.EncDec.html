@@ -45,8 +45,87 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../get_started.html">Get started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../examples/tabular_explanations_example.html">Tabular explanation</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../get_started.html">Get started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#welcome-to-lore-sa">Welcome to LORE_sa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#what-is-lore">What is LORE?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#using-virtualenv">Using virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#using-conda">Using conda</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#quick-start">Quick Start</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#basic-usage">Basic Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#key-components">Key Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#choosing-an-explainer">Choosing an Explainer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#tabularrandomgeneratorlore">TabularRandomGeneratorLore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#tabulargeneticgeneratorlore">TabularGeneticGeneratorLore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#tabularrandgengeneratorlore">TabularRandGenGeneratorLore</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#understanding-the-explanation">Understanding the Explanation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#rule">Rule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#counterfactuals">Counterfactuals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#deltas">Deltas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#feature-importances">Feature Importances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../get_started.html#fidelity">Fidelity</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#next-steps">Next Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#common-pitfalls">Common Pitfalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../get_started.html#getting-help">Getting Help</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../architecture.html">Architecture and Methodology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#theoretical-foundation">Theoretical Foundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#the-four-stage-process">The Four-Stage Process</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#stage-1-instance-encoding">Stage 1: Instance Encoding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#stage-2-neighborhood-generation">Stage 2: Neighborhood Generation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#stage-3-surrogate-training">Stage 3: Surrogate Training</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#stage-4-rule-extraction">Stage 4: Rule Extraction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#architecture-components">Architecture Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#black-box-wrapper-abstractbbox">Black Box Wrapper (AbstractBBox)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#dataset-tabulardataset">Dataset (TabularDataset)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#encoder-decoder-encdec">Encoder/Decoder (EncDec)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#neighborhood-generator-neighborhoodgenerator">Neighborhood Generator (NeighborhoodGenerator)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#surrogate-model-surrogate">Surrogate Model (Surrogate)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#rule-and-expression-classes">Rule and Expression Classes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#workflow-diagram">Workflow Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#best-practices">Best Practices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#choosing-num-instances">Choosing num_instances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#interpreting-fidelity">Interpreting Fidelity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#handling-low-fidelity">Handling Low Fidelity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#feature-importance-interpretation">Feature Importance Interpretation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#computational-complexity">Computational Complexity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#time-complexity">Time Complexity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#space-complexity">Space Complexity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#typical-running-times">Typical Running Times</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#references">References</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#primary-paper">Primary Paper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#related-work">Related Work</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#key-differences-from-lime">Key Differences from LIME</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#implementation-notes">Implementation Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#thread-safety">Thread Safety</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#memory-considerations">Memory Considerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../architecture.html#reproducibility">Reproducibility</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/tabular_explanations_example.html">Tabular explanation example</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#learning-and-explaining-german-credit-dataset">Learning and explaining German Credit Dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../examples/tabular_explanations_example.html#loading-and-preparation-of-data">Loading and preparation of data</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/tabular_explanations_example.html#learning-a-random-forest-classfier">Learning a Random Forest classfier</a></li>
@@ -231,66 +310,255 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="lore_sa.encoder_decoder.EncDec">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lore_sa.encoder_decoder.</span></span><span class="sig-name descname"><span class="pre">EncDec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_descriptor</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/encoder_decoder/enc_dec.html#EncDec"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.encoder_decoder.EncDec" title="Permalink to this definition"></a></dt>
-<dd><p>Generic class to implement an encoder/decoder</p>
-<p>It is implemented by different classes, each of which must implements the functions: enc, dec, enc_fit_transform
-the idea is that the user sends the complete record and here only the categorical variables are handled</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="lore_sa.encoder_decoder.EncDec.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_descriptor</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/encoder_decoder/enc_dec.html#EncDec.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.encoder_decoder.EncDec.__init__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<p class="rubric">Methods</p>
-<table class="autosummary longtable docutils align-default">
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lore_sa.encoder_decoder.EncDec.__init__" title="lore_sa.encoder_decoder.EncDec.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(dataset_descriptor)</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">decode</span></code>(x)</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">decode_target_class</span></code>(x)</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lore_sa.encoder_decoder.EncDec.encode" title="lore_sa.encoder_decoder.EncDec.encode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">encode</span></code></a>(x)</p></td>
-<td><p>It applies the encoder to the input features</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">encode_target_class</span></code>(param)</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lore_sa.encoder_decoder.EncDec.get_encoded_features" title="lore_sa.encoder_decoder.EncDec.get_encoded_features"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_encoded_features</span></code></a>()</p></td>
-<td><p>Provides a dictionary with the new encoded features name and the new index :return:</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lore_sa.encoder_decoder.EncDec.get_encoded_intervals" title="lore_sa.encoder_decoder.EncDec.get_encoded_intervals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_encoded_intervals</span></code></a>()</p></td>
-<td><p>Returns a list of intervals that contains the lower and upper indices of the encoded values of features</p></td>
-</tr>
-</tbody>
-</table>
-<dl class="py method">
-<dt class="sig sig-object py" id="lore_sa.encoder_decoder.EncDec.encode">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">encode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.array</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/encoder_decoder/enc_dec.html#EncDec.encode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.encoder_decoder.EncDec.encode" title="Permalink to this definition"></a></dt>
-<dd><p>It applies the encoder to the input features</p>
+<dd><p>Abstract base class for encoding and decoding features.</p>
+<p>The EncDec class provides an interface for transforming features between their
+original representation and an encoded representation suitable for machine learning
+models. This is particularly important for:</p>
+<ul class="simple">
+<li><p>Categorical features: Converting to one-hot encoding or ordinal encoding</p></li>
+<li><p>Numerical features: Scaling or normalization</p></li>
+<li><p>Feature engineering: Creating derived features</p></li>
+</ul>
+<p>The encoder is used by LORE to:
+1. Encode instances before generating neighborhoods
+2. Decode synthetic instances back to original feature space
+3. Decode rules to make them interpretable</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lore_sa.encoder_decoder.EncDec.dataset_descriptor">
+<span class="sig-name descname"><span class="pre">dataset_descriptor</span></span><a class="headerlink" href="#lore_sa.encoder_decoder.EncDec.dataset_descriptor" title="Permalink to this definition"></a></dt>
+<dd><p>Descriptor containing information about feature types,
+ranges, and categorical values</p>
 <dl class="field-list simple">
-<dt class="field-odd">Param[Numpy array] x<span class="colon">:</span></dt>
-<dd class="field-odd"><p>the Dataset containing the features to be encoded</p>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
 </dd>
-<dt class="field-even">Param[list] features_to_encode<span class="colon">:</span></dt>
-<dd class="field-even"><p>list of columns of Dataset.df dataframe to be encoded</p>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lore_sa.encoder_decoder.EncDec.encoded_features">
+<span class="sig-name descname"><span class="pre">encoded_features</span></span><a class="headerlink" href="#lore_sa.encoder_decoder.EncDec.encoded_features" title="Permalink to this definition"></a></dt>
+<dd><p>Mapping from encoded feature indices to feature names</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lore_sa.encoder_decoder.EncDec.encoded_descriptor">
+<span class="sig-name descname"><span class="pre">encoded_descriptor</span></span><a class="headerlink" href="#lore_sa.encoder_decoder.EncDec.encoded_descriptor" title="Permalink to this definition"></a></dt>
+<dd><p>Descriptor for the encoded feature space</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="lore_sa.encoder_decoder.EncDec.encode">
+<span class="sig-name descname"><span class="pre">encode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/encoder_decoder/enc_dec.html#EncDec.encode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.encoder_decoder.EncDec.encode" title="Permalink to this definition"></a></dt>
+<dd><p>Transform features to encoded representation</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lore_sa.encoder_decoder.EncDec.decode">
+<span class="sig-name descname"><span class="pre">decode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/encoder_decoder/enc_dec.html#EncDec.decode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.encoder_decoder.EncDec.decode" title="Permalink to this definition"></a></dt>
+<dd><p>Transform encoded features back to original representation</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lore_sa.encoder_decoder.EncDec.encode_target_class">
+<span class="sig-name descname"><span class="pre">encode_target_class</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/encoder_decoder/enc_dec.html#EncDec.encode_target_class"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.encoder_decoder.EncDec.encode_target_class" title="Permalink to this definition"></a></dt>
+<dd><p>Encode target class labels</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lore_sa.encoder_decoder.EncDec.decode_target_class">
+<span class="sig-name descname"><span class="pre">decode_target_class</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/encoder_decoder/enc_dec.html#EncDec.decode_target_class"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.encoder_decoder.EncDec.decode_target_class" title="Permalink to this definition"></a></dt>
+<dd><p>Decode target class labels</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="lore_sa.encoder_decoder.EncDec.get_encoded_features">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_encoded_features</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/encoder_decoder/enc_dec.html#EncDec.get_encoded_features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.encoder_decoder.EncDec.get_encoded_features" title="Permalink to this definition"></a></dt>
-<dd><p>Provides a dictionary with the new encoded features name and the new index
-:return:</p>
+<span class="sig-name descname"><span class="pre">get_encoded_features</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/encoder_decoder/enc_dec.html#EncDec.get_encoded_features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.encoder_decoder.EncDec.get_encoded_features" title="Permalink to this definition"></a></dt>
+<dd><p>Get mapping of encoded features</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="lore_sa.encoder_decoder.EncDec.get_encoded_intervals">
 <span class="sig-name descname"><span class="pre">get_encoded_intervals</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/encoder_decoder/enc_dec.html#EncDec.get_encoded_intervals"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.encoder_decoder.EncDec.get_encoded_intervals" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a list of intervals that contains the lower and upper indices of the encoded
-values of features</p>
+<dd><p>Get index intervals for encoded features</p>
+</dd></dl>
+
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">lore_sa.encoder_decoder</span><span class="w"> </span><span class="kn">import</span> <span class="n">ColumnTransformerEnc</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Create encoder from dataset descriptor</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">encoder</span> <span class="o">=</span> <span class="n">ColumnTransformerEnc</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">descriptor</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Encode a sample</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">encoded</span> <span class="o">=</span> <span class="n">encoder</span><span class="o">.</span><span class="n">encode</span><span class="p">([</span><span class="n">sample</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Decode back to original space</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">decoded</span> <span class="o">=</span> <span class="n">encoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">encoded</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>ColumnTransformerEnc: Concrete implementation using sklearn’s ColumnTransformer</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="lore_sa.encoder_decoder.EncDec.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_descriptor</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/encoder_decoder/enc_dec.html#EncDec.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lore_sa.encoder_decoder.EncDec.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Initialize the encoder/decoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dataset_descriptor</strong> (<em>dict</em>) – Dictionary containing feature information including
+‘numeric’, ‘categorical’, and ‘ordinal’ feature descriptors</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lore_sa.encoder_decoder.EncDec.__init__" title="lore_sa.encoder_decoder.EncDec.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(dataset_descriptor)</p></td>
+<td><p>Initialize the encoder/decoder.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#id0" title="lore_sa.encoder_decoder.EncDec.decode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">decode</span></code></a>(x)</p></td>
+<td><p>Transform features from encoded to original representation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lore_sa.encoder_decoder.EncDec.decode_target_class" title="lore_sa.encoder_decoder.EncDec.decode_target_class"><code class="xref py py-obj docutils literal notranslate"><span class="pre">decode_target_class</span></code></a>(x)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#id1" title="lore_sa.encoder_decoder.EncDec.encode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">encode</span></code></a>(x)</p></td>
+<td><p>Transform features from original to encoded representation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lore_sa.encoder_decoder.EncDec.encode_target_class" title="lore_sa.encoder_decoder.EncDec.encode_target_class"><code class="xref py py-obj docutils literal notranslate"><span class="pre">encode_target_class</span></code></a>(param)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#id2" title="lore_sa.encoder_decoder.EncDec.get_encoded_features"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_encoded_features</span></code></a>()</p></td>
+<td><p>Get a mapping of encoded feature indices to feature names.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#id3" title="lore_sa.encoder_decoder.EncDec.get_encoded_intervals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_encoded_intervals</span></code></a>()</p></td>
+<td><p>Get index intervals for each original feature in the encoded space.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="id0">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">decode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.array</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/encoder_decoder/enc_dec.html#EncDec.decode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id0" title="Permalink to this definition"></a></dt>
+<dd><p>Transform features from encoded to original representation.</p>
+<p>This method reverses the encoding transformation, converting features from
+the encoded space back to their original representation. This is essential
+for making explanations interpretable to users.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>np.array</em>) – Array of shape (n_samples, n_encoded_features) containing
+samples in the encoded feature space</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>Decoded array of shape (n_samples, n_features) in the original</dt><dd><p>feature space</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Encoded:  [[1, 0, 0, 25], [0, 1, 0, 30]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Original: [[&#39;red&#39;, 25], [&#39;blue&#39;, 30]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">decoded</span> <span class="o">=</span> <span class="n">encoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">encoded_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id1">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">encode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.array</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/encoder_decoder/enc_dec.html#EncDec.encode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id1" title="Permalink to this definition"></a></dt>
+<dd><p>Transform features from original to encoded representation.</p>
+<p>This method applies the encoding transformation to convert features from their
+original space (e.g., with categorical labels) to an encoded space suitable for
+machine learning (e.g., with one-hot encoded categorical features).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>np.array</em>) – Array of shape (n_samples, n_features) containing samples
+in the original feature space</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>Encoded array of shape (n_samples, n_encoded_features) where</dt><dd><p>n_encoded_features may be larger than n_features due to one-hot encoding</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Original: [[&#39;red&#39;, 25], [&#39;blue&#39;, 30]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Encoded:  [[1, 0, 0, 25], [0, 1, 0, 30]]  # one-hot for color</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">encoded</span> <span class="o">=</span> <span class="n">encoder</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">original_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id2">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_encoded_features</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/encoder_decoder/enc_dec.html#EncDec.get_encoded_features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id2" title="Permalink to this definition"></a></dt>
+<dd><p>Get a mapping of encoded feature indices to feature names.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>Dictionary mapping encoded feature indices to descriptive names.</dt><dd><p>For one-hot encoded features, names include the category value
+(e.g., ‘color=red’, ‘color=blue’).</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">features</span> <span class="o">=</span> <span class="n">encoder</span><span class="o">.</span><span class="n">get_encoded_features</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># {0: &#39;age&#39;, 1: &#39;color=red&#39;, 2: &#39;color=blue&#39;, 3: &#39;color=green&#39;}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id3">
+<span class="sig-name descname"><span class="pre">get_encoded_intervals</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/lore_sa/encoder_decoder/enc_dec.html#EncDec.get_encoded_intervals"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id3" title="Permalink to this definition"></a></dt>
+<dd><p>Get index intervals for each original feature in the encoded space.</p>
+<p>This method returns a list of (start, end) tuples indicating the range of
+encoded indices that correspond to each original feature. This is useful
+when an original categorical feature is one-hot encoded into multiple columns.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>List of (start_idx, end_idx) tuples, one for each original feature.</dt><dd><p>For numerical features, start_idx == end_idx. For one-hot encoded
+categorical features, the interval spans multiple indices.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">intervals</span> <span class="o">=</span> <span class="n">encoder</span><span class="o">.</span><span class="n">get_encoded_intervals</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># [(0, 1), (1, 4), (4, 5)]  # age (1 col), color (3 cols), income (1 col)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </dd></dl>

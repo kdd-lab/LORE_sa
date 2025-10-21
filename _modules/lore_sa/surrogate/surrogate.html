@@ -42,8 +42,87 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../get_started.html">Get started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../examples/tabular_explanations_example.html">Tabular explanation</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../get_started.html">Get started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#welcome-to-lore-sa">Welcome to LORE_sa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#what-is-lore">What is LORE?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#using-virtualenv">Using virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#using-conda">Using conda</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#quick-start">Quick Start</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#basic-usage">Basic Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#key-components">Key Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#choosing-an-explainer">Choosing an Explainer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#tabularrandomgeneratorlore">TabularRandomGeneratorLore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#tabulargeneticgeneratorlore">TabularGeneticGeneratorLore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#tabularrandgengeneratorlore">TabularRandGenGeneratorLore</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#understanding-the-explanation">Understanding the Explanation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#rule">Rule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#counterfactuals">Counterfactuals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#deltas">Deltas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#feature-importances">Feature Importances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../get_started.html#fidelity">Fidelity</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#next-steps">Next Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#common-pitfalls">Common Pitfalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../get_started.html#getting-help">Getting Help</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../architecture.html">Architecture and Methodology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../architecture.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../architecture.html#theoretical-foundation">Theoretical Foundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../architecture.html#the-four-stage-process">The Four-Stage Process</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#stage-1-instance-encoding">Stage 1: Instance Encoding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#stage-2-neighborhood-generation">Stage 2: Neighborhood Generation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#stage-3-surrogate-training">Stage 3: Surrogate Training</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#stage-4-rule-extraction">Stage 4: Rule Extraction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../architecture.html#architecture-components">Architecture Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#black-box-wrapper-abstractbbox">Black Box Wrapper (AbstractBBox)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#dataset-tabulardataset">Dataset (TabularDataset)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#encoder-decoder-encdec">Encoder/Decoder (EncDec)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#neighborhood-generator-neighborhoodgenerator">Neighborhood Generator (NeighborhoodGenerator)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#surrogate-model-surrogate">Surrogate Model (Surrogate)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#rule-and-expression-classes">Rule and Expression Classes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../architecture.html#workflow-diagram">Workflow Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../architecture.html#best-practices">Best Practices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#choosing-num-instances">Choosing num_instances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#interpreting-fidelity">Interpreting Fidelity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#handling-low-fidelity">Handling Low Fidelity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#feature-importance-interpretation">Feature Importance Interpretation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../architecture.html#computational-complexity">Computational Complexity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#time-complexity">Time Complexity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#space-complexity">Space Complexity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#typical-running-times">Typical Running Times</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../architecture.html#references">References</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#primary-paper">Primary Paper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#related-work">Related Work</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#key-differences-from-lime">Key Differences from LIME</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../architecture.html#implementation-notes">Implementation Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#thread-safety">Thread Safety</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#memory-considerations">Memory Considerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../architecture.html#reproducibility">Reproducibility</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../examples/tabular_explanations_example.html">Tabular explanation example</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#learning-and-explaining-german-credit-dataset">Learning and explaining German Credit Dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#loading-and-preparation-of-data">Loading and preparation of data</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../examples/tabular_explanations_example.html#learning-a-random-forest-classfier">Learning a Random Forest classfier</a></li>
@@ -235,27 +314,151 @@
 
 <div class="viewcode-block" id="Surrogate"><a class="viewcode-back" href="../../../source/generated/lore_sa.surrogate.Surrogate.html#lore_sa.surrogate.Surrogate">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">Surrogate</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Generic surrogate class</span>
+<span class="sd">    Abstract base class for interpretable surrogate models.</span>
+<span class="sd">    </span>
+<span class="sd">    A surrogate model is an interpretable machine learning model (like a decision tree)</span>
+<span class="sd">    that approximates the behavior of a complex black box model in a local region around</span>
+<span class="sd">    a specific instance. LORE uses surrogates to extract interpretable rules that explain</span>
+<span class="sd">    black box predictions.</span>
+<span class="sd">    </span>
+<span class="sd">    The surrogate model is trained on a synthetic neighborhood of instances generated</span>
+<span class="sd">    around the instance to explain, with labels provided by the black box model. This</span>
+<span class="sd">    creates a local approximation that is both accurate and interpretable.</span>
+<span class="sd">    </span>
+<span class="sd">    Key responsibilities:</span>
+<span class="sd">    1. Train an interpretable model on the neighborhood</span>
+<span class="sd">    2. Extract factual rules explaining the prediction</span>
+<span class="sd">    3. Generate counterfactual rules showing alternative scenarios</span>
+<span class="sd">    4. Measure fidelity (how well it approximates the black box)</span>
+<span class="sd">    </span>
+<span class="sd">    Attributes:</span>
+<span class="sd">        kind (str): Type of surrogate model (e.g., &#39;decision_tree&#39;, &#39;supertree&#39;)</span>
+<span class="sd">        preprocessing: Preprocessing method to apply before training</span>
+<span class="sd">        fidelity (float): Score indicating how well the surrogate approximates </span>
+<span class="sd">            the black box (computed during training)</span>
+<span class="sd">    </span>
+<span class="sd">    Methods:</span>
+<span class="sd">        train: Train the surrogate model on neighborhood data</span>
+<span class="sd">        get_rule: Extract the decision rule for a specific instance</span>
+<span class="sd">        get_counterfactual_rules: Generate counterfactual rules</span>
+<span class="sd">    </span>
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; from lore_sa.surrogate import DecisionTreeSurrogate</span>
+<span class="sd">        &gt;&gt;&gt; </span>
+<span class="sd">        &gt;&gt;&gt; surrogate = DecisionTreeSurrogate()</span>
+<span class="sd">        &gt;&gt;&gt; surrogate.train(neighborhood_X, neighborhood_y)</span>
+<span class="sd">        &gt;&gt;&gt; rule = surrogate.get_rule(instance, encoder)</span>
+<span class="sd">        &gt;&gt;&gt; counterfactuals = surrogate.get_counterfactual_rules(instance, </span>
+<span class="sd">        ...                                                       neighborhood_X, </span>
+<span class="sd">        ...                                                       neighborhood_y, </span>
+<span class="sd">        ...                                                       encoder)</span>
+<span class="sd">    </span>
+<span class="sd">    See Also:</span>
+<span class="sd">        DecisionTreeSurrogate: Concrete implementation using scikit-learn decision trees</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 <div class="viewcode-block" id="Surrogate.__init__"><a class="viewcode-back" href="../../../source/generated/lore_sa.surrogate.Surrogate.html#lore_sa.surrogate.Surrogate.__init__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">kind</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">preprocessing</span> <span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize the surrogate model.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            kind (str, optional): Type of surrogate model (e.g., &#39;decision_tree&#39;, &#39;supertree&#39;)</span>
+<span class="sd">            preprocessing (optional): Preprocessing method to apply to the data before training</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="c1">#decision tree, supertree</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">kind</span> <span class="o">=</span> <span class="n">kind</span>
         <span class="c1">#kind of preprocessing to apply</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">preprocessing</span> <span class="o">=</span> <span class="n">preprocessing</span></div>
 
-    <span class="nd">@abstractmethod</span>
+<div class="viewcode-block" id="Surrogate.train"><a class="viewcode-back" href="../../../source/generated/lore_sa.surrogate.Surrogate.html#lore_sa.surrogate.Surrogate.train">[docs]</a>    <span class="nd">@abstractmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">train</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">Yb</span><span class="p">,</span> <span class="n">weights</span><span class="p">):</span>
-        <span class="k">pass</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Train the surrogate model on neighborhood data.</span>
+<span class="sd">        </span>
+<span class="sd">        This method trains the interpretable surrogate model on a synthetic neighborhood</span>
+<span class="sd">        of instances, where the labels are provided by the black box model. The goal is</span>
+<span class="sd">        to create a local approximation that captures the black box&#39;s decision boundaries.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            Z (np.array): Training data in encoded space, shape (n_samples, n_encoded_features).</span>
+<span class="sd">                These are the synthetic instances generated around the instance to explain.</span>
+<span class="sd">            Yb (np.array): Target labels from the black box model, shape (n_samples,).</span>
+<span class="sd">                These are the predictions made by the black box on the neighborhood.</span>
+<span class="sd">            weights (np.array, optional): Sample weights for training, shape (n_samples,).</span>
+<span class="sd">                Can be used to emphasize certain instances in the neighborhood.</span>
+<span class="sd">        </span>
+<span class="sd">        Note:</span>
+<span class="sd">            The fidelity of the surrogate is typically computed during training to assess</span>
+<span class="sd">            how well it approximates the black box model in the local neighborhood.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span></div>
 
-    <span class="nd">@abstractmethod</span>
+<div class="viewcode-block" id="Surrogate.get_rule"><a class="viewcode-back" href="../../../source/generated/lore_sa.surrogate.Surrogate.html#lore_sa.surrogate.Surrogate.get_rule">[docs]</a>    <span class="nd">@abstractmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_rule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">encdec</span><span class="p">:</span> <span class="n">EncDec</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="k">pass</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Extract the decision rule for a specific instance.</span>
+<span class="sd">        </span>
+<span class="sd">        This method traverses the trained surrogate model to extract the decision rule</span>
+<span class="sd">        that applies to the given instance. The rule describes the conditions (premises)</span>
+<span class="sd">        that lead to the predicted class (consequence).</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            x (np.array): Instance to explain, in encoded space, shape (n_encoded_features,)</span>
+<span class="sd">            encdec (EncDec, optional): Encoder/decoder to convert the rule back to </span>
+<span class="sd">                original feature space for interpretability</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            Rule: Rule object containing premises (conditions) and consequence (prediction)</span>
+<span class="sd">                that explain why the surrogate (and by extension, the black box) predicts</span>
+<span class="sd">                a specific class for this instance</span>
+<span class="sd">        </span>
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; rule = surrogate.get_rule(encoded_instance, encoder)</span>
+<span class="sd">            &gt;&gt;&gt; print(rule)</span>
+<span class="sd">            # Output: IF age &gt; 30 AND income &lt;= 50000 THEN class = 0</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span></div>
 
-    <span class="nd">@abstractmethod</span>
+<div class="viewcode-block" id="Surrogate.get_counterfactual_rules"><a class="viewcode-back" href="../../../source/generated/lore_sa.surrogate.Surrogate.html#lore_sa.surrogate.Surrogate.get_counterfactual_rules">[docs]</a>    <span class="nd">@abstractmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_counterfactual_rules</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">neighborhood_train_X</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">neighborhood_train_Y</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">,</span>
                                  <span class="n">encoder</span><span class="p">:</span> <span class="n">EncDec</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                                  <span class="n">filter_crules</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">constraints</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">unadmittible_features</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="k">pass</span></div>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Generate counterfactual rules showing alternative scenarios.</span>
+<span class="sd">        </span>
+<span class="sd">        Counterfactual rules describe what changes to the instance would result in a</span>
+<span class="sd">        different prediction. They answer &quot;what if&quot; questions like: &quot;What if the age</span>
+<span class="sd">        was lower? Would the prediction change?&quot;</span>
+<span class="sd">        </span>
+<span class="sd">        This method finds paths in the surrogate model that lead to different classes</span>
+<span class="sd">        and extracts the minimal changes (deltas) needed to reach those predictions.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            x (np.array): Instance to explain, in encoded space, shape (n_encoded_features,)</span>
+<span class="sd">            neighborhood_train_X (np.array): Neighborhood instances in encoded space,</span>
+<span class="sd">                shape (n_samples, n_encoded_features)</span>
+<span class="sd">            neighborhood_train_Y (np.array): Labels for neighborhood instances from the</span>
+<span class="sd">                black box, shape (n_samples,)</span>
+<span class="sd">            encoder (EncDec, optional): Encoder/decoder for converting rules to original space</span>
+<span class="sd">            filter_crules (optional): Function to filter counterfactual rules</span>
+<span class="sd">            constraints (dict, optional): Constraints on which features can be changed</span>
+<span class="sd">            unadmittible_features (list, optional): List of features that cannot be </span>
+<span class="sd">                changed (e.g., immutable features like age, gender)</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            tuple: (counterfactual_rules, deltas) where:</span>
+<span class="sd">                - counterfactual_rules (list): List of Rule objects for different classes</span>
+<span class="sd">                - deltas (list): List of lists of Expression objects showing minimal </span>
+<span class="sd">                  changes needed for each counterfactual</span>
+<span class="sd">        </span>
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; crules, deltas = surrogate.get_counterfactual_rules(</span>
+<span class="sd">            ...     encoded_instance, neighborhood_X, neighborhood_y, encoder</span>
+<span class="sd">            ... )</span>
+<span class="sd">            &gt;&gt;&gt; print(f&quot;Counterfactual: {crules[0]}&quot;)</span>
+<span class="sd">            &gt;&gt;&gt; print(f&quot;Changes needed: {deltas[0]}&quot;)</span>
+<span class="sd">            # Changes needed: [age &gt;= 40, income &gt; 60000]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span></div></div>
 </pre></div>
 
            </div>
