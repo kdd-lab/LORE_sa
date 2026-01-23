@@ -351,7 +351,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support
 
-- 📖 Documentation: https://kdd-lab.github.io/LORE_sa/html/index.html
+- 📖 Documentation: [https://kdd-lab.github.io/LORE_sa/html/index.html](https://kdd-lab.github.io/LORE_sa/)
 - 🐛 Issue Tracker: https://github.com/kdd-lab/LORE_sa/issues
 - 📄 Paper: https://arxiv.org/abs/1805.10820
 - 💬 Discussions: Use GitHub Discussions for questions and discussions
