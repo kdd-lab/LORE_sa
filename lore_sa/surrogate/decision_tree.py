@@ -55,7 +55,7 @@ class DecisionTreeSurrogate(Surrogate):
                           'splitter': ['best', 'random'],
                           'max_depth': [None, 2, 10, 12, 16, 20, 30],
                           'criterion': ['entropy', 'gini'],
-                          'max_features': [0.2, 1, 5, 'auto', 'sqrt', 'log2']
+                          'max_features': [0.2, 1, 5, 'sqrt', 'log2']
                           }
 
             # if multi_label is False or (multi_label is True and one_vs_rest is True):
@@ -262,7 +262,7 @@ class DecisionTreeSurrogate(Surrogate):
                             crule_list.append(crule)
                             delta_list.append(delta)
             else:
-                if num_falsified_conditions < clen:
+                if num_falsified_conditions < clen and num_falsified_conditions > 0:
                     clen = num_falsified_conditions
                     crule_list = [crule]
                     delta_list = [delta]
@@ -276,22 +276,62 @@ class DecisionTreeSurrogate(Surrogate):
 
     def get_falsified_conditions(self, x_dict: dict, crule: Rule):
         """
-        Check the wrong conditions
-        :param x_dict:
-        :param crule:
+        Check the wrong conditions.
+        Separates logic for numerical inequalities vs boolean/categorical equalities.
+
+        :param x_dict: Dictionary containing instance data.
+                       For inequalities: {variable: value}
+                       For equalities: {f"{variable} == {value}": boolean_flag}
+        :param crule: The rule object containing premises.
         :return: list of falsified premises
         """
         delta = []
-        for p in crule.premises:
-            try:
-                if p.operator == operator.le and x_dict[p.variable] > p.value:
-                    delta.append(p)
-                elif p.operator == operator.gt and x_dict[p.variable] <= p.value:
-                    delta.append(p)
-            except:
-                # print('pop', p.operator2string(), 'xd', x_dict, 'xd di p ', p.variable, 'hthrr', p.value)
 
-                continue
+        for p in crule.premises:
+            # Group 1: Numerical Inequalities (le, lt, ge, gt)
+            if p.operator in [operator.le, operator.lt, operator.ge, operator.gt]:
+                # Retrieve the raw value (e.g., 'Age': 25)
+                if p.variable not in x_dict:
+                    continue # Skip if data is missing, or raise ValueError
+
+                actual_value = x_dict[p.variable]
+
+                # We append to delta if the condition is NOT met
+                if p.operator == operator.le and not (actual_value <= p.value):
+                    delta.append(p)
+                elif p.operator == operator.lt and not (actual_value < p.value):
+                    delta.append(p)
+                elif p.operator == operator.ge and not (actual_value >= p.value):
+                    delta.append(p)
+                elif p.operator == operator.gt and not (actual_value > p.value):
+                    delta.append(p)
+
+            # Group 2: Boolean / Categorical Logic (eq, ne)
+            elif p.operator in [operator.eq, operator.ne]:
+                # Construct the special key: e.g., "Color == Red"
+                # Note: We convert p.value to string to ensure the format matches
+                key = f"{p.variable} == {p.value}"
+
+                # Check if this boolean feature exists in x_dict
+                if key in x_dict:
+                    # x_dict[key] is likely 1/True (Match) or 0/False (No Match)
+                    is_match = x_dict[key]
+
+                    # Case A: Premise is EQUAL (==).
+                    # Falsified if x_dict says it is NOT a match (False/0)
+                    if p.operator == operator.eq and not is_match:
+                        delta.append(p)
+
+                    # Case B: Premise is NOT EQUAL (!=).
+                    # Falsified if x_dict says it IS a match (True/1)
+                    elif p.operator == operator.ne and is_match:
+                        delta.append(p)
+                else:
+                    # Optional: Handle case where the specific one-hot feature is missing
+                    # usually in one-hot encoding, if the key is missing, it implies False,
+                    # but explicit checks are safer.
+                    pass
+
         return delta
 
     def check_feasibility_of_falsified_conditions(self, delta, unadmittible_features: list):
