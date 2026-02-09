@@ -28,11 +28,16 @@ class Lore(object):
 
         super().__init__()
         self.bbox = bbox
-        self.descriptor = dataset.descriptor
+
+        self.descriptor = None
+        if dataset is not None and dataset.descriptor is not None:
+            self.descriptor = dataset.descriptor
         self.encoder = encoder
         self.generator = generator
         self.surrogate = surrogate
-        self.class_name = dataset.class_name
+        self.class_name = None
+        if dataset is not None and dataset.class_name is not None:
+            self.class_name = dataset.class_name
 
 
     def explain(self, x: np.array, num_instances=1000):
