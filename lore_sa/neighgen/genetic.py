@@ -427,6 +427,7 @@ class GeneticGenerator(LegacyGeneticGenerator):
 
         return population, halloffame, logbook
 
+    @staticmethod
     def eaSimple(population, toolbox, cxpb, mutpb, ngen, stats=None,
                  halloffame=None, verbose=__debug__):
         """This algorithm reproduce the simplest evolutionary algorithm as
