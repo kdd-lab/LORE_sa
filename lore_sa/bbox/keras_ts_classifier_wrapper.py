@@ -5,7 +5,7 @@ __all__ = ["AbstractBBox", "keras_ts_classifier_wrapper"]
 
 class keras_ts_classifier_wrapper(AbstractBBox):
     def __init__(self, classifier):
-        super().__init__()
+        super().__init__(classifier)
         self.bbox = classifier
 
     def predict(self, X):
