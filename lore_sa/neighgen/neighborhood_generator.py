@@ -34,44 +34,53 @@ class NeighborhoodGenerator(object):
         if from_z is None:
             raise RuntimeError("Missing parameter 'from_z' in generate_synthetic_instance")
 
-        columns = [None for e in range(len(self.encoder.get_encoded_features().items()))]
-        instance = np.zeros(len(columns))
-        if from_z is not None:
-            instance = from_z # -1 because the target class is not generated
+        if self.encoder.type == 'one-hot':
+            columns = [None for e in range(len(self.encoder.get_encoded_features().items()))]
+            instance = np.zeros(len(columns))
+            if from_z is not None:
+                instance = from_z # -1 because the target class is not generated
 
 
-        for name, feature in self.dataset.descriptor['categorical'].items():
-            if random.random() < mutpb:
-                if self.encoder is not None: # TO CHECK: it may be that the encoder does not exist?
-                    # feature is encoded, so i need to random generate chunks of one-hot-encoded values
+            for name, feature in self.dataset.descriptor['categorical'].items():
+                if random.random() < mutpb:
+                    if self.encoder is not None: # TO CHECK: it may be that the encoder does not exist?
+                        # feature is encoded, so i need to random generate chunks of one-hot-encoded values
 
-                    # finding the vector index of the feature
-                    indices = [k for k, v in self.encoder.get_encoded_features().items() if v.split("=")[0] == name]
-                    index_choice = np.random.choice(indices)
-                    instance[indices[0]:indices[-1]+1] = 0
-                    instance[index_choice] = 1
-                    # check if the instance within indices has at least one 1
-                    if np.sum(instance[indices[0]:indices[-1]+1]) == 0:
-                        print(f'Missing value: {name} - {indices}')
-                else:
-                    # feature is not encoded: random choice among the distinct values of the feature
+                        # finding the vector index of the feature
+                        indices = [k for k, v in self.encoder.get_encoded_features().items() if v.split("=")[0] == name]
+                        index_choice = np.random.choice(indices)
+                        instance[indices[0]:indices[-1]+1] = 0
+                        instance[index_choice] = 1
+                        # check if the instance within indices has at least one 1
+                        if np.sum(instance[indices[0]:indices[-1]+1]) == 0:
+                            print(f'Missing value: {name} - {indices}')
+                    else:
+                        # feature is not encoded: random choice among the distinct values of the feature
 
-                    instance[feature['index']] = np.random.choice(feature['distinct_values'])
-                    columns[feature['index']] = name
+                        instance[feature['index']] = np.random.choice(feature['distinct_values'])
+                        columns[feature['index']] = name
 
-        for name, feature in self.dataset.descriptor['numeric'].items():
-            if random.random() < mutpb:
-                idx = None
-                if self.encoder is not None:
-                    idx = [k for k, v in self.encoder.get_encoded_features().items() if v == name][0]
-                else:
-                    idx = feature['index']
-                columns[idx] = name
+            for name, feature in self.dataset.descriptor['numeric'].items():
+                if random.random() < mutpb:
+                    idx = None
+                    if self.encoder is not None:
+                        idx = [k for k, v in self.encoder.get_encoded_features().items() if v == name][0]
+                    else:
+                        idx = feature['index']
+                    columns[idx] = name
 
-                instance[idx] = np.random.uniform(low=feature['min'], high=feature['max'])
-        self.columns = columns
+                    instance[idx] = np.random.uniform(low=feature['min'], high=feature['max'])
+            self.columns = columns
 
-        return instance
+            return instance
+        elif self.encoder.type == 'vae':
+            # for vae, the generation is done in the latent space, so we just add a small noise to the input vector
+            noise = np.random.normal(0, 0.1, size=from_z.shape)
+            instance = from_z + noise
+            return instance
+        else:
+            raise RuntimeError(f"Unsupported encoder type: {self.encoder.type}")
+
 
     def balance_neigh(self, z, Z, num_samples):
         X = self.encoder.decode(Z)
