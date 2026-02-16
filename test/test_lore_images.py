@@ -1,4 +1,5 @@
 import base64
+import os
 import unittest
 from io import BytesIO
 
@@ -246,14 +247,18 @@ class LoreImagesTest(unittest.TestCase):
         # 2. prepare encoders
         vae_model_name = f"{dataset}_vae_p{pxl_size}_l{latent_dim}"
         vae_model_uri = f"models:/{vae_model_name}@champion"
-
-        self.enc = CustomVAEEncoderDecoder(mlflow.keras.load_model(vae_model_uri))
+        vae_model_uri = f"resources/model.keras" # Use local path for testing
+        # ~/github/MedMNISTVae/mlruns/657869511119108362/models/m-f72753ec127948ac9e3a46b92005868a/artifacts
+        vae_model_path = os.path.join("resources", "models", "mnist_vae", "model.keras")
+        self.enc = CustomVAEEncoderDecoder(tf.keras.models.load_model(vae_model_path))
 
         # 3. load model
         model_name = f"{dataset}_classifier_{pxl_size}"
         model_uri = f"models:/{model_name}@champion"
-        self.model = mlflow.keras.load_model(model_uri)
 
+        # /github/MedMNISTVae/mlruns/274291121911349144/models/m-503e1b5ac0674e6f86a069bc3a183cce/artifacts
+        classifier_model_path = os.path.join("resources", "models", "mnist_classifier",  "model.keras")
+        self.model = tf.keras.models.load_model(classifier_model_path)
 
         # # 4. wrapper for the model
         self.bbox = keras_ts_classifier_wrapper(self.model)
