@@ -116,6 +116,10 @@ class LegacyGeneticGenerator(NeighborhoodGenerator):
         return np.array(Z)
 
     def setup_toolbox(self, x, evaluate, population_size):
+        # if hasattr(creator, "fitness"):
+        #     del creator.fitness
+        # if hasattr(creator, "individual"):
+        #     del creator.individual
 
         creator.create("fitness", base.Fitness, weights=(1.0,))
         creator.create("individual", np.ndarray, fitness=creator.fitness)
@@ -189,7 +193,9 @@ class LegacyGeneticGenerator(NeighborhoodGenerator):
 
     def mutate(self, toolbox, x):
         z = toolbox.clone(x)
-        z = self.generate_synthetic_instance(from_z=z, mutpb=self.mutpb)
+        nz = self.generate_synthetic_instance(from_z=z, mutpb=self.mutpb)
+
+        z[:] = nz
 
         return z,
 
@@ -390,6 +396,10 @@ class GeneticGenerator(LegacyGeneticGenerator):
     #     return np.array(Z)
 
     def setup_toolbox(self, x, evaluate, population_size):
+        # if hasattr(creator, "fitness"):
+        #     del creator.fitness
+        # if hasattr(creator, "individual"):
+        #     del creator.individual
 
         creator.create("fitness", base.Fitness, weights=(1.0,))
         creator.create("individual", np.ndarray, fitness=creator.fitness)

@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+from tensorflow import newaxis
 
 from .surrogate import DecisionTreeSurrogate, Surrogate
 from .bbox import AbstractBBox
@@ -62,7 +63,7 @@ class Lore(object):
         self.surrogate.train(neighbour, neighb_train_yb)
 
         # extract the feature importances from the decision tree in self.dt
-        if hasattr(self.surrogate, 'dt') and self.surrogate.dt is not None:
+        if self.encoder.type == 'one=hot' and hasattr(self.surrogate, 'dt') and self.surrogate.dt is not None:
             intervals = self.encoder.get_encoded_intervals()
             features_ = self.encoder.encoded_descriptor
             importances = self.surrogate.dt.feature_importances_
@@ -92,7 +93,9 @@ class Lore(object):
 
         crules, deltas = self.surrogate.get_counterfactual_rules(z, neighbour, neighb_train_yb, self.encoder)
         # I wants also the counterfactuals in the original space the so called "no_equal", as well the "equals"
-        original_class = self.bbox.predict([x])
+        if isinstance(x, pd.Series):
+            x = x.values
+        original_class = self.bbox.predict(x[newaxis, ...])[0]
         no_equal = [x_c.tolist() for x_c,y_c in zip(dec_neighbor, neighb_train_y) if y_c != original_class]
         actual_class = [y_c for x_c,y_c in zip(dec_neighbor, neighb_train_y) if y_c != original_class]
         return {

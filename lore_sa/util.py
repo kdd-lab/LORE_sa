@@ -5,9 +5,6 @@ import scipy.stats as st
 from scipy.spatial.distance import jaccard
 import warnings
 
-from .encoder_decoder import ColumnTransformerEnc
-
-
 def vector2dict(x, feature_names):
     """
     Given an array ```x''' and an ordered list of feature names, returns a dictionary
@@ -36,7 +33,7 @@ def record2str(x, feature_names, numeric_columns, encdec=None):
         elif encdec is None:
             s += '%s = %s' % (att, val)
         else:
-            if isinstance(encdec, ColumnTransformerEnc):
+            if isinstance(encdec, lore_sa.encoder_decoder.tabular_enc.ColumnTransformerEnc):
                 att_split = att.split('=')
                 s += '%s = %s, ' % (att_split[0], att_split[1])
 

@@ -1,6 +1,5 @@
 import json
 
-from .encoder_decoder import EncDec
 from .util import vector2dict
 from typing import Callable
 import operator
@@ -65,15 +64,15 @@ class Expression(object):
 
 class Rule(object):
 
-    def __init__(self, premises: list, consequences: Expression, encoder: EncDec):
+    def __init__(self, premises: list, consequences: Expression):
         """
         :param [list] premises: list of Expression objects representing the premises
         :param [Expression] consequences: Expression representing the consequence
-        :param [EncDec] encoder: encoder to decode categorical rules
         """
-        self.encoder = encoder
-        self.premises = [self.decode_rule(p) for p in premises]
-        self.consequences = self.decode_rule(consequences)
+        # self.premises = [self.decode_rule(p) for p in premises]
+        # self.consequences = self.decode_rule(consequences)
+        self.premises = [p for p in premises]
+        self.consequences = consequences
 
     def _pstr(self):
         return '{ %s }' % (', '.join([str(p) for p in self.premises]))
@@ -108,24 +107,6 @@ class Rule(object):
                 'op': self.consequences.operator2string()
             }
         }
-
-
-    def decode_rule(self, rule: Expression):
-        if 'categorical' not in self.encoder.dataset_descriptor.keys() or self.encoder.dataset_descriptor['categorical'] == {}:
-            return rule
-
-        if rule.variable.split('=')[0] in self.encoder.dataset_descriptor['categorical'].keys():
-            decoded_label = rule.variable.split("=")[0]
-            decoded_value = rule.variable.split("=")[1]
-            rule.variable = decoded_label
-            if rule.value:
-                rule.operator = operator.eq
-            else:
-                rule.operator = operator.ne
-            rule.value = decoded_value
-            return rule
-        else:
-            return rule
 
     def is_covered(self, x, feature_names):
         xd = vector2dict(x, feature_names)

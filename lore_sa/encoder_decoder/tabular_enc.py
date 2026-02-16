@@ -1,4 +1,5 @@
 import itertools
+import operator
 
 from sklearn.compose import ColumnTransformer
 
@@ -9,6 +10,8 @@ import copy
 from sklearn.preprocessing import OneHotEncoder, FunctionTransformer, OrdinalEncoder
 
 __all__ = ["EncDec", "ColumnTransformerEnc"]
+
+from ..rule import Expression
 
 
 class InvertableColumnTransformer(ColumnTransformer):
@@ -241,3 +244,28 @@ class ColumnTransformerEnc(EncDec):
         :return:
         """
         return self.target_encoder.transform(X)
+
+    def decode_rule(self, rule: Expression):
+        """
+        Decode a rule starting from the original descriptor
+
+        :param rule: the rule to decode
+        :return: the decoded rule
+        """
+        if 'categorical' not in self.dataset_descriptor.keys() or self.dataset_descriptor['categorical'] == {}:
+            return rule
+
+        if rule.variable.split('=')[0] in self.dataset_descriptor['categorical'].keys():
+            decoded_label = rule.variable.split("=")[0]
+            decoded_value = rule.variable.split("=")[1]
+            rule.variable = decoded_label
+            if rule.value:
+                rule.operator = operator.eq
+            else:
+                rule.operator = operator.ne
+            rule.value = decoded_value
+            return rule
+        else:
+            return rule
+
+

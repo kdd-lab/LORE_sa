@@ -133,7 +133,10 @@ class DecisionTreeSurrogate(Surrogate):
         predicted_class = self.dt.predict(z)
         inv_transform_predicted_class = encoder.decode_target_class([predicted_class])[0]
 
-        target_feature_name = list(encoder.encoded_descriptor['target'].keys())[0]
+        if encoder.type == 'one_hot':
+            target_feature_name = list(encoder.encoded_descriptor['target'].keys())[0]
+        else:
+            target_feature_name = 'target'
 
         consequence = Expression(variable=target_feature_name, operator=operator.eq,
                                  value=inv_transform_predicted_class[0])
@@ -141,8 +144,12 @@ class DecisionTreeSurrogate(Surrogate):
         leave_id = self.dt.apply(z)
         node_index = self.dt.decision_path(z).indices
 
-        feature_names = list(encoder.encoded_features.values())
-        numeric_columns = list(encoder.encoded_descriptor['numeric'].keys())
+        if encoder.type == 'one-hot':
+            feature_names = list(encoder.encoded_features.values())
+            numeric_columns = list(encoder.encoded_descriptor['numeric'].keys())
+        else:
+            feature_names = [f"dim {i}" for i in range(self.dt.tree_.n_features)]
+            numeric_columns = feature_names
 
         premises = list()
         for node_id in node_index:
@@ -162,7 +169,7 @@ class DecisionTreeSurrogate(Surrogate):
                 premises.append(Expression(attribute, op, thr))
 
         premises = self.compact_premises(premises)
-        return Rule(premises=premises, consequences=consequence, encoder=encoder)
+        return Rule(premises=premises, consequences=consequence)
 
     def compact_premises(self, premises_list):
         """
@@ -206,9 +213,12 @@ class DecisionTreeSurrogate(Surrogate):
         # inv_transform_predicted_class = encoder.encoder.named_transformers_.get('target')\
         #     .inverse_transform([predicted_class])[0] #TODO: modify to generalize to multiclasses
 
-        class_name = list(encoder.encoded_descriptor['target'].keys())[0]
-        class_values = list(encoder.encoded_descriptor['target'].values())[0]['distinct_values']
-
+        if encoder.type == 'one_hot':
+            class_name = list(encoder.encoded_descriptor['target'].keys())[0]
+            class_values = list(encoder.encoded_descriptor['target'].values())[0]['distinct_values']
+        else:
+            class_name = 'target'
+            class_values = self.dt.tree_.n_classes
 
         clen = np.inf
         crule_list = list()

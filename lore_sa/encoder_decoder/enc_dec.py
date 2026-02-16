@@ -2,6 +2,9 @@ from abc import abstractmethod
 import numpy as np
 
 __all__ = ["EncDec"]
+
+
+
 class EncDec():
     """
     Generic class to implement an encoder/decoder
@@ -50,4 +53,8 @@ class EncDec():
 
     @abstractmethod
     def encode_target_class(self, param):
+        pass
+
+    @abstractmethod
+    def decode_rule(self, rule):
         pass
