@@ -194,7 +194,7 @@ class Lore(object):
         # I wants also the counterfactuals in the original space the so called "no_equal", as well the "equals"
         if isinstance(x, pd.Series):
             x = x.values
-        original_class = self.bbox.predict(x[newaxis, ...])[0]
+        original_class = self.bbox.predict(x[np.newaxis, ...])[0]
 
         sample_size = max(1, int(0.01 * num_instances)) # 1% of the generated neighborhood
 
