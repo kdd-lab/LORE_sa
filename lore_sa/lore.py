@@ -45,6 +45,7 @@ class Lore(object):
         """
         Explains a single instance of the dataset.
         :param x: an array with the values of the instance to explain (the target class is not included)
+        :param num_instances: the number of instances to generate in the neighborhood of the instance to explain
         :return:
         """
         # map the single record in input to the encoded space
@@ -96,8 +97,15 @@ class Lore(object):
         if isinstance(x, pd.Series):
             x = x.values
         original_class = self.bbox.predict(x[newaxis, ...])[0]
-        no_equal = [x_c.tolist() for x_c,y_c in zip(dec_neighbor, neighb_train_y) if y_c != original_class]
-        actual_class = [y_c for x_c,y_c in zip(dec_neighbor, neighb_train_y) if y_c != original_class]
+
+        sample_size = max(1, int(0.01 * num_instances)) # 1% of the generated neighborhood
+
+        all_ce = [(x_c, y_c) for x_c, y_c in zip(dec_neighbor, neighb_train_y) if y_c != original_class]
+        if len(all_ce) > sample_size:
+            all_ce = np.random.choice(all_ce, size=sample_size, replace=False)
+
+        no_equal = [x_c for x_c, y_c in all_ce]
+        actual_class = [y_c for x_c, y_c in all_ce]
         return {
             # 'x': x.tolist(),
             'rule': rule.to_dict(),
@@ -108,8 +116,6 @@ class Lore(object):
             'counterfactual_predictions': actual_class,
             'feature_importances': self.feature_importances,
         }
-
-
 
 class TabularRandomGeneratorLore(Lore):
 

@@ -75,7 +75,7 @@ class NeighborhoodGenerator(object):
             return instance
         elif self.encoder.type == 'vae':
             # for vae, the generation is done in the latent space, so we just add a small noise to the input vector
-            noise = np.random.normal(0, 0.1, size=from_z.shape)
+            noise = np.random.normal(0, 0.5, size=from_z.shape)
             instance = from_z + noise
             return instance
         else:
@@ -84,17 +84,17 @@ class NeighborhoodGenerator(object):
 
     def balance_neigh(self, z, Z, num_samples):
         X = self.encoder.decode(Z)
-        for i in range(len(X)):
-            if None in X[i]:
-                X[i] = self.encoder.decode(z.reshape(1, -1))[0]
+        # for i in range(len(X)):
+        #     if None in X[i]:
+        #         X[i] = self.encoder.decode(z.reshape(1, -1))[0]
         Yb = self.bbox.predict(X)
-        x = self.encoder.decode(z.reshape(1, -1))[0]
+        x = self.encoder.decode(z[np.newaxis, ...])[0]
 
         class_counts = np.unique(Yb, return_counts=True)
 
         if len(class_counts[0]) <= 2:
             ocs = int(np.round(num_samples * self.ocr))
-            Z1 = self.__rndgen_not_class(z, ocs, self.bbox.predict(x.reshape(1, -1))[0])
+            Z1 = self.__rndgen_not_class(z, ocs, self.bbox.predict(x[np.newaxis, ...])[0])
             if len(Z1) > 0:
                 Z = np.concatenate((Z, Z1), axis=0)
         else:
@@ -102,19 +102,19 @@ class NeighborhoodGenerator(object):
             max_cc2 = np.max([cc for cc in class_counts[1] if cc != max_cc])
             if max_cc2 / len(Yb) < self.ocr:
                 ocs = int(np.round(num_samples * self.ocr)) - max_cc2
-                Z1 = self.__rndgen_not_class(z, ocs, self.bbox.predict(x.reshape(1, -1))[0])
+                Z1 = self.__rndgen_not_class(z, ocs, self.bbox.predict(x[np.newaxis, ...])[0])
                 if len(Z1) > 0:
                     Z = np.concatenate((Z, Z1), axis=0)
         return Z
 
-    def __rndgen_not_class(self, z, num_samples, class_value, max_iter=1000):
+    def __rndgen_not_class(self, z, num_samples, class_value, max_iter=10):
         Z = list()
         iter_count = 0
         multi_label = isinstance(class_value, np.ndarray)
         while len(Z) < num_samples:
             z1 = self.generate_synthetic_instance(z)
-            x1 = self.encoder.decode(z1.reshape(1, -1))[0]
-            y = self.bbox.predict([x1])[0]
+            x1 = self.encoder.decode(z1[np.newaxis, ...])[0]
+            y = self.bbox.predict(x1[np.newaxis, ...])[0]
             flag = y != class_value if not multi_label else np.all(y != class_value)
             if flag:
                 Z.append(z1)
