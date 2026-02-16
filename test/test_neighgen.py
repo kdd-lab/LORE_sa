@@ -10,12 +10,12 @@ from sklearn.model_selection import train_test_split
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler, OrdinalEncoder
 
-from ..lore_sa.bbox import sklearn_classifier_bbox
-from ..lore_sa.dataset import TabularDataset
-from ..lore_sa.encoder_decoder import ColumnTransformerEnc
-from ..lore_sa.neighgen import RandomGenerator
-from ..lore_sa.neighgen.genetic import GeneticGenerator, LegacyGeneticGenerator
-from ..lore_sa.neighgen.neighborhood_generator import NeighborhoodGenerator
+from lore_sa.bbox import sklearn_classifier_bbox
+from lore_sa.dataset import TabularDataset
+from lore_sa.encoder_decoder import ColumnTransformerEnc
+from lore_sa.neighgen import RandomGenerator
+from lore_sa.neighgen.genetic import GeneticGenerator, LegacyGeneticGenerator
+from lore_sa.neighgen.neighborhood_generator import NeighborhoodGenerator
 
 
 class NeighgenTest(unittest.TestCase):

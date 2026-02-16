@@ -2,8 +2,8 @@ import unittest
 
 import operator
 
-from ..lore_sa.rule import Expression
-from ..lore_sa.surrogate import DecisionTreeSurrogate
+from lore_sa.rule import Expression
+from lore_sa.surrogate import DecisionTreeSurrogate
 
 
 class RuleTest(unittest.TestCase):

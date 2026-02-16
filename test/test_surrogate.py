@@ -11,11 +11,11 @@ from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler, OrdinalEncoder
 from sklearn.tree import DecisionTreeClassifier, export_text
 
-from ..lore_sa.bbox import sklearn_classifier_bbox
-from ..lore_sa.dataset import TabularDataset
-from ..lore_sa.encoder_decoder import ColumnTransformerEnc
-from ..lore_sa.neighgen import RandomGenerator
-from ..lore_sa.surrogate import DecisionTreeSurrogate
+from lore_sa.bbox import sklearn_classifier_bbox
+from lore_sa.dataset import TabularDataset
+from lore_sa.encoder_decoder import ColumnTransformerEnc
+from lore_sa.neighgen import RandomGenerator
+from lore_sa.surrogate import DecisionTreeSurrogate
 
 class SurrogateTest(unittest.TestCase):
 

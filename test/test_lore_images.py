@@ -10,11 +10,11 @@ import tensorflow as tf
 from PIL import Image
 from tensorflow.keras import Model, layers, regularizers
 
-from ..lore_sa.bbox.keras_ts_classifier_wrapper import keras_ts_classifier_wrapper
-from ..lore_sa.encoder_decoder import EncDec
-from ..lore_sa.neighgen import GeneticGenerator
-from ..lore_sa.surrogate import DecisionTreeSurrogate
-from ..lore_sa.lore import Lore
+from lore_sa.bbox.keras_ts_classifier_wrapper import keras_ts_classifier_wrapper
+from lore_sa.encoder_decoder import EncDec
+from lore_sa.neighgen import GeneticGenerator
+from lore_sa.surrogate import DecisionTreeSurrogate
+from lore_sa.lore import Lore
 
 
 @tf.keras.utils.register_keras_serializable()

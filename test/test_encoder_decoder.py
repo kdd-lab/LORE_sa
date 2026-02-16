@@ -1,8 +1,8 @@
 import unittest
 
 import pandas as pd
-from ..lore_sa.dataset import TabularDataset
-from ..lore_sa.encoder_decoder import ColumnTransformerEnc
+from lore_sa.dataset import TabularDataset
+from lore_sa.encoder_decoder import ColumnTransformerEnc
 import numpy as np
 
 
