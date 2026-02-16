@@ -245,18 +245,10 @@ class LoreImagesTest(unittest.TestCase):
         self.images = x_test
 
         # 2. prepare encoders
-        vae_model_name = f"{dataset}_vae_p{pxl_size}_l{latent_dim}"
-        vae_model_uri = f"models:/{vae_model_name}@champion"
-        vae_model_uri = f"resources/model.keras" # Use local path for testing
-        # ~/github/MedMNISTVae/mlruns/657869511119108362/models/m-f72753ec127948ac9e3a46b92005868a/artifacts
         vae_model_path = os.path.join("resources", "models", "mnist_vae", "model.keras")
         self.enc = CustomVAEEncoderDecoder(tf.keras.models.load_model(vae_model_path))
 
         # 3. load model
-        model_name = f"{dataset}_classifier_{pxl_size}"
-        model_uri = f"models:/{model_name}@champion"
-
-        # /github/MedMNISTVae/mlruns/274291121911349144/models/m-503e1b5ac0674e6f86a069bc3a183cce/artifacts
         classifier_model_path = os.path.join("resources", "models", "mnist_classifier",  "model.keras")
         self.model = tf.keras.models.load_model(classifier_model_path)
 
@@ -274,39 +266,17 @@ class LoreImagesTest(unittest.TestCase):
 
 
     def test_lore_images_init(self):
-        # given
-        # assert self.images.shape == (10000, 64, 64, 1)
-        # assert self.enc is not None
-        # assert self.model is not None
-        # # when
-        # num_samples = 10
-        # rnd_idx = np.random.randint(0, self.images.shape[0], num_samples)
-        # sample_images = self.images[rnd_idx]
-        #
-        # for i in range(num_samples):
-        #     base64_str = image_to_base64(sample_images[i])
-        #     assert isinstance(base64_str, str)
-        #     assert len(base64_str) > 0
-        #     print(f"{base64_str}")
-        #
-        # predictions = self.bbox.predict_proba(sample_images) # Predict on the first 10 images
-        # predicted_class = np.argmax(predictions, axis=1)
-        # confidence = np.max(predictions, axis=1)
-        # less_confident_index = np.argmin(confidence)
-        # print(f"Least confident prediction index: {less_confident_index}, Confidence: {confidence[less_confident_index]}")
-        # print("Predicted classes:", predicted_class)
-        # print("Confidence scores:", confidence)
-        # assert predictions.shape == (num_samples, 10) # Assuming 10 classes for MNIST
-        # assert predicted_class.shape == (num_samples,)
-        # assert confidence.shape == (num_samples,)
-        #
-        # mu = self.enc.encode(sample_images)
-        # print(f"Encoded images shape: {mu}")
-        # assert mu.shape == (num_samples, 4) # Check if the encoded shape matches the latent dimension of the VAE
-        #
-        # reconstructed_images = self.enc.decode(mu)
-        # print(f"Reconstructed images shape: {reconstructed_images.shape}")
-        # assert reconstructed_images.shape == (num_samples, 64, 64, 1)
-
-        explanation = self.imageLore.explain(self.images[0], num_instances=100)
+        explanation = self.imageLore.explain(self.images[0], num_instances=1000)
         print(explanation)
+
+        print("Exemplars")
+        exemplars = explanation['exemplars']
+        for i, e in enumerate(exemplars):
+            print(f"Exemplar {i}. Predicted class: {explanation['exemplars_predictions'][i]}")
+            print(f"Exemplar (base64): {image_to_base64(e)}")
+
+        print(" Counter Exemplars")
+        cf_examples = explanation['counter_exemplars']
+        for i, cf in enumerate(cf_examples):
+            print(f"Counterfactual {i}. Predicted class: {explanation['counter_exemplars_predictions'][i]}")
+            print(f"CF (base64): {image_to_base64(cf)}")

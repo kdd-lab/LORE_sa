@@ -203,20 +203,23 @@ class Lore(object):
             idx = np.random.choice(len(all_ce), size=sample_size, replace=False)
             all_ce = [all_ce[i] for i in idx]
 
-        no_equal = [x_c for x_c, y_c in all_ce]
-        actual_class = [y_c for x_c, y_c in all_ce]
+        all_e = [(x_c, y_c) for x_c, y_c in zip(dec_neighbor, neighb_train_y) if y_c == original_class]
+        if len(all_e) > sample_size:
+            idx = np.random.choice(len(all_e), size=sample_size, replace=False)
+            all_e = [all_e[i] for i in idx]
+
         return {
             # 'x': x.tolist(),
             'rule': rule.to_dict(),
             'counterfactuals': [c.to_dict() for c in crules],
             'fidelity': self.surrogate.fidelity,
             'deltas': [[dd.to_dict() for dd in d] for d  in deltas],
-            'counterfactual_samples': no_equal, # here are the cfs
-            'counterfactual_predictions': actual_class,
+            'exemplars': [x_c for x_c, y_c in all_e],
+            'exemplars_predictions': [y_c for x_c, y_c in all_e],
+            'counter_exemplars': [x_c for x_c, y_c in all_ce],
+            'counter_exemplars_predictions': [y_c for x_c, y_c in all_ce],
             'feature_importances': self.feature_importances,
         }
-
-
 
 class TabularRandomGeneratorLore(Lore):
     """
