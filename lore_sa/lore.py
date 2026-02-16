@@ -102,7 +102,8 @@ class Lore(object):
 
         all_ce = [(x_c, y_c) for x_c, y_c in zip(dec_neighbor, neighb_train_y) if y_c != original_class]
         if len(all_ce) > sample_size:
-            all_ce = np.random.choice(all_ce, size=sample_size, replace=False)
+            idx = np.random.choice(len(all_ce), size=sample_size, replace=False)
+            all_ce = [all_ce[i] for i in idx]
 
         no_equal = [x_c for x_c, y_c in all_ce]
         actual_class = [y_c for x_c, y_c in all_ce]
