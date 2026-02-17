@@ -3,13 +3,15 @@ name = "LORE_sa"
 version = "0.0.1"
 requires-python = ">=3.8"
 description = "LOREM explainer package"
-readme = "README.rst"
+readme = "README.md"
 
 [build-system]
-requires = ["setuptools", "setuptools-scm"]
+requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
+[tool.setuptools]
+packages = ["lore_sa"]
+
 [tool.setuptools.dynamic]
-readme = {file = ["README.md"]}
 dependencies = {file = ["requirements.txt"]}
 
