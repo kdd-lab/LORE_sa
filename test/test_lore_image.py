@@ -1,4 +1,4 @@
-zimport base64
+import base64
 import io
 import os
 import unittest
