@@ -3,9 +3,7 @@ import os
 import unittest
 from io import BytesIO
 
-import mlflow
 import keras
-import mlflow.keras
 import numpy as np
 import tensorflow as tf
 from PIL import Image
@@ -234,9 +232,6 @@ class LoreImagesTest(unittest.TestCase):
         dataset = 'mnist'
         pxl_size = 64
         latent_dim = 4
-        mlflow_uri = 'http://localhost:5000'
-
-        mlflow.set_tracking_uri(mlflow_uri)
 
         # 1. prepare dataset
         from tensorflow.keras.datasets import mnist
