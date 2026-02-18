@@ -1,3 +1,2 @@
-furo
 sphinx==6.0
 sphinx_rtd_theme
