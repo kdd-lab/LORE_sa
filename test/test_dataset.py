@@ -1,7 +1,7 @@
 import unittest
 import pandas
 
-from ..lore_sa.dataset import TabularDataset
+from lore_sa.dataset import TabularDataset
 
 descriptor_dummy = {'categorical': {'col3': {'count': {'America': 1, 'Europe': 1},
                         'distinct_values': ['America', 'Europe'],

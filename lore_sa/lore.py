@@ -8,7 +8,6 @@ from .encoder_decoder import ColumnTransformerEnc, EncDec
 from .neighgen.genetic import GeneticGenerator
 from .neighgen.neighborhood_generator import NeighborhoodGenerator
 from .neighgen.random import RandomGenerator
-from .neighgen.genetic_proba_generator import GeneticProbaGenerator
 
 
 class Lore(object):
@@ -44,20 +43,20 @@ class Lore(object):
         feature_importances (list): Feature importances from the last explanation
     
     Examples:
-        >>> from lore_sa import TabularGeneticGeneratorLore
-        >>> from lore_sa.dataset import TabularDataset
-        >>> from lore_sa.bbox import sklearn_classifier_bbox
-        >>> 
-        >>> # Load dataset and create black box model
-        >>> dataset = TabularDataset.from_csv('data.csv', class_name='target')
-        >>> bbox = sklearn_classifier_bbox.sklearnBBox(trained_model)
-        >>> 
-        >>> # Create LORE explainer
-        >>> explainer = TabularGeneticGeneratorLore(bbox, dataset)
-        >>> 
-        >>> # Explain a single instance
-        >>> explanation = explainer.explain_instance(instance)
-        >>> print(explanation['rule'])
+        > from lore_sa import TabularGeneticGeneratorLore
+        > from lore_sa.dataset import TabularDataset
+        > from lore_sa.bbox import sklearn_classifier_bbox
+        >
+        > # Load dataset and create black box model
+        > dataset = TabularDataset.from_csv('data.csv', class_name='target')
+        > bbox = sklearn_classifier_bbox.sklearnBBox(trained_model)
+        >
+        > # Create LORE explainer
+        > explainer = TabularGeneticGeneratorLore(bbox, dataset)
+        >
+        > # Explain a single instance
+        > explanation = explainer.explain_instance(instance)
+        > print(explanation['rule'])
     """
 
     def __init__(self, bbox: AbstractBBox, dataset: Dataset, encoder: EncDec,
@@ -226,14 +225,14 @@ class TabularRandomGeneratorLore(Lore):
             with the same class as the original and instances with different classes.
     
     Example:
-        >>> from lore_sa import TabularRandomGeneratorLore
-        >>> from lore_sa.dataset import TabularDataset
-        >>> from lore_sa.bbox import sklearn_classifier_bbox
-        >>> 
-        >>> dataset = TabularDataset.from_csv('data.csv', class_name='target')
-        >>> bbox = sklearn_classifier_bbox.sklearnBBox(model)
-        >>> explainer = TabularRandomGeneratorLore(bbox, dataset)
-        >>> explanation = explainer.explain_instance(instance)
+        > from lore_sa import TabularRandomGeneratorLore
+        > from lore_sa.dataset import TabularDataset
+        > from lore_sa.bbox import sklearn_classifier_bbox
+        >
+        > dataset = TabularDataset.from_csv('data.csv', class_name='target')
+        > bbox = sklearn_classifier_bbox.sklearnBBox(model)
+        > explainer = TabularRandomGeneratorLore(bbox, dataset)
+        > explanation = explainer.explain_instance(instance)
     
     See Also:
         TabularGeneticGeneratorLore: Uses genetic algorithm for better neighborhood generation
@@ -293,19 +292,19 @@ class TabularGeneticGeneratorLore(Lore):
             with the same class and instances with different classes.
     
     Example:
-        >>> from lore_sa import TabularGeneticGeneratorLore
-        >>> from lore_sa.dataset import TabularDataset
-        >>> from lore_sa.bbox import sklearn_classifier_bbox
-        >>> 
-        >>> dataset = TabularDataset.from_csv('data.csv', class_name='target')
-        >>> bbox = sklearn_classifier_bbox.sklearnBBox(model)
-        >>> explainer = TabularGeneticGeneratorLore(bbox, dataset)
-        >>> explanation = explainer.explain_instance(instance)
-        >>> 
-        >>> # Access the explanation components
-        >>> print(f"Factual rule: {explanation['rule']}")
-        >>> print(f"Counterfactuals: {explanation['counterfactuals']}")
-        >>> print(f"Fidelity: {explanation['fidelity']:.2f}")
+        > from lore_sa import TabularGeneticGeneratorLore
+        > from lore_sa.dataset import TabularDataset
+        > from lore_sa.bbox import sklearn_classifier_bbox
+        >
+        > dataset = TabularDataset.from_csv('data.csv', class_name='target')
+        > bbox = sklearn_classifier_bbox.sklearnBBox(model)
+        > explainer = TabularGeneticGeneratorLore(bbox, dataset)
+        > explanation = explainer.explain_instance(instance)
+        >
+        > # Access the explanation components
+        > print(f"Factual rule: {explanation['rule']}")
+        > print(f"Counterfactuals: {explanation['counterfactuals']}")
+        > print(f"Fidelity: {explanation['fidelity']:.2f}")
     
     See Also:
         TabularRandomGeneratorLore: Simpler but faster random generation

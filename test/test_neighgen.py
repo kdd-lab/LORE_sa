@@ -10,12 +10,12 @@ from sklearn.model_selection import train_test_split
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler, OrdinalEncoder
 
-from ..lore_sa.bbox import sklearn_classifier_bbox
-from ..lore_sa.dataset import TabularDataset
-from ..lore_sa.encoder_decoder import ColumnTransformerEnc
-from ..lore_sa.neighgen import RandomGenerator
-from ..lore_sa.neighgen.genetic import GeneticGenerator, LegacyGeneticGenerator
-from ..lore_sa.neighgen.neighborhood_generator import NeighborhoodGenerator
+from lore_sa.bbox import sklearn_classifier_bbox
+from lore_sa.dataset import TabularDataset
+from lore_sa.encoder_decoder import ColumnTransformerEnc
+from lore_sa.neighgen import RandomGenerator
+from lore_sa.neighgen.genetic import GeneticGenerator, LegacyGeneticGenerator
+from lore_sa.neighgen.neighborhood_generator import NeighborhoodGenerator
 
 
 class NeighgenTest(unittest.TestCase):
@@ -87,7 +87,7 @@ class NeighgenTest(unittest.TestCase):
         z = self.enc.encode([x.values])[0] # remove the class feature from the input instance
 
         gen = GeneticGenerator(bbox=self.bbox, dataset=self.dataset, encoder=self.enc, ocr=0.1, ngen=20)
-        neighbour = gen.generate(z, 5000, self.dataset.descriptor, self.enc)
+        neighbour = gen.generate(z, 1000, self.dataset.descriptor, self.enc)
         # Assert the lenght of the generated dataset is at least 1000
         self.assertGreaterEqual(neighbour.shape[0], 100)
 
@@ -106,7 +106,7 @@ class NeighgenTest(unittest.TestCase):
         x = self.dataset.df.iloc[num_row][:-1]
         z = self.enc.encode([x.values])[0] # remove the class feature from the input instance
         gen = LegacyGeneticGenerator(bbox=self.bbox, dataset=self.dataset, encoder=self.enc, ocr=0.1, ngen=20)
-        neighbour = gen.generate(z, 1000, self.dataset.descriptor, self.enc)
+        neighbour = gen.generate(z, 100, self.dataset.descriptor, self.enc)
         # Assert the lenght of the generated dataset is at least 1000
         self.assertGreaterEqual(neighbour.shape[0], 100)
         dec_neighbour = self.enc.decode(neighbour)

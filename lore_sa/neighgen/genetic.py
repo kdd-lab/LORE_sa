@@ -5,7 +5,7 @@ import random
 from deap.algorithms import varAnd, eaSimple
 from scipy.spatial.distance import cdist, hamming
 from .neighborhood_generator import NeighborhoodGenerator
-from deap import base, creator, tools, algorithms
+from deap import base, creator, tools
 
 import numpy as np
 
@@ -116,6 +116,10 @@ class LegacyGeneticGenerator(NeighborhoodGenerator):
         return np.array(Z)
 
     def setup_toolbox(self, x, evaluate, population_size):
+        # if hasattr(creator, "fitness"):
+        #     del creator.fitness
+        # if hasattr(creator, "individual"):
+        #     del creator.individual
 
         creator.create("fitness", base.Fitness, weights=(1.0,))
         creator.create("individual", np.ndarray, fitness=creator.fitness)
@@ -189,7 +193,9 @@ class LegacyGeneticGenerator(NeighborhoodGenerator):
 
     def mutate(self, toolbox, x):
         z = toolbox.clone(x)
-        z = self.generate_synthetic_instance(from_z=z, mutpb=self.mutpb)
+        nz = self.generate_synthetic_instance(from_z=z, mutpb=self.mutpb)
+
+        z[:] = nz
 
         return z,
 
@@ -390,6 +396,10 @@ class GeneticGenerator(LegacyGeneticGenerator):
     #     return np.array(Z)
 
     def setup_toolbox(self, x, evaluate, population_size):
+        # if hasattr(creator, "fitness"):
+        #     del creator.fitness
+        # if hasattr(creator, "individual"):
+        #     del creator.individual
 
         creator.create("fitness", base.Fitness, weights=(1.0,))
         creator.create("individual", np.ndarray, fitness=creator.fitness)
@@ -427,6 +437,7 @@ class GeneticGenerator(LegacyGeneticGenerator):
 
         return population, halloffame, logbook
 
+    @staticmethod
     def eaSimple(population, toolbox, cxpb, mutpb, ngen, stats=None,
                  halloffame=None, verbose=__debug__):
         """This algorithm reproduce the simplest evolutionary algorithm as
