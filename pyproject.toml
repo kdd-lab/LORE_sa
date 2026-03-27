@@ -1,7 +1,7 @@
 [project]
 name = "LORE_sa"
-version = "0.0.1"
-requires-python = ">=3.8"
+version = "1.1.0"
+requires-python = ">=3.11"
 description = "LOREM explainer package"
 readme = "README.md"
 
