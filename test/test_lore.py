@@ -2,18 +2,16 @@ import os
 import unittest
 
 import joblib
-import sklearn.datasets
 from sklearn.compose import ColumnTransformer
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import train_test_split
-from sklearn.pipeline import Pipeline, make_pipeline
+from sklearn.pipeline import  make_pipeline
 from sklearn.preprocessing import StandardScaler, OrdinalEncoder
 
-from lore_sa.bbox import AbstractBBox, sklearn_classifier_bbox, bbox
+from lore_sa.bbox import sklearn_classifier_bbox
 from lore_sa.dataset import TabularDataset
 from lore_sa.encoder_decoder import ColumnTransformerEnc
-from lore_sa.lore import TabularRandomGeneratorLore, TabularGeneticGeneratorLore
+from lore_sa.lore import TabularGeneticGeneratorLore
 
 
 class LoremTest(unittest.TestCase):

@@ -1,11 +1,9 @@
-from .random import RandomGenerator
 from .genetic import GeneticGenerator
-from .genetic_proba_generator import GeneticProbaGenerator
+from .random import RandomGenerator
 from .neighborhood_generator import NeighborhoodGenerator
 
 __all__ = [
     "RandomGenerator",
     "GeneticGenerator",
-    "GeneticProbaGenerator",
-    "NeighborhoodGenerator"
+    "NeighborhoodGenerator",
 ]

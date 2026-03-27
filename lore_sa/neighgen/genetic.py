@@ -5,7 +5,7 @@ import random
 from deap.algorithms import varAnd, eaSimple
 from scipy.spatial.distance import cdist, hamming
 from .neighborhood_generator import NeighborhoodGenerator
-from deap import base, creator, tools, algorithms
+from deap import base, creator, tools
 
 import numpy as np
 

@@ -5,9 +5,9 @@ import numpy as np
 
 import numpy as np
 
-from ..bbox import AbstractBBox
-from ..dataset import Dataset
-from ..encoder_decoder import EncDec
+from lore_sa.bbox import AbstractBBox
+from lore_sa.dataset import Dataset
+from lore_sa.encoder_decoder import EncDec
 
 warnings.filterwarnings("ignore")
 
