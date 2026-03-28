@@ -1,5 +1,5 @@
 [project]
-name = "LORE-ext"
+name = "LORE_sa"
 version = "1.1.0"
 requires-python = ">=3.11"
 description = "LOREM explainer package"
