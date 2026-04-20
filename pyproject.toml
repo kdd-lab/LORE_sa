@@ -4,6 +4,7 @@ version = "1.1.0"
 requires-python = ">=3.11"
 description = "LOREM explainer package"
 readme = "README.md"
+dynamic = ["dependencies"]
 
 [project.optional-dependencies]
 images = ["keras", "tensorflow"]
@@ -13,7 +14,8 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-packages = ["lore_sa"]
+#packages = ["lore_sa"]
+packages = {find = {where = ["."],  include = ["lore_sa*"], exclude = ["tests*", "docs*", "test*"]}}
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
