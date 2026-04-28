@@ -23,11 +23,12 @@ from ..util import vector2dict, multilabel2str
 class DecisionTreeSurrogate(Surrogate):
 
     def __init__(self, kind=None, preprocessing=None, class_values=None, multi_label: bool = False,
-                 one_vs_rest: bool = False, cv=5, prune_tree: bool = False, ):
+                 one_vs_rest: bool = False, cv=5, grid_search_tree: bool = False, prune_tree: bool = False, ):
         super().__init__(kind, preprocessing)
         self.dt = None
         self.fidelity = None
         self.confusion_matrix = None
+        self.grid_search_tree = grid_search_tree
         self.prune_tree = prune_tree
         self.class_values = class_values
         self.multi_label = multi_label
@@ -45,11 +46,11 @@ class DecisionTreeSurrogate(Surrogate):
         :param [bool] multi_label:
         :param [bool] one_vs_rest:
         :param [int] cv:
-        :param [bool] prune_tree:
+
         :return:
         """
         self.dt = DecisionTreeClassifier(class_weight='balanced', random_state=42)
-        if self.prune_tree is True:
+        if self.grid_search_tree is True:
             param_list = {'min_samples_split': [0.01, 0.05, 0.1, 0.2, 3, 2],
                           'min_samples_leaf': [0.001, 0.01, 0.05, 0.1, 2, 4],
                           'splitter': ['best', 'random'],
@@ -73,10 +74,13 @@ class DecisionTreeSurrogate(Surrogate):
             dt_search.fit(Z, Yb, sample_weight=weights)
             logger.info('End time: {0}'.format(datetime.datetime.now()))
             self.dt = dt_search.best_estimator_
-            logger.info('Pruning')
-            self.prune_duplicate_leaves(self.dt)
+
         else:
             self.dt.fit(Z, Yb)
+
+        if self.prune_tree:
+            logger.info('Pruning')
+            self.prune_duplicate_leaves(self.dt)
 
         self.fidelity = self.dt.score(Z, Yb)
         self.confusion_matrix = confusion_matrix(Yb, self.dt.predict(Z))
@@ -133,7 +137,7 @@ class DecisionTreeSurrogate(Surrogate):
         predicted_class = self.dt.predict(z)
         inv_transform_predicted_class = encoder.decode_target_class([predicted_class])[0]
 
-        if encoder.type == 'one_hot':
+        if encoder.type == 'one-hot':
             target_feature_name = list(encoder.encoded_descriptor['target'].keys())[0]
         else:
             target_feature_name = 'target'
