@@ -183,9 +183,12 @@ class Lore(object):
 
         # get the rule for the instance `z`, decode using the encoder class
         rule = self.surrogate.get_rule(z, self.encoder)
+        rule = self.encoder.decode_rule(rule)
         # print('rule', rule)
 
         crules, deltas = self.surrogate.get_counterfactual_rules(z, neighbour, neighb_train_yb, self.encoder)
+        crules = [self.encoder.decode_rule(cr) for cr in crules]
+
         # I wants also the counterfactuals in the original space the so called "no_equal", as well the "equals"
         original_class = self.bbox.predict([x])
         no_equal = [x_c.tolist() for x_c,y_c in zip(dec_neighbor, neighb_train_y) if y_c != original_class]

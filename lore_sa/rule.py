@@ -1,6 +1,5 @@
 import json
 
-from .encoder_decoder import EncDec
 from .util import vector2dict
 from typing import Callable
 import operator

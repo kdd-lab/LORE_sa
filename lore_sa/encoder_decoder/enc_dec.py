@@ -1,8 +1,10 @@
 from abc import abstractmethod
 import numpy as np
+import operator
 
 __all__ = ["EncDec"]
 
+from lore_sa.rule import Expression, Rule
 
 
 class EncDec():
@@ -155,6 +157,37 @@ class EncDec():
     def encode_target_class(self, param):
         pass
 
-    @abstractmethod
+
+    def decode_expression(self, expr: Expression):
+        """
+        Decode a rule starting from the original descriptor
+
+        :param expr: the rule to decode
+        :return: the decoded rule
+        """
+        if 'categorical' not in self.dataset_descriptor.keys() or self.dataset_descriptor['categorical'] == {}:
+            return expr
+
+        if expr.variable.split('=')[0] in self.dataset_descriptor['categorical'].keys():
+            decoded_label = expr.variable.split("=")[0]
+            decoded_value = expr.variable.split("=")[1]
+            expr.variable = decoded_label
+            if expr.value:
+                expr.operator = operator.eq
+            else:
+                expr.operator = operator.ne
+            expr.value = decoded_value
+            return expr
+        else:
+            return expr
+
     def decode_rule(self, rule):
-        pass
+        """
+        Decode a rule starting from the original descriptor
+
+        :param rule: the rule to decode
+        :return: the decoded rule
+        """
+        decoded_premises = [self.decode_expression(p) for p in rule.premises]
+        decoded_consequences = self.decode_expression(rule.consequences)
+        return Rule(decoded_premises, decoded_consequences)
