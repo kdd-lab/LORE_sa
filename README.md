@@ -229,7 +229,7 @@ from lore_sa.surrogate import DecisionTreeSurrogate
 # Create components
 encoder = ColumnTransformerEnc(dataset.descriptor)
 generator = GeneticGenerator(bbox, dataset, encoder, ocr=0.1)
-surrogate = DecisionTreeSurrogate(prune_tree=True)
+surrogate = DecisionTreeSurrogate(grid_search_tree=True)
 
 # Create explainer
 explainer = Lore(bbox, dataset, encoder, generator, surrogate)

@@ -170,13 +170,15 @@ class Lore(object):
             importances_ = importances * bm
             feature_importances = []
             for start, end in intervals:
-                slice_ = importances_[start:end]
+                slice_ = importances_ [start:end]
                 non_zero = slice_[slice_ != 0]
                 if len(non_zero) > 0:
                     feature_importances.append(non_zero[0])
                 else:
                     feature_importances.append(0)
             feature_names = [self.encoder.encoded_features[start] for start, _ in intervals ]
+            # the categorical feature in feature_names have the format "feature=value", I want to keep only the feature name
+            feature_names = [f.split('=')[0] for f in feature_names]
             self.feature_importances = list(zip(feature_names, feature_importances))
         else:
             self.feature_importances = None # check if an alternative
