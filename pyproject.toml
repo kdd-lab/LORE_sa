@@ -1,7 +1,7 @@
 [project]
 name = "LORE_sa"
-version = "1.1.1"
-requires-python = ">=3.11"
+version = "1.1.3"
+requires-python = ">=3.9"
 description = "LOREM explainer package"
 readme = "README.md"
 dynamic = ["dependencies"]
