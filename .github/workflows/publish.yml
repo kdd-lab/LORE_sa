@@ -2,25 +2,53 @@ name: Publish to PyPI
 
 on:
   release:
-    types: [published] 
+    types: [published]
 
 jobs:
+  verify-version:
+    name: Check release tag matches pyproject.toml
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compare tag vs pyproject.toml version
+        run: |
+          TAG_VERSION="${GITHUB_REF_NAME#v}"
+
+          PKG_VERSION=$(python3 - <<'EOF'
+          import tomllib
+          from pathlib import Path
+          data = tomllib.loads(Path("pyproject.toml").read_text())
+          print(data["project"]["version"])
+          EOF
+          )
+
+          echo "Tag version:     $TAG_VERSION"
+          echo "Package version: $PKG_VERSION"
+
+          if [ "$TAG_VERSION" != "$PKG_VERSION" ]; then
+            echo "❌ Mismatch: tag=$TAG_VERSION pyproject=$PKG_VERSION"
+            exit 1
+          fi
+          echo "✅ Versions match: $TAG_VERSION"
+
   build-n-publish:
     name: Build and publish Python distro to PyPI
+    needs: verify-version          # ← blocked until check passes
     runs-on: ubuntu-latest
     environment:
       name: pypi
       url: https://pypi.org/p/LORE_sa
     permissions:
-      id-token: write # Required 
+      id-token: write
 
     steps:
     - uses: actions/checkout@v4
-    
+
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: "3.x"
+        python-version: "3.11"     # pin to your minimum, not "3.x"
 
     - name: Install build tools
       run: python -m pip install build
