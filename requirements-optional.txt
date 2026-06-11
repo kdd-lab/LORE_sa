@@ -1,0 +1,4 @@
+# Optional integrations not required for core library usage/tests.
+imblearn
+category_encoders
+

@@ -8,6 +8,8 @@ dynamic = ["dependencies"]
 
 [project.optional-dependencies]
 images = ["keras", "tensorflow"]
+docs = ["sphinx~=5.0", "sphinx_rtd_theme~=1.2.0", "furo", "sphinx_material"]
+optional = ["imblearn", "category_encoders"]
 
 [build-system]
 requires = ["setuptools"]

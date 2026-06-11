@@ -1,0 +1,6 @@
+# Documentation build dependencies.
+sphinx~=5.0
+sphinx_rtd_theme~=1.2.0
+furo
+sphinx_material
+
